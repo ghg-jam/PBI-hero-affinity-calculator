@@ -104,12 +104,83 @@ button{cursor:pointer;border:none;border-radius:8px;padding:8px 14px;font-size:1
 .pick{display:flex;align-items:center;gap:5px;font-size:12px;border:1px solid var(--border);border-radius:16px;padding:3px 10px 3px 6px;background:var(--bg);cursor:pointer}
 .pick img{width:20px;height:20px;border-radius:4px}
 .adv summary{font-size:12px;color:var(--muted);cursor:pointer}
-.scan-box{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-bottom:12px;padding:10px 12px;border:1px dashed var(--border);border-radius:10px}
-.scan-hint{font-size:11.5px;color:var(--muted);flex:1 1 220px}
+.save-actions{display:flex;flex-wrap:wrap;gap:8px}
 .scan-status{flex:1 1 100%;font-size:12px;line-height:1.5}
 .scan-status.ok{color:var(--greenT)}
 .scan-status.bad{color:var(--danger)}
 .item-row.warn .item-qty{border-color:#e0b400;background:rgba(224,180,0,.2)}
+.stage-box{margin-top:14px;padding-top:10px;border-top:1px dashed var(--border)}
+.stage-table td:first-child{white-space:nowrap}
+.stage-sum td{border-top:2px solid var(--border)}
+.hist-box{padding:10px 12px;margin-bottom:10px;border:1px solid var(--border);border-radius:10px;background:var(--accent2)}
+.now-row td{background:var(--accent2);font-weight:600}
+.tier-sel{font-weight:700;border-width:2px}
+.tier-sel.t0{border-color:#3fae57}.tier-sel.t1{border-color:#8a5cd6}.tier-sel.t2{border-color:#c9a233}
+.advice{border-radius:10px;padding:8px 10px;margin:8px 0;font-size:13px}
+.advice.warn{background:rgba(214,69,69,.12);border:1px solid #d64545}
+.advice.info{background:rgba(63,130,214,.1);border:1px solid #3f82d6}
+.advice button{margin-left:6px}
+.pair-vis{display:flex;align-items:center;justify-content:center;gap:8px;margin:6px 0 10px}
+.pair-pill{flex:1;max-width:150px;text-align:center;border-radius:14px;padding:10px 6px;border:2px solid;display:flex;flex-direction:column;gap:2px}
+.pair-pill small{font-size:11px;color:var(--muted)}
+.pair-pill b{font-size:20px}
+.pair-pill.t0{border-color:#3fae57;background:rgba(63,174,87,.12)}.pair-pill.t1{border-color:#8a5cd6;background:rgba(138,92,214,.12)}.pair-pill.t2{border-color:#c9a233;background:rgba(201,162,51,.12)}
+.pair-op{display:flex;align-items:center;justify-content:center;padding:0;border:0;background:var(--panel);color:var(--text);border-radius:50%;width:54px;height:54px;font-size:28px;font-weight:700;cursor:pointer;box-shadow:0 0 0 2px var(--border);position:relative;line-height:1}
+.pair-op i{position:absolute;right:2px;bottom:0;font-size:12px;font-style:normal;color:var(--muted)}
+.pair-op:hover{box-shadow:0 0 0 2px var(--text)}
+.gap-eq{display:flex;align-items:flex-end;gap:10px}
+.gap-eq .field{flex:1}
+.gap-op{font-size:22px;font-weight:700;padding-bottom:4px;color:var(--muted)}
+.gap-band{margin:4px 0 6px;max-width:440px}
+.dual{position:relative;height:34px;margin:2px 0 0}
+.dual-track{position:absolute;left:10px;right:10px;top:13px;height:8px;border-radius:4px;background:var(--border)}
+.dual-fill{position:absolute;top:-4px;height:16px;border-radius:4px;opacity:.85;min-width:3px}
+.dual input[type=range]{position:absolute;left:0;width:100%;top:0;height:34px;margin:0;background:none;pointer-events:none;-webkit-appearance:none;appearance:none}
+.dual input[type=range]::-webkit-slider-runnable-track{background:none;height:34px}
+.dual input[type=range]::-moz-range-track{background:none}
+.dual input[type=range]::-webkit-slider-thumb{pointer-events:auto;-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--tc,#888);cursor:grab;margin-top:6px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.dual input[type=range]::-moz-range-thumb{pointer-events:auto;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--tc,#888);cursor:grab}
+.dual-ticks{display:flex;justify-content:space-between;padding:0 6px;font-size:10px;color:var(--muted,#888)}
+.gap-eqline{font-size:12px;font-weight:600;margin-bottom:2px}
+.gap-ctrl .gap-pair input[type=number]{width:84px}
+.gap-svg{width:100%;height:auto;max-width:440px;display:block}
+.gc-track{fill:var(--border)}
+.gc-axis{stroke:var(--muted);stroke-width:1}
+.gc-zero{stroke:var(--text);stroke-width:1.5;stroke-dasharray:3 2}
+.gc-txt{fill:var(--muted);font-size:9px}
+.gc-val{fill:var(--text);font-size:11px;font-weight:700}
+.gc-end{fill:var(--text);font-size:10px;font-weight:600}
+.gap-pair{display:flex;gap:8px;align-items:center}
+.gap-pair input[type=range]{flex:1;min-width:80px}
+.gap-pair input[type=number]{width:72px;flex:0 0 auto}
+.chips-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ai-box{margin:10px 0;padding:8px 10px;border:1px dashed var(--border);border-radius:10px}
+.ai-box summary{cursor:pointer;font-weight:700;font-size:13px}
+.ai-preview{white-space:pre-wrap;word-break:break-word;margin:8px 0;padding:8px 10px;border-radius:8px;background:var(--bg);border:1px solid var(--border);font-size:12px;line-height:1.5;max-height:240px;overflow:auto;user-select:all}
+.ai-box .chips-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.ai-text{width:100%;box-sizing:border-box;margin:6px 0;font-family:monospace;font-size:12px;border:1px solid var(--border);border-radius:8px;padding:6px;background:var(--bg);color:var(--text)}
+.chip-btn.on{background:var(--accent,#3b82f6);color:#fff;border-color:var(--accent,#3b82f6)}
+.chip-btn.passed{opacity:.4}
+.apply-chips{flex-wrap:wrap}
+.chip-btn{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:3px 12px;font-size:12px;font-weight:600}
+.item-max-grid .item-qty{width:60px}
+.item-row.dim{opacity:.45}
+.own{color:var(--muted);font-size:10.5px;flex:0 0 auto;min-width:30px}
+.gap-chart{width:100%;height:auto;max-width:640px;display:block}
+.gc-band{opacity:.22}
+.gc-line{fill:none;stroke:var(--muted);stroke-width:1.5}
+.gc-ok{fill:var(--greenT);stroke:var(--panel);stroke-width:1.5}
+.gc-bad{fill:var(--danger);stroke:var(--panel);stroke-width:1.5}
+.gc-off{fill:var(--muted);stroke:var(--panel);stroke-width:1.5}
+.gc-now{stroke:var(--text);stroke-width:2}
+.usage-grid .item-list{gap:8px}
+.use-bar i.full{background:#d64545}
+.use-row{display:flex;gap:8px;align-items:center}
+.use-row img{width:28px;height:28px;border-radius:6px;flex:0 0 auto}
+.use-main{flex:1;min-width:0}
+.use-top{display:flex;justify-content:space-between;gap:6px;font-size:11.5px}
+.use-bar{height:6px;border-radius:3px;background:var(--border);margin-top:3px;overflow:hidden}
+.use-bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
 .footer-note{font-size:11px;color:var(--muted);margin-top:30px}
 </style>
 </head>
@@ -142,14 +213,29 @@ button{cursor:pointer;border:none;border-radius:8px;padding:8px 14px;font-size:1
     </select>
   </div>
 
+  <div class="panel save-panel">
+    <h2 id="t_saveTitle"></h2>
+    <div class="save-actions">
+      <button class="btn-light" id="t_saveDownload" onclick="downloadSave()"></button>
+      <button class="btn-light" id="t_saveLoad" onclick="document.getElementById('saveFile').click()"></button>
+      <input type="file" id="saveFile" accept=".json,application/json" hidden onchange="loadSaveFile(this.files[0]);this.value=''">
+      <button class="btn-danger" id="t_saveReset" onclick="resetAll()"></button>
+    </div>
+    <div class="block-hint" id="t_saveHint" style="margin:8px 0 0"></div>
+    <div class="scan-status" id="saveStatus"></div>
+  </div>
+
   <div class="panel">
     <h2 id="t_varsTitle"></h2>
-    <div class="scan-box" id="scanBox" ondragover="event.preventDefault()" ondrop="event.preventDefault();handleScan(event.dataTransfer.files[0])">
-      <button class="btn-light" id="t_scanBtn" onclick="document.getElementById('scanFile').click()"></button>
-      <input type="file" id="scanFile" accept="image/*" hidden onchange="handleScan(this.files[0]);this.value=''">
-      <span class="scan-hint" id="t_scanHint"></span>
-      <div class="scan-status" id="scanStatus"></div>
-    </div>
+    <details class="ai-box" id="aiBox"><summary data-t="aiTitle"></summary>
+      <div class="block-hint" data-t="aiStep1"></div>
+      <div class="chips-row"><button class="btn-light" data-t="aiCopy" onclick="copyAIPrompt(this)"></button><button class="btn-light" id="aiPrevBtn" data-t="aiPreview" onclick="toggleAIPreview()"></button></div>
+      <pre class="ai-preview" id="aiPreview" hidden></pre>
+      <div class="block-hint" style="margin-top:10px" data-t="aiStep2"></div>
+      <textarea id="aiText" rows="5" class="ai-text" spellcheck="false" placeholder='{"affinity": 0, "items": {"lollipop": {"count": 0, "favorite": false}}}'></textarea>
+      <button class="btn-light" data-t="aiImport" onclick="importAI()"></button>
+      <div class="scan-status" id="aiStatus"></div>
+    </details>
     <div id="varTable" class="tier-grid"></div>
     <div class="corner-note" id="t_varsNote"></div>
   </div>
@@ -388,15 +474,16 @@ function setFavorite(key, tierIdx, on){
   renderVars();
 }
 function tierFavKey(i){ return TIER_ITEMS[i].find(k=>itemState[k].favorite) || null; }
-function tierFavCap(i){ const k=tierFavKey(i); return k? itemState[k].cap : 0; }
-function nfItemsOf(i,c){ return TIER_ITEMS[i].filter(k=>!itemState[k].favorite && !(c && c.nfMode==='specific' && c.nfItems && c.nfItems[k]===false)); }
+function itemCapFor(k,c){ const inv=itemState[k].cap, m=c&&c.itemMax?c.itemMax[k]:undefined; return (m===undefined||m===null||m==='')?inv:Math.min(inv,Math.max(0,+m||0)); }
+function tierFavCap(i,c){ const k=tierFavKey(i); return k? itemCapFor(k,c) : 0; }
+function nfItemsOf(i,c){ return TIER_ITEMS[i].filter(k=>!itemState[k].favorite); }
 function tierNonFavCap(i,c){
-  const base = nfItemsOf(i,c).reduce((s,k)=>s+itemState[k].cap,0);
+  const base = nfItemsOf(i,c).reduce((s,k)=>s+itemCapFor(k,c),0);
   if(c && c.nfMode==='limit' && c.nfLimit && c.nfLimit[i]!=='' && c.nfLimit[i]!=null) return Math.min(base, Math.max(0,+c.nfLimit[i]||0));
   return base;
 }
 function allocNonFav(i,n,c){
-  const items = nfItemsOf(i,c).map(k=>({key:k,cap:itemState[k].cap,n:0})).filter(o=>o.cap>0);
+  const items = nfItemsOf(i,c).map(k=>({key:k,cap:itemCapFor(k,c),n:0})).filter(o=>o.cap>0);
   let left=n;
   if(c.nfMode==='even'){
     while(left>0){
@@ -410,20 +497,29 @@ function allocNonFav(i,n,c){
   }
   return items.filter(o=>o.n>0);
 }
-function tierCap(i,c){ return c.useNonFavorite ? tierFavCap(i)+tierNonFavCap(i,c) : tierFavCap(i); }
+function tierCap(i,c){ return c.useNonFavorite ? tierFavCap(i,c)+tierNonFavCap(i,c) : tierFavCap(i,c); }
+let HIST={h:[0,0,0],base:0}, HMODE=false, TG=null;
+const TL=()=>TG||targets;
 function tierPoints(i,n,c){
+  if(HMODE) return n*(tierFavKey(i)?FAVORITE_VALUES[i]:NORMAL_VALUES[i]);
+  n=Math.max(0,n-HIST.h[i]);
   if(!c.useNonFavorite) return n*FAVORITE_VALUES[i];
-  const favCap = tierFavCap(i);
+  const favCap = tierFavCap(i,c);
   const used = Math.min(n, favCap);
   return used*FAVORITE_VALUES[i] + (n-used)*NORMAL_VALUES[i];
 }
 function minCountForPoints(i, n0, pointsNeeded, c){
+  if(HMODE){ const v=tierFavKey(i)?FAVORITE_VALUES[i]:NORMAL_VALUES[i]; return Math.max(n0,Math.ceil(Math.max(0,pointsNeeded)/v)); }
+  const h=HIST.h[i];
+  return h+minCountCore(i,Math.max(0,n0-h),pointsNeeded,c);
+}
+function minCountCore(i, n0, pointsNeeded, c){
   const cap = tierCap(i,c);
   if(pointsNeeded<=0) return n0;
   if(!c.useNonFavorite){
     return Math.min(cap, Math.max(n0, Math.ceil(pointsNeeded/FAVORITE_VALUES[i])));
   }
-  const favCap = tierFavCap(i);
+  const favCap = tierFavCap(i,c);
   if(n0 < favCap){
     const fullFavPoints = favCap*FAVORITE_VALUES[i];
     if(pointsNeeded <= fullFavPoints){
@@ -472,302 +568,314 @@ Object.assign(LANG.pl,{"nfTitle": "Użycie prezentów nieulubionych", "nfAuto": 
 Object.assign(LANG.ar,{"nfTitle": "استخدام الهدايا غير المفضلة", "nfAuto": "حسب الحاجة", "nfLimit": "تحديد حد أقصى", "nfEven": "توزيع متساوٍ", "nfSpecific": "اختيار الهدايا", "nfLimitLabel": "الحد الأقصى للهدايا غير المفضلة لكل لون (فارغ = بلا حد)", "nfPick": "حدد الهدايا التي يمكن استخدامها", "nfBreakdown": "استخدام الهدايا في الصف الأخير"});
 Object.assign(LANG.ko,{"nfTitle": "비선호 선물 사용 방식", "nfAuto": "필요에 따라 자동", "nfLimit": "상한 설정", "nfEven": "균등하게 사용", "nfSpecific": "선물 지정", "nfLimitLabel": "색상별 비선호 선물 최대 사용 수 (비우면 제한 없음)", "nfPick": "사용할 수 있는 선물을 선택", "nfBreakdown": "마지막 행의 선물 사용 내역"});
 Object.assign(LANG.fil,{"nfTitle": "Paggamit ng hindi paboritong regalo", "nfAuto": "Ayon sa pangangailangan", "nfLimit": "Magtakda ng limitasyon", "nfEven": "Pantay na gamitin", "nfSpecific": "Pumili ng regalo", "nfLimitLabel": "Pinakamaraming hindi paboritong regalo kada kulay (walang laman = walang limit)", "nfPick": "I-tick ang mga regalong puwedeng gamitin", "nfBreakdown": "Paggamit ng regalo sa huling hanay"});
-Object.assign(LANG.en,{"scanBtn": "📷 Fill from screenshot", "scanHint": "Upload (or paste) a screenshot of the hero’s affinity screen. It is read inside your browser and never uploaded.", "scanBusy": "Reading screenshot…", "scanDone": "Filled {n} gifts and {f} favorite(s).", "scanAff": "Current affinity: {v}.", "scanNoAff": "Current affinity not detected, please enter it yourself.", "scanCheck": "Please double-check the numbers.", "scanFail": "Couldn’t read this screenshot. Use a full screenshot of the hero affinity screen, or enter the numbers by hand."});
-Object.assign(LANG.zhTW,{"scanBtn": "📷 從截圖自動填入", "scanHint": "上傳（或貼上）英雄好感度畫面的截圖。圖片只會在你的瀏覽器內辨識，不會上傳。", "scanBusy": "正在辨識截圖…", "scanDone": "已填入 {n} 種禮物數量，喜愛禮物 {f} 個。", "scanAff": "現有好感度：{v}。", "scanNoAff": "沒有偵測到現有好感度，請自行輸入。", "scanCheck": "請再核對一次數字。", "scanFail": "無法辨識這張截圖。請使用英雄好感度畫面的完整截圖，或手動輸入數量。"});
-Object.assign(LANG.zhCN,{"scanBtn": "📷 从截图自动填入", "scanHint": "上传（或粘贴）英雄好感度界面的截图。图片只会在你的浏览器内识别，不会上传。", "scanBusy": "正在识别截图…", "scanDone": "已填入 {n} 种礼物数量，喜爱礼物 {f} 个。", "scanAff": "当前好感度：{v}。", "scanNoAff": "没有检测到当前好感度，请自行输入。", "scanCheck": "请再核对一次数字。", "scanFail": "无法识别这张截图。请使用英雄好感度界面的完整截图，或手动输入数量。"});
-Object.assign(LANG.ja,{"scanBtn": "📷 スクリーンショットから入力", "scanHint": "ヒーロー好感度画面のスクリーンショットをアップロード（または貼り付け）してください。画像はブラウザ内で解析され、送信されません。", "scanBusy": "スクリーンショットを読み取り中…", "scanDone": "ギフト {n} 種類と好みのギフト {f} 個を入力しました。", "scanAff": "現在の好感度：{v}。", "scanNoAff": "現在の好感度を検出できませんでした。手動で入力してください。", "scanCheck": "数値をもう一度確認してください。", "scanFail": "このスクリーンショットを読み取れませんでした。ヒーロー好感度画面の全体のスクリーンショットを使うか、手動で入力してください。"});
-Object.assign(LANG.es,{"scanBtn": "📷 Rellenar desde captura", "scanHint": "Sube (o pega) una captura de la pantalla de afinidad del héroe. Se lee en tu navegador y nunca se sube.", "scanBusy": "Leyendo captura…", "scanDone": "Se rellenaron {n} regalos y {f} favorito(s).", "scanAff": "Afinidad actual: {v}.", "scanNoAff": "No se detectó la afinidad actual, introdúcela tú.", "scanCheck": "Revisa los números de nuevo.", "scanFail": "No se pudo leer esta captura. Usa una captura completa de la pantalla de afinidad del héroe o introduce los números a mano."});
-Object.assign(LANG.fr,{"scanBtn": "📷 Remplir depuis une capture", "scanHint": "Importez (ou collez) une capture de l’écran d’affinité du héros. Elle est lue dans votre navigateur et n’est jamais envoyée.", "scanBusy": "Lecture de la capture…", "scanDone": "{n} cadeaux et {f} favori(s) renseignés.", "scanAff": "Affinité actuelle : {v}.", "scanNoAff": "Affinité actuelle non détectée, saisissez-la vous-même.", "scanCheck": "Vérifiez bien les nombres.", "scanFail": "Impossible de lire cette capture. Utilisez une capture complète de l’écran d’affinité du héros ou saisissez les nombres à la main."});
-Object.assign(LANG.de,{"scanBtn": "📷 Aus Screenshot ausfüllen", "scanHint": "Lade einen Screenshot des Zuneigungs-Bildschirms des Helden hoch (oder füge ihn ein). Er wird im Browser gelesen und nie hochgeladen.", "scanBusy": "Screenshot wird gelesen…", "scanDone": "{n} Geschenke und {f} Favorit(en) eingetragen.", "scanAff": "Aktuelle Zuneigung: {v}.", "scanNoAff": "Aktuelle Zuneigung nicht erkannt, bitte selbst eingeben.", "scanCheck": "Bitte die Zahlen noch einmal prüfen.", "scanFail": "Dieser Screenshot konnte nicht gelesen werden. Nutze einen vollständigen Screenshot des Zuneigungs-Bildschirms oder gib die Zahlen manuell ein."});
-Object.assign(LANG.pt,{"scanBtn": "📷 Preencher por captura de tela", "scanHint": "Envie (ou cole) uma captura da tela de afinidade do herói. Ela é lida no seu navegador e nunca é enviada.", "scanBusy": "Lendo captura…", "scanDone": "{n} presentes e {f} favorito(s) preenchidos.", "scanAff": "Afinidade atual: {v}.", "scanNoAff": "Afinidade atual não detectada, digite você mesmo.", "scanCheck": "Confira os números novamente.", "scanFail": "Não foi possível ler esta captura. Use uma captura completa da tela de afinidade do herói ou digite os números manualmente."});
-Object.assign(LANG.vi,{"scanBtn": "📷 Điền từ ảnh chụp màn hình", "scanHint": "Tải lên (hoặc dán) ảnh chụp màn hình thiện cảm của anh hùng. Ảnh được đọc ngay trong trình duyệt và không bao giờ được tải lên.", "scanBusy": "Đang đọc ảnh chụp…", "scanDone": "Đã điền {n} loại quà và {f} quà yêu thích.", "scanAff": "Thiện cảm hiện tại: {v}.", "scanNoAff": "Không phát hiện được thiện cảm hiện tại, vui lòng tự nhập.", "scanCheck": "Vui lòng kiểm tra lại các con số.", "scanFail": "Không đọc được ảnh này. Hãy dùng ảnh chụp đầy đủ màn hình thiện cảm của anh hùng hoặc nhập số bằng tay."});
-Object.assign(LANG.th,{"scanBtn": "📷 กรอกจากภาพหน้าจอ", "scanHint": "อัปโหลด (หรือวาง) ภาพหน้าจอความชอบของฮีโร่ ระบบอ่านภาพในเบราว์เซอร์ของคุณและไม่อัปโหลดภาพไปที่ใด", "scanBusy": "กำลังอ่านภาพหน้าจอ…", "scanDone": "กรอกของขวัญ {n} ชนิด และของโปรด {f} ชิ้นแล้ว", "scanAff": "ค่าความชอบปัจจุบัน: {v}", "scanNoAff": "ตรวจไม่พบค่าความชอบปัจจุบัน กรุณากรอกเอง", "scanCheck": "กรุณาตรวจสอบตัวเลขอีกครั้ง", "scanFail": "อ่านภาพนี้ไม่ได้ กรุณาใช้ภาพหน้าจอความชอบของฮีโร่แบบเต็ม หรือกรอกตัวเลขเอง"});
-Object.assign(LANG.id,{"scanBtn": "📷 Isi dari tangkapan layar", "scanHint": "Unggah (atau tempel) tangkapan layar layar afinitas hero. Gambar dibaca di browser Anda dan tidak pernah diunggah.", "scanBusy": "Membaca tangkapan layar…", "scanDone": "{n} hadiah dan {f} favorit terisi.", "scanAff": "Afinitas saat ini: {v}.", "scanNoAff": "Afinitas saat ini tidak terdeteksi, silakan isi sendiri.", "scanCheck": "Periksa kembali angkanya.", "scanFail": "Tangkapan layar ini tidak bisa dibaca. Gunakan tangkapan layar penuh layar afinitas hero atau isi angka secara manual."});
-Object.assign(LANG.ru,{"scanBtn": "📷 Заполнить по скриншоту", "scanHint": "Загрузите (или вставьте) скриншот экрана симпатии героя. Он читается в вашем браузере и никуда не отправляется.", "scanBusy": "Чтение скриншота…", "scanDone": "Заполнено подарков: {n}, любимых: {f}.", "scanAff": "Текущая симпатия: {v}.", "scanNoAff": "Текущая симпатия не распознана, введите её вручную.", "scanCheck": "Пожалуйста, перепроверьте числа.", "scanFail": "Не удалось прочитать скриншот. Используйте полный скриншот экрана симпатии героя или введите числа вручную."});
-Object.assign(LANG.tr,{"scanBtn": "📷 Ekran görüntüsünden doldur", "scanHint": "Kahramanın yakınlık ekranının görüntüsünü yükleyin (veya yapıştırın). Görüntü tarayıcınızda okunur ve asla yüklenmez.", "scanBusy": "Ekran görüntüsü okunuyor…", "scanDone": "{n} hediye ve {f} favori dolduruldu.", "scanAff": "Mevcut yakınlık: {v}.", "scanNoAff": "Mevcut yakınlık algılanamadı, lütfen kendiniz girin.", "scanCheck": "Lütfen sayıları tekrar kontrol edin.", "scanFail": "Bu ekran görüntüsü okunamadı. Kahraman yakınlık ekranının tam görüntüsünü kullanın veya sayıları elle girin."});
-Object.assign(LANG.it,{"scanBtn": "📷 Compila da screenshot", "scanHint": "Carica (o incolla) uno screenshot della schermata di affinità dell’eroe. Viene letto nel browser e non viene mai caricato.", "scanBusy": "Lettura dello screenshot…", "scanDone": "Compilati {n} regali e {f} preferito/i.", "scanAff": "Affinità attuale: {v}.", "scanNoAff": "Affinità attuale non rilevata, inseriscila tu.", "scanCheck": "Ricontrolla i numeri.", "scanFail": "Impossibile leggere questo screenshot. Usa uno screenshot completo della schermata di affinità dell’eroe o inserisci i numeri a mano."});
-Object.assign(LANG.pl,{"scanBtn": "📷 Wypełnij ze zrzutu ekranu", "scanHint": "Prześlij (lub wklej) zrzut ekranu ekranu sympatii bohatera. Jest odczytywany w przeglądarce i nigdy nie jest wysyłany.", "scanBusy": "Odczytywanie zrzutu…", "scanDone": "Wypełniono prezentów: {n}, ulubionych: {f}.", "scanAff": "Obecna sympatia: {v}.", "scanNoAff": "Nie wykryto obecnej sympatii, wpisz ją ręcznie.", "scanCheck": "Sprawdź liczby jeszcze raz.", "scanFail": "Nie udało się odczytać zrzutu. Użyj pełnego zrzutu ekranu sympatii bohatera lub wpisz liczby ręcznie."});
-Object.assign(LANG.ar,{"scanBtn": "📷 املأ من لقطة الشاشة", "scanHint": "ارفع (أو الصق) لقطة شاشة لشاشة ود البطل. تُقرأ داخل متصفحك ولا تُرفع أبدًا.", "scanBusy": "جارٍ قراءة لقطة الشاشة…", "scanDone": "تم ملء {n} هدايا و{f} مفضلة.", "scanAff": "الود الحالي: {v}.", "scanNoAff": "لم يتم اكتشاف الود الحالي، يرجى إدخاله بنفسك.", "scanCheck": "يرجى التحقق من الأرقام مرة أخرى.", "scanFail": "تعذرت قراءة هذه اللقطة. استخدم لقطة كاملة لشاشة ود البطل أو أدخل الأرقام يدويًا."});
-Object.assign(LANG.ko,{"scanBtn": "📷 스크린샷으로 채우기", "scanHint": "영웅 호감도 화면의 스크린샷을 업로드(또는 붙여넣기)하세요. 이미지는 브라우저 안에서만 분석되며 업로드되지 않습니다.", "scanBusy": "스크린샷 읽는 중…", "scanDone": "선물 {n}종과 선호 선물 {f}개를 입력했습니다.", "scanAff": "현재 호감도: {v}.", "scanNoAff": "현재 호감도를 인식하지 못했습니다. 직접 입력해 주세요.", "scanCheck": "숫자를 한 번 더 확인해 주세요.", "scanFail": "이 스크린샷을 읽을 수 없습니다. 영웅 호감도 화면 전체 스크린샷을 사용하거나 숫자를 직접 입력하세요."});
-Object.assign(LANG.fil,{"scanBtn": "📷 Punan mula sa screenshot", "scanHint": "Mag-upload (o i-paste) ng screenshot ng affinity screen ng hero. Binabasa ito sa iyong browser at hindi kailanman ina-upload.", "scanBusy": "Binabasa ang screenshot…", "scanDone": "Napunan ang {n} regalo at {f} paborito.", "scanAff": "Kasalukuyang affinity: {v}.", "scanNoAff": "Hindi natukoy ang kasalukuyang affinity, pakilagay mismo.", "scanCheck": "Pakisuri muli ang mga numero.", "scanFail": "Hindi mabasa ang screenshot na ito. Gumamit ng buong screenshot ng affinity screen ng hero o ilagay ang mga numero nang mano-mano."});
-/* ===== screenshot recognizer ===== */
-/* Affinity screenshot recognizer — pure browser JS, no dependencies. */
-const AOCR = (function(){
-const ORDER=['lollipop','cake','perfume','box','ring','crown','bear','bouquet','mirror','juice','shoe','musicbox'];
-const TIER_OF=[0,0,1,1,2,2,1,1,1,2,2,2];
-let TEMPLATES=[];      // [{label, f:Float32Array(256)}]
-let THUMBS=null;       // {key: Float32Array}
-function setTemplates(t){ TEMPLATES=t; }
-function setThumbs(t){ THUMBS=t; }
-
-function loadPixels(src,maxW){
-  const sw=src.naturalWidth||src.width, sh=src.naturalHeight||src.height;
-  const s=sw>maxW?maxW/sw:1, w=Math.round(sw*s), h=Math.round(sh*s);
-  const c=document.createElement('canvas'); c.width=w; c.height=h;
-  const g=c.getContext('2d',{willReadFrequently:true}); g.imageSmoothingQuality='high'; g.drawImage(src,0,0,w,h);
-  return {w,h,d:g.getImageData(0,0,w,h).data};
-}
-function px(P,x,y){ const i=(y*P.w+x)*4; return [P.d[i],P.d[i+1],P.d[i+2]]; }
-
-/* ---- morphology on a Uint8Array mask of size w*h ---- */
-function morph(m,w,h,r,max){
-  const t=new Uint8Array(w*h), o=new Uint8Array(w*h);
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
-    let v=max?0:1;
-    for(let k=-r;k<=r;k++){ const xx=x+k; const a=(xx<0||xx>=w)?(max?0:1):m[y*w+xx]; if(max){ if(a){v=1;break;} } else { if(!a){v=0;break;} } }
-    t[y*w+x]=v;
-  }
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
-    let v=max?0:1;
-    for(let k=-r;k<=r;k++){ const yy=y+k; const a=(yy<0||yy>=h)?(max?0:1):t[yy*w+x]; if(max){ if(a){v=1;break;} } else { if(!a){v=0;break;} } }
-    o[y*w+x]=v;
-  }
-  return o;
-}
-function components(m,w,h,eight){
-  const seen=new Uint8Array(w*h), out=[], st=[];
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
-    const i=y*w+x; if(!m[i]||seen[i]) continue;
-    let minx=x,maxx=x,miny=y,maxy=y,area=0; st.length=0; st.push(i); seen[i]=1;
-    while(st.length){
-      const j=st.pop(), jx=j%w, jy=(j/w)|0; area++;
-      if(jx<minx)minx=jx; if(jx>maxx)maxx=jx; if(jy<miny)miny=jy; if(jy>maxy)maxy=jy;
-      for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){
-        if(!dx&&!dy) continue; if(!eight&&dx&&dy) continue;
-        const nx=jx+dx, ny=jy+dy; if(nx<0||ny<0||nx>=w||ny>=h) continue;
-        const n=ny*w+nx; if(m[n]&&!seen[n]){ seen[n]=1; st.push(n); }
-      }
-    }
-    out.push({x:minx,y:miny,w:maxx-minx+1,h:maxy-miny+1,area});
-  }
-  return out;
-}
-
-/* ---- grid detection ---- */
-function findGrid(P){
-  const y0=Math.floor(P.h*0.55), y1=Math.floor(P.h*0.93), H=y1-y0, W=P.w;
-  const m=new Uint8Array(W*H);
-  for(let y=0;y<H;y++)for(let x=0;x<W;x++){
-    const i=((y+y0)*W+x)*4, r=P.d[i],g=P.d[i+1],b=P.d[i+2], mx=Math.max(r,g,b), mn=Math.min(r,g,b);
-    if(mx>70 && (mx-mn)>0.35*mx) m[y*W+x]=1;
-  }
-  const c=morph(morph(m,W,H,2,true),W,H,2,false);
-  let comps=components(c,W,H,false).filter(k=>k.area>0.008*W*W && k.w>0.10*W && k.w<0.20*W && k.h>=0.85*k.w && k.h<=1.5*k.w);
-  comps.forEach(k=>k.y+=y0);
-  if(comps.length<12) return {ok:false,reason:'cells',found:comps.length};
-  comps.sort((a,b)=>a.y-b.y);
-  // two rows
-  const rows=[[comps[0]]];
-  for(let i=1;i<comps.length;i++){ const last=rows[rows.length-1]; if(comps[i].y-last[0].y>0.5*last[0].w) rows.push([comps[i]]); else last.push(comps[i]); }
-  if(rows.length!==2||rows[0].length!==6||rows[1].length!==6) return {ok:false,reason:'layout',found:comps.length,rows:rows.map(r=>r.length)};
-  rows.forEach(r=>r.sort((a,b)=>a.x-b.x));
-  const cells=[].concat(rows[0],rows[1]).map(k=>({x:k.x,y:k.y,w:k.w,h:k.w}));
-  return {ok:true,cells};
-}
-
-/* ---- glyph features ---- */
-function glyphFeature(mask,mw,mh,box){
-  // crop box from mask (binary), aspect-preserving fit to 16x16, light blur
-  const S=16, f=new Float32Array(S*S);
-  const gh=box.h, gw=box.w, sc=(S-2)/gh;
-  let tw=Math.max(2,Math.min(S-2,Math.round(gw*sc))), th=S-2;
-  const ox=Math.floor((S-tw)/2), oy=1;
-  for(let ty=0;ty<th;ty++)for(let tx=0;tx<tw;tx++){
-    const sx0=box.x+tx*gw/tw, sx1=box.x+(tx+1)*gw/tw, sy0=box.y+ty*gh/th, sy1=box.y+(ty+1)*gh/th;
-    let sum=0,n=0;
-    for(let yy=Math.floor(sy0);yy<Math.max(Math.floor(sy0)+1,Math.ceil(sy1));yy++)for(let xx=Math.floor(sx0);xx<Math.max(Math.floor(sx0)+1,Math.ceil(sx1));xx++){
-      if(xx<0||yy<0||xx>=mw||yy>=mh) continue; sum+=mask[yy*mw+xx]; n++;
-    }
-    f[(oy+ty)*S+ox+tx]=n?sum/n:0;
-  }
-  // blur 3x3
-  const o=new Float32Array(S*S);
-  for(let y=0;y<S;y++)for(let x=0;x<S;x++){ let s=0,n=0; for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){ const xx=x+dx,yy=y+dy; if(xx<0||yy<0||xx>=S||yy>=S) continue; s+=f[yy*S+xx]; n++; } o[y*S+x]=s/n; }
-  return o;
-}
-function classify(f){
-  let best=null,bd=1e9,second=1e9,secondLabel=null;
-  const bestBy={};
-  for(const t of TEMPLATES){ let d=0; for(let i=0;i<256;i++){ const e=f[i]-t.f[i]; d+=e*e; } if(bestBy[t.label]===undefined||d<bestBy[t.label]) bestBy[t.label]=d; }
-  const arr=Object.entries(bestBy).sort((a,b)=>a[1]-b[1]);
-  return {label:arr[0][0],dist:arr[0][1],ratio:arr.length>1?arr[1][1]/Math.max(arr[0][1],1e-6):99,margin:arr.length>1?arr[1][1]-arr[0][1]:99};
-}
-
-/* read a run of digits from a binary mask region; returns glyph boxes sorted by x */
-function digitBoxes(mask,w,h,minH,maxH,maxW,topmost){
-  let raw=components(mask,w,h,true).filter(k=>k.h>=minH&&k.h<=maxH&&k.w>=2&&k.area>=4);
-  let comps=[];
-  raw.forEach(k=>{
-    const n=Math.round(k.w/(0.72*k.h));
-    if(k.w>1.1*k.h && k.w<=2.9*k.h && n>=2 && n<=4){
-      const col=[]; for(let x=0;x<k.w;x++){ let s=0; for(let y=k.y;y<k.y+k.h;y++) s+=mask[y*w+k.x+x]; col.push(s); }
-      const cuts=[0];
-      for(let j=1;j<n;j++){ const ex=j*k.w/n, lo=Math.max(cuts[cuts.length-1]+2,Math.floor(ex-0.2*k.w/n*n/2)), hi=Math.min(k.w-2,Math.ceil(ex+0.2*k.w/n*n/2)); let bx=Math.round(ex),bv=1e9; for(let x=lo;x<=hi;x++){ if(col[x]<bv){bv=col[x];bx=x;} } cuts.push(bx); }
-      cuts.push(k.w);
-      for(let j=0;j<n;j++){ const x0=k.x+cuts[j], x1=k.x+cuts[j+1]; let miny=1e9,maxy=-1,area=0,minx=1e9,maxx=-1;
-        for(let y=k.y;y<k.y+k.h;y++)for(let x=x0;x<x1;x++) if(mask[y*w+x]){ area++; if(y<miny)miny=y; if(y>maxy)maxy=y; if(x<minx)minx=x; if(x>maxx)maxx=x; }
-        if(area>=4) comps.push({x:minx,y:miny,w:maxx-minx+1,h:maxy-miny+1,area}); }
-    } else comps.push(k);
-  });
-  comps=comps.filter(k=>k.w<=maxW&&k.w>=2);
-  if(!comps.length) return [];
-  const cys=comps.map(k=>k.y+k.h/2).sort((a,b)=>a-b), med=topmost?cys[0]:cys[(cys.length/2)|0];
-  comps=comps.filter(k=>Math.abs(k.y+k.h/2-med)<=maxH*0.35);
-  comps.sort((a,b)=>a.x-b.x);
-  return comps;
-}
-
-function maskRegion(P,x0,y0,x1,y1,pred){
-  x0=Math.max(0,Math.floor(x0));y0=Math.max(0,Math.floor(y0));x1=Math.min(P.w,Math.ceil(x1));y1=Math.min(P.h,Math.ceil(y1));
-  const w=x1-x0,h=y1-y0,m=new Uint8Array(w*h);
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){ const i=((y+y0)*P.w+x+x0)*4; if(pred(P.d[i],P.d[i+1],P.d[i+2])) m[y*w+x]=1; }
-  return {m,w,h,x0,y0};
-}
-const isWhite=(r,g,b)=>Math.min(r,g,b)>=185 && (Math.max(r,g,b)-Math.min(r,g,b))<70;
-const isDark=(r,g,b)=>Math.max(r,g,b)<140 && b>=g+12 && b>=r+25;
-
-function maskRegionAdaptive(P,x0,y0,x1,y1,mode){
-  x0=Math.max(0,Math.floor(x0));y0=Math.max(0,Math.floor(y0));x1=Math.min(P.w,Math.ceil(x1));y1=Math.min(P.h,Math.ceil(y1));
-  const w=x1-x0,h=y1-y0,m=new Uint8Array(w*h), vals=[];
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){ const i=((y+y0)*P.w+x+x0)*4, r=P.d[i],g=P.d[i+1],b=P.d[i+2];
-    vals.push(mode==='white'?Math.min(r,g,b):(r+g+b)/3); }
-  const sorted=vals.slice().sort((a,b)=>a-b), q=p=>sorted[Math.min(sorted.length-1,Math.floor(p*sorted.length))];
-  let thr;
-  if(mode==='white'){ thr=Math.max(120,Math.min(190,0.78*q(0.985))); }
-  else { const lo=q(0.01), bg=q(0.6); thr=lo+0.5*(bg-lo); }
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){ const i=((y+y0)*P.w+x+x0)*4, r=P.d[i],g=P.d[i+1],b=P.d[i+2], v=vals[y*w+x];
-    if(mode==='white'){ if(v>=thr && (Math.max(r,g,b)-Math.min(r,g,b))<90) m[y*w+x]=1; }
-    else { if(v<=thr && b>=g+6 && b>=r+15) m[y*w+x]=1; } }
-  return {m,w,h,x0,y0};
-}
-function cellCountGlyphs(P,c){
-  const R=maskRegionAdaptive(P,c.x+0.30*c.w,c.y+0.70*c.w,c.x+c.w-0.035*c.w,c.y+c.w-0.01*c.w,'white');
-  const boxes=digitBoxes(R.m,R.w,R.h,0.10*c.w,0.24*c.w,0.17*c.w);
-  return {R,boxes};
-}
-function readDigits(R,boxes){
-  let s='',maxDist=0,minRatio=99,items=[];
-  boxes.forEach(b=>{ const f=glyphFeature(R.m,R.w,R.h,b), r=classify(f); s+=r.label; maxDist=Math.max(maxDist,r.dist); minRatio=Math.min(minRatio,r.ratio); items.push({label:r.label,dist:r.dist}); });
-  const conf=boxes.length?Math.max(0,Math.min(1,1-(maxDist-1.0)/3))*Math.min(1,(minRatio-1)/1.0):0;
-  return {text:s,conf,maxDist,minRatio,items};
-}
-function hasHeart(P,c){
-  const x0=Math.max(0,c.x-0.04*c.w), x1=c.x+0.40*c.w, y0=Math.max(0,c.y-0.14*c.w), y1=c.y+0.32*c.w;
-  let n=0;
-  for(let y=Math.floor(y0);y<y1;y++)for(let x=Math.floor(x0);x<x1;x++){ const [r,g,b]=px(P,x,y); if(r>205&&g<150&&b>95&&r-g>85) n++; }
-  return n;
-}
-function labelColors(P,c){
-  const y0=c.y+c.w*1.01, y1=c.y+c.w*1.26; let red=0,green=0;
-  for(let y=Math.floor(y0);y<y1&&y<P.h;y++)for(let x=Math.floor(c.x);x<c.x+c.w;x++){ const [r,g,b]=px(P,x,y); if(r>170&&g<95&&b<95) red++; else if(g>120&&r<110&&b<120&&g-r>40) green++; }
-  return {red,green};
-}
-function thumb(P,c){
-  const T=[10,8], f=new Float32Array(T[0]*T[1]*3);
-  const x0=c.x+0.12*c.w,x1=c.x+0.88*c.w,y0=c.y+0.10*c.w,y1=c.y+0.62*c.w;
-  for(let ty=0;ty<T[1];ty++)for(let tx=0;tx<T[0];tx++){
-    let s=[0,0,0],n=0;
-    for(let y=Math.floor(y0+(y1-y0)*ty/T[1]);y<y0+(y1-y0)*(ty+1)/T[1];y++)for(let x=Math.floor(x0+(x1-x0)*tx/T[0]);x<x0+(x1-x0)*(tx+1)/T[0];x++){ const p=px(P,x,y); s[0]+=p[0];s[1]+=p[1];s[2]+=p[2];n++; }
-    for(let k=0;k<3;k++) f[(ty*T[0]+tx)*3+k]=n?s[k]/n:0;
-  }
-  return f;
-}
-function assignItems(P,cells){
-  if(!THUMBS) return {order:ORDER.slice(),method:'position'};
-  const keys=Object.keys(THUMBS), th=cells.map(c=>thumb(P,c));
-  const D=th.map(t=>keys.map(k=>{ let d=0; for(let i=0;i<t.length;i++){ const e=t[i]-THUMBS[k][i]; d+=e*e; } return d/t.length; }));
-  const pick=D.map(r=>r.indexOf(Math.min(...r)));
-  const used=new Set(pick);
-  if(used.size===cells.length) return {order:pick.map(i=>keys[i]),method:'icon'};
-  return {order:ORDER.slice(),method:'position'};
-}
-
-/* ---- current affinity (number above the clover icon) ---- */
-function findClover(P){
-  const y0=Math.floor(P.h*0.36), y1=Math.floor(P.h*0.56), x1=Math.floor(P.w*0.22), W=x1, H=y1-y0;
-  const m=new Uint8Array(W*H);
-  for(let y=0;y<H;y++)for(let x=0;x<W;x++){ const [r,g,b]=px(P,x,y+y0); if(g>r+40&&g>b+15&&g<200&&g>110&&r<120) m[y*W+x]=1; }
-  const comps=components(morph(morph(m,W,H,1,true),W,H,1,false),W,H,false).filter(k=>k.w>0.025*P.w&&k.w<0.08*P.w&&k.h>0.6*k.w&&k.h<1.4*k.w);
-  if(!comps.length) return null;
-  comps.sort((a,b)=>b.area-a.area); const k=comps[0]; k.y+=y0; return k;
-}
-function affRegion(P){
-  const x0=P.w*0.012, x1=P.w*0.158, y0=P.h*0.385, y1=P.h*0.50;
-  const R=maskRegionAdaptive(P,x0,y0,x1,y1,'dark');
-  const boxes=digitBoxes(R.m,R.w,R.h,0.0055*P.h,0.026*P.h,0.03*P.w,true);
-  return {R,boxes};
-}
-function readAffinity(P){
-  const {R,boxes}=affRegion(P);
-  if(!boxes.length) return {ok:false};
-  const r=readDigits(R,boxes); return {ok:true,value:parseInt(r.text||'0',10),text:r.text,conf:r.conf,n:boxes.length};
-}
-
-function recognize(src){
-  const P=loadPixels(src,576);
-  const grid=findGrid(P);
-  if(!grid.ok) return {ok:false,error:grid};
-  const as=assignItems(P,grid.cells);
-  const items={}, dbg=[];
-  grid.cells.forEach((c,i)=>{
-    const {R,boxes}=cellCountGlyphs(P,c), rd=readDigits(R,boxes);
-    const heart=hasHeart(P,c), lab=labelColors(P,c);
-    const key=as.order[i];
-    items[key]={count:rd.text===''?null:parseInt(rd.text,10),conf:rd.conf,maxDist:rd.maxDist,minRatio:rd.minRatio,fav:(heart>=0.011*c.w*c.w) && !(lab.green>lab.red*1.5 && lab.green>8), heart, lab};
-  });
-  return {ok:true,items,affinity:readAffinity(P),method:as.method,grid:grid.cells};
-}
-
-/* training helpers (used offline) */
-function trainSamples(src,truthCounts,truthAff){
-  const P=loadPixels(src,576), grid=findGrid(P), out=[], thumbs={};
-  if(!grid.ok) return {out,thumbs,err:grid};
-  grid.cells.forEach((c,i)=>{
-    const {R,boxes}=cellCountGlyphs(P,c), s=String(truthCounts[i]);
-    if(boxes.length===s.length) boxes.forEach((b,j)=>out.push({label:s[j],f:Array.from(glyphFeature(R.m,R.w,R.h,b))}));
-    else out.push({err:'count mismatch cell '+i+': '+boxes.length+' vs '+s});
-    thumbs[ORDER[i]]=Array.from(thumb(P,c));
-  });
-  { const {R,boxes}=affRegion(P), t=String(truthAff);
-    if(boxes.length===t.length) boxes.forEach((bx,j)=>out.push({label:t[j],f:Array.from(glyphFeature(R.m,R.w,R.h,bx)),dark:true}));
-    else out.push({err:'aff mismatch '+boxes.length+' vs '+t, boxes:boxes.map(k=>[k.x,k.y,k.w,k.h])}); }
-  return {out,thumbs};
-}
-return {recognize,trainSamples,setTemplates,setThumbs,ORDER,findGrid,loadPixels,readAffinity};
-})();
-
-const AOCR_T=[{"l":"2","f":"0005<BFFB=:730000019CLPPLFA:4000003BS^_]ZTLA7000006GY_ZVWXTF9000007FRRJGNWZL<000006>DA:<GV[N=0000036731:JYZK;0000012225BR[VE8000000127@OYYM=400000026@MXYOB720000004<KWZQB8100000007BS[XL?720000001<JY\\WPHB93000003@OZ[YYVQC8000003=GMLMPQNB8000003:ADDFIKI?7000"},{"l":"0","f":"0003:AFGF?7200000039CJLMLG>62000008FV[ZXZXN?500000>O_\\RNRYWI;10000AQ]SFAFQZQB30001BQVG969ETTG60003FSSA302<NSI70006IVTA3018JPH70007KXUA3018JPH70007KXUA302<NSI70006IWWE726CUVH60003FV]N=7=N]VF30001@R`YJCJY`R@10000:K]`ZUZ`]K:000004>KRRPRRK>40000028BKNNNKB82000"},{"l":"9","f":"000005?D?500000000025=INI?:730000005?N]b]SND:000003=N[b`][]PA00000:I]b]SNS]SD00000ASgbSB:BSPD00000DXlbN:0:NND00000=NbbXKDKXQD000007BSZXSSZbUD0000005?INS]glXD00000025:?IXdgSA000000005?N]b]I:000000008IZb[N=300000000:N]]N?50000000007DLI=520000000005?D?5000000"},{"l":"3","f":"000005?D?50000000037:?INI=52000000:DNS]b]N?5000000=KXZ]`bZI8000000:DNNNS]]N:00000037:<?IX[N:0000000005?N]]N:0000000008I[g`N:0000000008I[gbS?3000000005?N]b]I:0000035535ASbgSA00000:??50:NblXD00000=FI?:BSbgSA00000:DNNNS]b]I:000003:DKNPSQI<30000005?INNNI?50000"},{"l":"1","f":"00001:CHF>81000000001>JRPE;1000000001AQ`aTC2000000001;HZbXE20000000004;O_ZF200000000015I\\ZF200000000002FZZF200000000002FZZF200000000002FZZF200000000002FZZF200000000002FZZF200000000002FZZF200000000002FZZF200000000002FZZF200000000001?LL?100000000001;EE;10000"},{"l":"6","f":"0000008BIG=50000000013=JRNA7000000006>P^aVB700000000;J\\d\\M;300000000?SddVH9300000013BVdbVL?70000006>P^d^VRJA730000;J[a[RPTTL?70002BVa[KABLWWJ<0005G[^P<38FW^Q?0007I]_P<35?Q]SA0005G[aVB75?Q[Q?0002=LZZPFBIPPD800006>MVZVSSME93000013=GQSQNC9100000008BKNKG=50000"},{"l":"8","f":"00037?GIG?7300000038@HNPNG?72000008CRY]]]XN?500000=L]]XUX[XG:00000BRaYNINX]N?00000AP]VKGLUZM?00000=JYYVSVXVG:00000;I\\a_]`_VC700000=K\\]ZX\\]WE800000BOYOGEJSYM?00000COTD:;AN[QB00000DPVD79CSaTD00000BOYNDDO]cRA00000=JYYVV]b]I:000006?JOPQSQI<30000039CJNNNI?50000"},{"l":"4","f":"00000008BIG=50000000013=JRNA7000000006>P^d]I:00000013>L^ff]I:0000006>P^fe`ZI:000000;J\\da\\YVI:000000?Sa^QMQSI:000003DX^RDEOSI:00003=P``RGKVYOB73007G[if^X[`aWL=7007FU]\\[^djj\\P=7003<DIIIR^jl[K7300023555@O`fVB00000000008FW^Q?00000000003:EJC8000000000038?B=5000"},{"l":"5","f":"00015<EKNKD:30000003:ENRRNG<30000008EV^^ZTL?5000000;M]^UKEA:4000000=Q`ZJ>9853000001>R_ZJ@<841000003@Tb`UOJ@60000003<ISTSWYRB50000027=BDHR\\[K:00000000005BS]P?00000355315AQ[P?000008>?839GW^P?00000;FKC=DS__N=00000:HSSQU^aXE8000005?INOQSOF:3000003:DKNNMF=40000"},{"l":"7","f":"00:DNNNNNI?5000000=KXXXXXSI<300000DXlllllg]I:00000AQbbbdggbN=00000:DNNNS]b]I:0000037:::BS[S?30000000000:NXN:0000000003:DNND70000000007DNND:3000000000:NXN:00000000025?NSI80000000005?INI?50000000008ISN?52000000000:NXN:000000000007DKD7000000000005?D?500000000"},{"l":"5","f":"00000:DNNI?5000000025BNXXSI<30000005?Sbllg]I:0000008I]ggd`]L=000000:Nbib[VSF:000000:Nbib[SI<3000000:Nbjgd[N=30000008IZbbed]I:0000005?INNX`gSA000000258::K[lXD0000037::::K[lXD00000:DNNNNXblXD00000=L]`bbeggSA00000:I]glllg]I:000003<ISXXXSI<30000005?INNNI?50000"},{"l":"0","f":"00005?ILF<3000000025=ISVPF<52000005?N]gjdZL?5000008I[eedcc[K:10002=QadZTWabVB60007DX`ZI@GWb`L<000<L``Q=3<PbiUB000@Qe`N:0:NblXD000@Qe`N:0:NblXD000=Nb_O;2<PbiUB0009G[_UE=GWb`L<0004AU`_UQWabVB60001:K[ccddd[K:100005?N]glg]N?50000025=ISXSI=5200000005?INI?500000"},{"l":"1","f":"0000:DNNND:000000000:FSVXK=000000000:I]glXD0000000003=N]gVD00000000005?N]SD000000000025ASPD000000000000:NND000000000000:NND000000000000:NND000000000000:NND000000000000:NND000000000000:NND000000000000:NND000000000000:NND0000000000007DD=0000000000005??:00000"},{"l":"2","f":"00000:DND:00000000025BNXNB5200000005?SblbS?50000003=N[dgg_N=300000:I]][XbbXD700000ASgZNDU[XD700000AQbQD:NVS?300000:DNGDDQSI800000037:AKXXP?5000000025FVgZI520000003:DUblXD00000000:GXbilXD00000000ASgjll[K:7300000DXllllbXND:00000=KXXXXUQND:00000:DNNNNNNND:000"},{"l":"4","f":"0000005?II?50000000003<ISQD7000000000:I]gbN:000000000ASgjbN:000000025I[llbN:00000005?SbllbN:00000008IZbbe_N:0000003?S]_X_]S?300000:I]`_X_`]I:00000ASggebeggSA00000AQbbdgjjgSA00000:DNNS]gg]I:0000037::AN_`S?30000000005?SXN:000000000025BGD7000000000000:??50000"},{"l":"2","f":"00027AINKD:300000004<JSXUMB820000008G[gli`SB7000002?Q_cced_L<000004BQWTPZaeQ@000004=FE@=M\\eQ@00000268648LZ`L<0000000139CRWSB7000000028DRUPB8200000014AP\\SE5200000003<LZ`P>0000000008FYcdQ>000000002?QcjhWG:73000007G[ilj`VND:000007CPWXWTQND:000007AKNNNNNND:000"},{"l":"0","f":"00027AINIA7200000038@JQUQI>62000008DS[`b`ZN?500000>Oa_ZUZ]ZH900001BVf[ODOZaQ?10003FXcRB7BRaVE30006IZ^K:0;L`ZI60007KZ[G80:K_[K70007KZ[G80:K_[K70006IZ^K:0;L`\\K70003EVaSE:ER`XG60001?Qa]UNU[]O?300009HZ`a`a^RC7100005?NZbgbVD820000026>GNSNE83100000027=DID<200000"},{"l":"9","f":"005?INNNKG?8300003<IRVUVUQH?72000:I]edbdgd[N?5000AReb[VX_eb[H:000DVd[NFGP]edQ?000DUbVF<8BSbgSA000DVdXG80:N_dQ?000ARe`VJDKXa_L<000<JZ^]ZX[bc[F80005=GP]gllleVA5000248BSdljg\\K;2000000:Nblg]N?50000000:Naj`P@520000000:N_dXG80000000007DOQG=40000000005?GG?8300000"},{"l":"3","f":"00005?INNI?500000003<ISXXSI<3000000:I]gllg]I:000000=L]`dgigSA000000:DNPV`ggSA00000037:?L]d]I:0000000008K_dXD70000000008K_e]I:0000000005DXegSA0000003553=QdlXD000000:AD=BSdlXD000000ANXQS]glXD000000AP][]`bbQA000000:DNSXXSND:00000037:?DD?:730000000005::5000000"},{"l":"1","f":"00007@JLG=40000000008DQUPC7000000000:K_hcO<0000000007EYeeR>0000000003>P`eS@00000000019J\\cS@00000000007FYbR@00000000007FYbR@00000000007FYbR@00000000007FYbR@00000000007FYbR@00000000007FYbR@00000000006EXaR@00000000006CU_Q@00000000003;GNF:000000000028@F@800000"},{"l":"6","f":"0000003:??8300000000027AGE:30000000005?QVQ?5000000013=JXVM<400000004=KW^WK=400000009H[cc\\PB60000002@Sejie\\N=3000005G[hheda[H:000008K`f`VVY`PA00000:NaaTDFO_TD000008K^^QAEN]QB000005GY_YPTX]N?000002?P]__a_XG:0000008DS]dd]N?500000038AIQQK?72000000038?GGA830000"},{"l":"8","f":"0004;ELNLE;400000028CNTVTNC82000005@R^eee^R@5000008FY__Y^^YF8000008F[_\\SZ]\\H9000005AV__X^^YE8000003>RagcfbXD7000004@Tbgcfc\\H9000009H\\_\\RY_cO>00000>Oc\\P?LZjVB00000@Rf[M=LZjVB00000>Oc]VKW_eQ?00000:HY]]\\`_YH:000005>JW_e_WJ>50000025;FNSLD;5200000014>EJC;410000"},{"l":"4","f":"000003:DKNKB8000000016AMVXUG:00000003=N_jlgS?00000017EVchjfS?0000003=N]bbddS?0000017EV_[Y_cS?000003=N]]SQ[bS?000008GX]SGJYbS?00002>P`_QGL[dVB20005G[gbXSXbg[G50007I]jiedeij`K80005G[jllllllbN:0002?P_bbceij`K800008BKNNPXbg[G50000369::=DNSJ=20000000003:DIB8000"},{"l":"5","f":"00001;ENNJC9300000027DOXWQG:30000006AUckh^N=3000000:K_fd^SE81000000=Qcf^VK?50000000=Qcf_WL?50000000<O`eb^UH:30000009HUZ\\`_WE80000005=DGIU_cP?00000014569K]kWC0000036999;L\\hTB000008BLLJKX`aM=00000:IY\\]]`]SB7000008EXbgg_SC93000003:FPVVLA6310000004=FMMC9000000"},{"l":"7","f":"000:DNNNNNND:000000=KXXXXXXK=000000DXllllllXD000000AQbbdgjlXD000000:DNNS]egSA00000037::BS_]I:0000000002=Q[S?3000000025<IZ]N:000000005?LZd`N:000000008I[ee[I800000003?Sdg]N?50000000:I]gdSA520000000ASgi_K8000000000DXlgXD5000000000=KXSG:2000000000:DNI?50000000"},{"l":"5","f":"0005?INNNNND:0000007DQXXXXXK=000000:NblllllXD000000:NbjgdbbQA000000:Nbib[VSF:000000:Nbib[SI<3000000:Nbjgd[N=30000008IZbbed]I:0000005?INNX`gSA000000258::K[lXD0000037::::K[lXD00000:DNNNNXblXD00000AQbbbbeggSA00000DXlllllg]I:00000=KXXXXXSI<300000:DNNNNNI?50000"},{"l":"0","f":"005?INNNLIB:300003<ISXXXVSK?50000:I]gllljg[I80000ASgigddfiaQ>3000DXlg]SQZde]I:000DXldSB=IZegSA000DXlbN:2=QdlXD000DXlbN:0:NblXD000DXlbN:0:NblXD000DXlbN:2=QdlXD000DXldRA;GYegSA000DXlg[NKUbe]I:000ASgie][`faQ>3000:I]gjgeee[I800003<ISWVVURK?5000005?INNNLIB:3000"},{"l":"1","f":"0000:DNNI?5000000000=KXXSI<300000000ASgjg]I:00000000:I]gjgSA000000003?SdllXD000000000:NbllXD000000000:NbllXD000000000:NbllXD000000000:NbllXD000000000:NbllXD000000000:NbllXD000000000:NbllXD0000000008I]ggSA0000000005?S]]I:00000000025BII<300000000000:??500000"},{"l":"2","f":"0005?INNNNI?50000007DQXXXXQD7000003?Q_ddgjdS?30000:IXXSS]gg]I:0000=NZPBBSdibN=0000:GPF:=Qdg]I:00003:?<:DXgdS?300000233:K_g[G7000000025ASdeUA300000028BP[b[I800000005BS`b[N?50000003=P`jeXI?<7300007DXelg]SLI?700007DXeljgd]SB700003<ISXXXXSI<3000005?INNNNI?5000"},{"l":"4","f":"000005?INNI?500000002:GSXXQD700000005DXgllbN:00000008K_jllbN:0000025ASdlllbN:000005?N]glllbN:000008I[eeegjbN:00003?Sdib_bidS?3000:I]gib_big]I:000ASgjjgegjjgSA000AQbbbbdgjjgSA000:DNNNNS]gg]I:00037::::BSddS?3000000000:NbbN:00000000007DQQD700000000005?II?5000"}];
-const AOCR_TH={"lollipop":"QVx9Tl6Ann2v3a3e8bjy3p/co2utVGCEQVx9QVx9RV5+opOx8bXw43LS+a308ZPg8Zfes5O/SF1/QV59WWeF5sXn+bf78JLe8pja8IbQ8pnf8rDwZWmMP2B9fYGc+cr9+Kj296Pp7onQ743S+rLz85nki2OhPWN+iIem8bDu42DB5ly263fE6Gq+52S65WDElWmnPmd/b2iW5G3f4lnC7ojS85nc7HjG96no9JbpgnCfPWt+SmiEwFfE3FXK+ajz9pzn4VS243PNwWjEWW6TPXGBPnmFbWKUx1HA74zn6ofhzESyozKjW3TET4e+PXaF","cake":"QVt8QVx9QVx9QVx9QV19QVx9QVd1QVd1QVx9QVx9WEZAQVx7QVRtQV59SFBsZjZWS0ZeQV17QV59QV59dDsVUVBVSE9qbTlicB48nh5MkDdbRFZyPl99PmB9SUtPbzYllxdNqCBclSdVnQ5CpRxQUVNsPWN+PWN+Pmd/XUpfwRJP2hBQpiFYrVFvxIeZppqoQWd/Pmh/PWt/k5GZw2eDxk90y5Ct5a7Z6cHa47fYfHqaPWt+PXGBgI6T5rax9dnQ/vXe9uHa++rf8dTe58zUcYOSPXqFRXZ/1ZZV7Lua99nT67qx8cnG8c/Z57ratpy3","perfume":"Ukp5XVBwZVVzVUt7U0t7eHWfk5S3VEt6U0p6U0p6W053mXlNnYJ5jIC1WE2AVk1/V06BVUt9VUt+VUt+Xk5+f157iHauk4XCbFh2WUyDWU2EWUyDWUyDWU2DYVGKlIbMjHrBhmt3lX92em2gemuea1qSXk+KXU+JY1GRblyYfF95fmFvjXmx0rz23bb3wabcZ1SbY1GSaFSZbV2heGGei3jCj3THu2/mv2rqwYDxiYDXZVWhcF6qp6nckHm/p3nhnU/bokrZq2Hno07mflq8b1ijd12shnW/m3PFjDTWiyvOmkzanlPfoEvjjWG9el2r","box":"Ukp5Yldyd2+AW1N9VEx8bmR9lY+ec26VWFOIU0p6VUt9jHlvj4a2kIekY2CqgHqriYGjb2q9X1ygVUt+WE2Ce2p8hXiqbme2XVavc3THa2nDcXHMeHKjY1aAbF+RmZGmdm+qenrKcHHMdnCygXadjoWnnpGXfG+MdGWMiYSyf4DQgHmxo57MrqGgoZilvbe2xr/BppeRYlKVbG6iloqSsqnA19Tlu7K9opyjr6ix0M7gloyzbFeeZGWIeW6cppm1x8DXs6m7l46bkoukfYPBcGGad1yoaWSAcW6bYV2giZDHYnO7j4egdYKql5Z1hGyL","ring":"jXMniXIyeGRAl4Bjl4dtmIJOkXcvkXUmkHQlj3Mli3Y0Z11PaH+tnLXeuNDzur65uZZnrH5GmHEwknYoe2tEWnKgy970t9P05vH61OXs1riM3Kt23KhxoXo8g3Feja3V6vj+1Ob32en1o7zSyqNzsHpCu4hSyZVjeG9nYpPLxtzuwNfqpsLdr8jbyKJymXczj2A1qXBOinNOUXmraZPCcpzGeqLKv8G2rIBVnoY6m2Y/qHBLoYxHn31nmH90076a2cOhqpKAnIZVpYVAp25MqHNNrZVIw5Jlv4dVtHhFpXE9podBrpREpW1GrHNPsIhS","crown":"j3MkkHMlj3Mlj3QlkHQkkHQkkHQlkHQlkHQlj3MllHgpknYok3Yok3comH0tm4Ezk3cok3Uok3cok3cop4w5k3AusYw8mX4stZYzz79WmYAuo3w0rY05nX4vrYw9mXkwroc6nYUyo3wrso4ynYYypn42pIM0nHg0t5FAo4Q1wp5Ho4Y3tIw3wqFHpYs4tIg9pYU2p4A7wJVCr4I7nXdMoHY9yYk/16BMqoRBjmdDpXg1uY1CrHRCw5BInHpRuYlKxYJnz5l/xJhRk3ZSvJFRvopSp3NQrFU0w3VBw3lEpV1grmxx0pdQ4qlV2o9AsnZe","bear":"U0p6cFJtunZlnmxpqHlvo3pxpHJrqHhzWEt3U0p7VUt+m2Bi84xn+aZx/K91/bZ5/LJ68ZtwaFFyVUx+WE2DgFNn85hm+ahx455q7Klx5qlx2Z1wW0t9WU2DXk+Kilxu9qBt9qVv3aJyypxy5qtz9LR4bVR8Xk+LdVaBrGde8pBf9aRu4Zdj35Zi8Kpu96xvxoZpf12AsWpk5IZW8pRi1X9a1Yhg1Ixj2o1g+7N09J5lu35wsWZh2nlM851q4pBmsltaw2li0IBr/LN28Z1krXN1il2VuWlj6YRY8Ipn8n6W/pKk+IKN4I1in2h0f12i","bouquet":"Ukp6U0p7T0h1TUhzc4CnlLbWanOaUEh2Ukp5U0p6aUl5qklykkZjW2RwncHjoMTnnL/dKklLQUhmUEp4q0Jp81127FZvqE9nhaLEn8Tmlpi5lD5geFJkQFRn4Etj3U5l6mB4r0VdUmF4f4Wq2mSZ81iV6VWTdVlz2VFo4ldlzHaQrK7LgpevhGV+6VKR4lGP6liVqE95e0dshURVscLhpLnfqL/ksbHPvipf3kqH30qGsE1/RllsVHp9qsLorMDkqL7jfpeyeTxYwU1/0lF7m2N7UlB8K1ZUkKzOmrHeqsPsc5mlJFlTLVdQd1tEhF+K","mirror":"Ukl3elpQyZJIwJVXvpNVs4NIaFFeU0p6U0p6U0p6bVRXvYtIfnt+a32ed4qooJqRw5ZXcFZeVUt+VUx+m21CmYRnaHufdYuuh57CrcbnuraouotMWUp4WU2Dr3s8ioN6boSngJe7lq/SwNr11ebsy6NjcVVnXU+Kr3o6jYV8dYyui6PGpb/hx9/6z+j8yrWNjWplZFKSpHJEoYdleZCxkqrMp8HisMnqqsTmvqyLl3BnalWai2FZw5BEgYuYhp2/kKfKk6vPjqXGwqFqjGVtclmjd1eMsHk2tYxQgYaQeI2we5CxlY+FwY5AgFx5e16s","juice":"j3MkkHQljnMomYJInYhVlX1Gt5c+2rM8z7RCmXspkncokncooI5mv7atu7Kqt6Z/9L8/9Lwf5L4pnYEwlXwrlHsqvLGU1M292cu328iR9M1a2b1eo4UilnwsmoMwlX4w3MSe+/PZ+ei3+fGp+/Sc0751mIEvmoQxoIs2nopC7byE/eey/tRl/uhk/dRC36pJnIUzoY04ppM7rJtX+rZx/Mxv/sA0/88z/rQO6Z1Do4w8p5Q9r51Cr51Q8aRv/Z0+/qUn/roZ/pUI3ZhWqZQ/r51EuqhKuahJxKVt9Z5k/ZMz/Z8m7aJevKFguqlLuahK","shoe":"j3MkkHQlkHQlkHQlkHQlkHQlkHQlkHQlkHQlj3Mlkncokncokncok3cok3cok3cok3coi3c4hohri3c5lXwrlXsrlXwrlnwrlnwslnwskn85lMK+Y8T9gZGImoMwmoMwmoMwmoMwmYMwloI0l7CkkeP+bcP8pbq6oIs2oIw2oYw2oY03oIw3jZd8ecT5YbT7esT7hq65ppM7p5Q8qJQ8qZI9gZJ5fcHrbLn7seD8ot77f5aJr5xCsJ5DwaNJvat7m7yyfMHwr9v7rc3VgbXYmJRYuqhKrKNf1LZu67RK4b1rwuHtnMvpjZNpg6e3sqNK","musicbox":"j3MkkHQlj3ImvJ1o7sOR8caT58qbl3s3kHQlj3MlkncokncorY9W78KR3pho0YJX8MORpotMkncokncolXwrlHor0LSC67J/wWxJnEw31qeAoYhHmXsymnkymoMwl4Av1LiJ67J/tGFDj1A+27aPr31LoXlJnnk9oIs2oIw2u6No+92u6LiM5cKXuoJktWVJsHRmm31LppM7p5Q8qJRDw6x6tpl0nX9QmIA8k21AiGJLn4o/r51Cr41NqGxPiWFFlGVJfVE7Zkg3mVdIqH5JrpxEuqlKwoxj1YV7pm1clWJOe01Ah09IvWBbsWtStqVK"};
-
-function aocrInit(){
-  AOCR.setTemplates(AOCR_T.map(t=>({label:t.l,f:Float32Array.from(Array.from(t.f),c=>(c.charCodeAt(0)-48)/60)})));
-  const th={}; Object.keys(AOCR_TH).forEach(k=>{ const b=atob(AOCR_TH[k]); th[k]=Float32Array.from(Array.from(b),c=>c.charCodeAt(0)); }); AOCR.setThumbs(th);
-}
-
-let aocrReady=false;
-
 let scanWarn = new Set();
-async function handleScan(file){
-  const st=document.getElementById('scanStatus');
-  if(!file) return;
-  st.className='scan-status'; st.textContent=t('scanBusy');
-  try{
-    const url=URL.createObjectURL(file); const im=new Image(); im.src=url; await im.decode();
-    if(!aocrReady){ aocrInit(); aocrReady=true; }
-    const r=AOCR.recognize(im); URL.revokeObjectURL(url);
-    if(!r.ok){ st.className='scan-status bad'; st.textContent=t('scanFail'); return; }
-    let n=0, favN=0; scanWarn=new Set();
-    Object.keys(r.items).forEach(k=>{ const it=r.items[k]; if(!itemState[k]) return; if(it.count==null){ scanWarn.add(k); } else { itemState[k].cap=it.count; n++; } });
-    TIER_ITEMS.forEach(list=>{ list.forEach(k=>itemState[k].favorite=false); const f=list.find(k=>r.items[k]&&r.items[k].fav); if(f){ itemState[f].favorite=true; favN++; } });
-    const a=r.affinity; let affMsg;
-    if(a&&a.ok&&a.text!==''){ currentAff=a.value; document.getElementById('curAff').value=currentAff; renderTargets(); affMsg=t('scanAff').replace('{v}',a.value); }
-    else affMsg=t('scanNoAff');
-    renderVars();
-    st.className='scan-status ok';
-    st.textContent=[t('scanDone').replace('{n}',n).replace('{f}',favN),affMsg,t('scanCheck')].join(' ');
-  }catch(e){ st.className='scan-status bad'; st.textContent=t('scanFail'); }
+
+/* ===== AI-assisted import ===== */
+function aiPromptText(){
+  const tn=['green','purple','gold'];
+  const list=TIER_ITEMS.map((l,i)=>tn[i]+' tier: '+l.map(k=>k+' ('+((ITEM_NAMES[k]&&ITEM_NAMES[k].en)||k)+')').join(', ')).join('\n');
+  return 'This is a screenshot of a hero\u2019s gift / affinity screen from a mobile game. Read it and reply with ONLY one JSON object (no explanation, no markdown).\n'
+   +'Format: {"affinity": <the hero\u2019s current affinity number shown on the screen, or 0 if not shown>, "items": {"lollipop": {"count": <number>, "favorite": <true|false>}, ...}}\n'
+   +'There are 12 gift items. Use exactly these keys:\n'+list+'\n'
+   +'"count" is the number shown on that item. "favorite" is true only for the item that has a heart badge (at most one per tier). If a number is unreadable, use null instead of guessing.';
 }
-document.addEventListener('paste',e=>{ const items=(e.clipboardData&&e.clipboardData.items)||[]; for(const it of items){ if(it.type&&it.type.startsWith('image/')){ handleScan(it.getAsFile()); e.preventDefault(); break; } } });
+function toggleAIPreview(){ const pre=document.getElementById('aiPreview'), b=document.getElementById('aiPrevBtn'); const show=pre.hidden; pre.hidden=!show; if(show) pre.textContent=aiPromptText(); b.textContent=t(show?'aiHide':'aiPreview'); b.setAttribute('data-t',show?'aiHide':'aiPreview'); }
+function copyAIPrompt(btn){
+  const txt=aiPromptText(), done=()=>{ const o=btn.textContent; btn.textContent=t('aiCopied'); setTimeout(()=>{ btn.textContent=t('aiCopy'); },1500); };
+  try{ navigator.clipboard.writeText(txt).then(done,()=>fallbackCopy(txt,done)); }catch(e){ fallbackCopy(txt,done); }
+}
+function fallbackCopy(txt,done){ const ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); done(); }catch(e){} ta.remove(); }
+function importAI(){
+  const st=document.getElementById('aiStatus'), raw=document.getElementById('aiText').value;
+  const a=raw.indexOf('{'), b=raw.lastIndexOf('}'); let o=null;
+  if(a>=0&&b>a){ try{ o=JSON.parse(raw.slice(a,b+1)); }catch(e){} }
+  const items=o&&(o.items||o);
+  if(!items||typeof items!=='object'){ st.className='scan-status bad'; st.textContent=t('aiBad'); return; }
+  let n=0, f=0;
+  Object.keys(itemState).forEach(k=>{ const v=items[k]; if(v===undefined||v===null) return; const c=(typeof v==='object')?v.count:v; if(c!==null&&c!==undefined&&isFinite(+c)){ itemState[k].cap=Math.max(0,Math.round(+c)); n++; } });
+  TIER_ITEMS.forEach(list=>{ const fk=list.find(k=>items[k]&&typeof items[k]==='object'&&items[k].favorite===true); if(fk){ list.forEach(k=>itemState[k].favorite=(k===fk)); f++; } });
+  const av=Math.max(0,Math.round(+(o&&o.affinity)||0)); if(av>0){ currentAff=av; document.getElementById('curAff').value=av; renderTargets(); }
+  if(!n){ st.className='scan-status bad'; st.textContent=t('aiBad'); return; }
+  renderVars(); queueSave(); st.className='scan-status ok';
+  st.textContent=t('aiDone').replace('{n}',n).replace('{f}',f).replace('{v}',currentAff);
+}
+Object.assign(LANG.en,{"saveTitle": "💾 Save data", "saveDownload": "Download save file", "saveLoad": "Load save file", "saveReset": "Reset all", "saveHint": "Your inputs are saved automatically in this browser. If your browser data gets cleared, download a save file now and load it back here later.", "saveDone": "Save file downloaded.", "saveLoaded": "Save file loaded.", "saveBad": "This file is not a valid save file.", "saveConfirm": "Tap again to confirm reset", "saveAuto": "Auto-saved in this browser at {t}.", "saveResetDone": "Everything was reset."});
+Object.assign(LANG.zhTW,{"saveTitle": "💾 存檔", "saveDownload": "下載存檔檔案", "saveLoad": "載入存檔檔案", "saveReset": "全部重設", "saveHint": "你輸入的內容會自動儲存在這個瀏覽器中。如果瀏覽器資料被清除，請先下載存檔檔案，之後再載入回來。", "saveDone": "存檔檔案已下載。", "saveLoaded": "已載入存檔。", "saveBad": "這不是有效的存檔檔案。", "saveConfirm": "再按一次確認重設", "saveAuto": "已於 {t} 自動儲存在此瀏覽器。", "saveResetDone": "已全部重設。"});
+Object.assign(LANG.zhCN,{"saveTitle": "💾 存档", "saveDownload": "下载存档文件", "saveLoad": "载入存档文件", "saveReset": "全部重置", "saveHint": "你输入的内容会自动保存在这个浏览器中。如果浏览器数据被清除，请先下载存档文件，之后再载入回来。", "saveDone": "存档文件已下载。", "saveLoaded": "已载入存档。", "saveBad": "这不是有效的存档文件。", "saveConfirm": "再点一次确认重置", "saveAuto": "已于 {t} 自动保存在此浏览器。", "saveResetDone": "已全部重置。"});
+Object.assign(LANG.ja,{"saveTitle": "💾 セーブデータ", "saveDownload": "セーブファイルをダウンロード", "saveLoad": "セーブファイルを読み込む", "saveReset": "すべてリセット", "saveHint": "入力内容はこのブラウザに自動保存されます。ブラウザのデータが消えた場合に備えて、セーブファイルをダウンロードしておき、後でここから読み込んでください。", "saveDone": "セーブファイルをダウンロードしました。", "saveLoaded": "セーブファイルを読み込みました。", "saveBad": "有効なセーブファイルではありません。", "saveConfirm": "もう一度押すとリセットします", "saveAuto": "{t} にこのブラウザへ自動保存しました。", "saveResetDone": "すべてリセットしました。"});
+Object.assign(LANG.es,{"saveTitle": "💾 Datos guardados", "saveDownload": "Descargar archivo de guardado", "saveLoad": "Cargar archivo de guardado", "saveReset": "Restablecer todo", "saveHint": "Tus datos se guardan automáticamente en este navegador. Si se borran los datos del navegador, descarga ahora un archivo de guardado y cárgalo aquí más tarde.", "saveDone": "Archivo de guardado descargado.", "saveLoaded": "Archivo de guardado cargado.", "saveBad": "Este archivo no es un guardado válido.", "saveConfirm": "Pulsa de nuevo para confirmar", "saveAuto": "Guardado automáticamente en este navegador a las {t}.", "saveResetDone": "Todo se ha restablecido."});
+Object.assign(LANG.fr,{"saveTitle": "💾 Sauvegarde", "saveDownload": "Télécharger le fichier de sauvegarde", "saveLoad": "Charger un fichier de sauvegarde", "saveReset": "Tout réinitialiser", "saveHint": "Vos saisies sont enregistrées automatiquement dans ce navigateur. Si les données du navigateur sont effacées, téléchargez dès maintenant un fichier de sauvegarde et rechargez-le ici plus tard.", "saveDone": "Fichier de sauvegarde téléchargé.", "saveLoaded": "Fichier de sauvegarde chargé.", "saveBad": "Ce fichier n’est pas une sauvegarde valide.", "saveConfirm": "Appuyez encore pour confirmer", "saveAuto": "Enregistré automatiquement dans ce navigateur à {t}.", "saveResetDone": "Tout a été réinitialisé."});
+Object.assign(LANG.de,{"saveTitle": "💾 Speicherdaten", "saveDownload": "Speicherdatei herunterladen", "saveLoad": "Speicherdatei laden", "saveReset": "Alles zurücksetzen", "saveHint": "Deine Eingaben werden automatisch in diesem Browser gespeichert. Falls die Browserdaten gelöscht werden, lade jetzt eine Speicherdatei herunter und lade sie später hier wieder.", "saveDone": "Speicherdatei heruntergeladen.", "saveLoaded": "Speicherdatei geladen.", "saveBad": "Diese Datei ist keine gültige Speicherdatei.", "saveConfirm": "Zum Bestätigen erneut tippen", "saveAuto": "Um {t} automatisch in diesem Browser gespeichert.", "saveResetDone": "Alles wurde zurückgesetzt."});
+Object.assign(LANG.pt,{"saveTitle": "💾 Dados salvos", "saveDownload": "Baixar arquivo de salvamento", "saveLoad": "Carregar arquivo de salvamento", "saveReset": "Redefinir tudo", "saveHint": "Seus dados são salvos automaticamente neste navegador. Se os dados do navegador forem apagados, baixe agora um arquivo de salvamento e carregue-o aqui depois.", "saveDone": "Arquivo de salvamento baixado.", "saveLoaded": "Arquivo de salvamento carregado.", "saveBad": "Este arquivo não é um salvamento válido.", "saveConfirm": "Toque novamente para confirmar", "saveAuto": "Salvo automaticamente neste navegador às {t}.", "saveResetDone": "Tudo foi redefinido."});
+Object.assign(LANG.vi,{"saveTitle": "💾 Lưu dữ liệu", "saveDownload": "Tải tệp lưu", "saveLoad": "Nạp tệp lưu", "saveReset": "Đặt lại tất cả", "saveHint": "Dữ liệu bạn nhập được tự động lưu trong trình duyệt này. Nếu dữ liệu trình duyệt bị xóa, hãy tải tệp lưu ngay bây giờ và nạp lại ở đây sau.", "saveDone": "Đã tải tệp lưu.", "saveLoaded": "Đã nạp tệp lưu.", "saveBad": "Tệp này không phải tệp lưu hợp lệ.", "saveConfirm": "Nhấn lại để xác nhận đặt lại", "saveAuto": "Đã tự động lưu trong trình duyệt này lúc {t}.", "saveResetDone": "Đã đặt lại tất cả."});
+Object.assign(LANG.th,{"saveTitle": "💾 บันทึกข้อมูล", "saveDownload": "ดาวน์โหลดไฟล์บันทึก", "saveLoad": "โหลดไฟล์บันทึก", "saveReset": "รีเซ็ตทั้งหมด", "saveHint": "ข้อมูลที่คุณกรอกจะถูกบันทึกอัตโนมัติในเบราว์เซอร์นี้ หากข้อมูลเบราว์เซอร์ถูกล้าง ให้ดาวน์โหลดไฟล์บันทึกไว้ก่อน แล้วโหลดกลับมาที่นี่ภายหลัง", "saveDone": "ดาวน์โหลดไฟล์บันทึกแล้ว", "saveLoaded": "โหลดไฟล์บันทึกแล้ว", "saveBad": "ไฟล์นี้ไม่ใช่ไฟล์บันทึกที่ถูกต้อง", "saveConfirm": "แตะอีกครั้งเพื่อยืนยันการรีเซ็ต", "saveAuto": "บันทึกอัตโนมัติในเบราว์เซอร์นี้เมื่อ {t}", "saveResetDone": "รีเซ็ตทั้งหมดแล้ว"});
+Object.assign(LANG.id,{"saveTitle": "💾 Simpan data", "saveDownload": "Unduh berkas simpanan", "saveLoad": "Muat berkas simpanan", "saveReset": "Reset semua", "saveHint": "Input Anda disimpan otomatis di browser ini. Jika data browser terhapus, unduh berkas simpanan sekarang dan muat kembali di sini nanti.", "saveDone": "Berkas simpanan diunduh.", "saveLoaded": "Berkas simpanan dimuat.", "saveBad": "Berkas ini bukan berkas simpanan yang valid.", "saveConfirm": "Ketuk lagi untuk konfirmasi reset", "saveAuto": "Disimpan otomatis di browser ini pada {t}.", "saveResetDone": "Semua telah direset."});
+Object.assign(LANG.ru,{"saveTitle": "💾 Сохранение данных", "saveDownload": "Скачать файл сохранения", "saveLoad": "Загрузить файл сохранения", "saveReset": "Сбросить всё", "saveHint": "Введённые данные автоматически сохраняются в этом браузере. Если данные браузера будут очищены, заранее скачайте файл сохранения и загрузите его здесь позже.", "saveDone": "Файл сохранения скачан.", "saveLoaded": "Файл сохранения загружен.", "saveBad": "Это недействительный файл сохранения.", "saveConfirm": "Нажмите ещё раз для подтверждения", "saveAuto": "Автосохранено в этом браузере в {t}.", "saveResetDone": "Всё сброшено."});
+Object.assign(LANG.tr,{"saveTitle": "💾 Veri kaydı", "saveDownload": "Kayıt dosyasını indir", "saveLoad": "Kayıt dosyasını yükle", "saveReset": "Hepsini sıfırla", "saveHint": "Girdileriniz bu tarayıcıda otomatik olarak kaydedilir. Tarayıcı verileri silinirse, şimdi bir kayıt dosyası indirin ve daha sonra buraya geri yükleyin.", "saveDone": "Kayıt dosyası indirildi.", "saveLoaded": "Kayıt dosyası yüklendi.", "saveBad": "Bu dosya geçerli bir kayıt dosyası değil.", "saveConfirm": "Sıfırlamayı onaylamak için tekrar dokunun", "saveAuto": "Bu tarayıcıda {t} saatinde otomatik kaydedildi.", "saveResetDone": "Her şey sıfırlandı."});
+Object.assign(LANG.it,{"saveTitle": "💾 Salvataggio dati", "saveDownload": "Scarica file di salvataggio", "saveLoad": "Carica file di salvataggio", "saveReset": "Reimposta tutto", "saveHint": "I tuoi dati vengono salvati automaticamente in questo browser. Se i dati del browser vengono cancellati, scarica ora un file di salvataggio e ricaricalo qui in seguito.", "saveDone": "File di salvataggio scaricato.", "saveLoaded": "File di salvataggio caricato.", "saveBad": "Questo file non è un salvataggio valido.", "saveConfirm": "Tocca di nuovo per confermare", "saveAuto": "Salvato automaticamente in questo browser alle {t}.", "saveResetDone": "Tutto è stato reimpostato."});
+Object.assign(LANG.pl,{"saveTitle": "💾 Zapis danych", "saveDownload": "Pobierz plik zapisu", "saveLoad": "Wczytaj plik zapisu", "saveReset": "Zresetuj wszystko", "saveHint": "Twoje dane są zapisywane automatycznie w tej przeglądarce. Jeśli dane przeglądarki zostaną wyczyszczone, pobierz teraz plik zapisu i wczytaj go tutaj później.", "saveDone": "Plik zapisu pobrany.", "saveLoaded": "Plik zapisu wczytany.", "saveBad": "To nie jest prawidłowy plik zapisu.", "saveConfirm": "Dotknij ponownie, aby potwierdzić", "saveAuto": "Automatycznie zapisano w tej przeglądarce o {t}.", "saveResetDone": "Wszystko zresetowano."});
+Object.assign(LANG.ar,{"saveTitle": "💾 حفظ البيانات", "saveDownload": "تنزيل ملف الحفظ", "saveLoad": "تحميل ملف الحفظ", "saveReset": "إعادة تعيين الكل", "saveHint": "تُحفظ مدخلاتك تلقائيًا في هذا المتصفح. إذا مُسحت بيانات المتصفح، فنزّل ملف حفظ الآن وحمّله هنا لاحقًا.", "saveDone": "تم تنزيل ملف الحفظ.", "saveLoaded": "تم تحميل ملف الحفظ.", "saveBad": "هذا الملف ليس ملف حفظ صالحًا.", "saveConfirm": "اضغط مرة أخرى لتأكيد إعادة التعيين", "saveAuto": "تم الحفظ تلقائيًا في هذا المتصفح في {t}.", "saveResetDone": "تمت إعادة تعيين كل شيء."});
+Object.assign(LANG.ko,{"saveTitle": "💾 데이터 저장", "saveDownload": "저장 파일 다운로드", "saveLoad": "저장 파일 불러오기", "saveReset": "모두 초기화", "saveHint": "입력한 내용은 이 브라우저에 자동 저장됩니다. 브라우저 데이터가 지워질 경우를 대비해 지금 저장 파일을 다운로드해 두고 나중에 여기서 불러오세요.", "saveDone": "저장 파일을 다운로드했습니다.", "saveLoaded": "저장 파일을 불러왔습니다.", "saveBad": "올바른 저장 파일이 아닙니다.", "saveConfirm": "초기화하려면 한 번 더 누르세요", "saveAuto": "{t}에 이 브라우저에 자동 저장되었습니다.", "saveResetDone": "모두 초기화했습니다."});
+Object.assign(LANG.fil,{"saveTitle": "💾 I-save ang data", "saveDownload": "I-download ang save file", "saveLoad": "I-load ang save file", "saveReset": "I-reset lahat", "saveHint": "Awtomatikong sine-save sa browser na ito ang iyong mga input. Kung mabura ang data ng browser, mag-download ng save file ngayon at i-load ito rito sa susunod.", "saveDone": "Na-download ang save file.", "saveLoaded": "Na-load ang save file.", "saveBad": "Hindi wastong save file ang file na ito.", "saveConfirm": "Pindutin muli para kumpirmahin ang reset", "saveAuto": "Awtomatikong na-save sa browser na ito nang {t}.", "saveResetDone": "Na-reset ang lahat."});
+
+Object.assign(LANG.en,{"stageTitle": "Gifts needed for each next stage", "stageHint": "Extra gifts to use to get from the previous milestone to the next one.", "stageStage": "Stage", "stagePoints": "Affinity gained", "stageSum": "Total"});
+Object.assign(LANG.zhTW,{"stageTitle": "到達下個階段所需的禮物數量", "stageHint": "從上一個目標推進到下一個目標，需要額外使用的禮物數量。", "stageStage": "階段", "stagePoints": "獲得好感度", "stageSum": "合計"});
+Object.assign(LANG.zhCN,{"stageTitle": "到达下个阶段所需的礼物数量", "stageHint": "从上一个目标推进到下一个目标，需要额外使用的礼物数量。", "stageStage": "阶段", "stagePoints": "获得好感度", "stageSum": "合计"});
+Object.assign(LANG.ja,{"stageTitle": "次の段階に進むために必要なギフト数", "stageHint": "前のマイルストーンから次のマイルストーンまでに追加で使うギフトの数です。", "stageStage": "段階", "stagePoints": "獲得好感度", "stageSum": "合計"});
+Object.assign(LANG.es,{"stageTitle": "Regalos necesarios para cada etapa", "stageHint": "Regalos adicionales para pasar del hito anterior al siguiente.", "stageStage": "Etapa", "stagePoints": "Afinidad ganada", "stageSum": "Total"});
+Object.assign(LANG.fr,{"stageTitle": "Cadeaux nécessaires pour chaque étape", "stageHint": "Cadeaux supplémentaires pour passer du jalon précédent au suivant.", "stageStage": "Étape", "stagePoints": "Affinité gagnée", "stageSum": "Total"});
+Object.assign(LANG.de,{"stageTitle": "Benötigte Geschenke für jede nächste Stufe", "stageHint": "Zusätzliche Geschenke, um vom vorherigen zum nächsten Meilenstein zu kommen.", "stageStage": "Stufe", "stagePoints": "Gewonnene Zuneigung", "stageSum": "Gesamt"});
+Object.assign(LANG.pt,{"stageTitle": "Presentes necessários para cada próxima etapa", "stageHint": "Presentes extras para ir do marco anterior ao próximo.", "stageStage": "Etapa", "stagePoints": "Afinidade ganha", "stageSum": "Total"});
+Object.assign(LANG.vi,{"stageTitle": "Số quà cần cho mỗi giai đoạn tiếp theo", "stageHint": "Số quà cần dùng thêm để đi từ mốc trước đến mốc kế tiếp.", "stageStage": "Giai đoạn", "stagePoints": "Thiện cảm nhận được", "stageSum": "Tổng"});
+Object.assign(LANG.th,{"stageTitle": "จำนวนของขวัญที่ต้องใช้ในแต่ละขั้นถัดไป", "stageHint": "จำนวนของขวัญที่ต้องใช้เพิ่มเพื่อไปจากเป้าหมายก่อนหน้าถึงเป้าหมายถัดไป", "stageStage": "ขั้น", "stagePoints": "ค่าความชอบที่ได้", "stageSum": "รวม"});
+Object.assign(LANG.id,{"stageTitle": "Hadiah yang dibutuhkan untuk tiap tahap berikutnya", "stageHint": "Hadiah tambahan untuk beralih dari target sebelumnya ke target berikutnya.", "stageStage": "Tahap", "stagePoints": "Afinitas didapat", "stageSum": "Total"});
+Object.assign(LANG.ru,{"stageTitle": "Подарки, нужные для каждого следующего этапа", "stageHint": "Дополнительные подарки, чтобы перейти от предыдущей цели к следующей.", "stageStage": "Этап", "stagePoints": "Получено симпатии", "stageSum": "Всего"});
+Object.assign(LANG.tr,{"stageTitle": "Her sonraki aşama için gereken hediyeler", "stageHint": "Önceki hedeften bir sonrakine geçmek için kullanılacak ek hediyeler.", "stageStage": "Aşama", "stagePoints": "Kazanılan yakınlık", "stageSum": "Toplam"});
+Object.assign(LANG.it,{"stageTitle": "Regali necessari per ogni fase successiva", "stageHint": "Regali aggiuntivi per passare dall’obiettivo precedente al successivo.", "stageStage": "Fase", "stagePoints": "Affinità ottenuta", "stageSum": "Totale"});
+Object.assign(LANG.pl,{"stageTitle": "Prezenty potrzebne na każdy kolejny etap", "stageHint": "Dodatkowe prezenty, by przejść od poprzedniego celu do następnego.", "stageStage": "Etap", "stagePoints": "Zdobyta sympatia", "stageSum": "Razem"});
+Object.assign(LANG.ar,{"stageTitle": "الهدايا اللازمة لكل مرحلة تالية", "stageHint": "الهدايا الإضافية للانتقال من الهدف السابق إلى التالي.", "stageStage": "المرحلة", "stagePoints": "الود المكتسب", "stageSum": "المجموع"});
+Object.assign(LANG.ko,{"stageTitle": "다음 단계마다 필요한 선물 수", "stageHint": "이전 목표에서 다음 목표로 가기 위해 추가로 사용할 선물 수입니다.", "stageStage": "단계", "stagePoints": "얻는 호감도", "stageSum": "합계"});
+Object.assign(LANG.fil,{"stageTitle": "Mga regalong kailangan sa bawat susunod na yugto", "stageHint": "Karagdagang regalong gagamitin para makarating mula sa nakaraang milestone papunta sa susunod.", "stageStage": "Yugto", "stagePoints": "Nakuhang affinity", "stageSum": "Kabuuan"});
+Object.assign(LANG.en,{"histTitle": "Estimated gifts already used to reach {a}", "histHint": "Worked out from your current affinity and this combo’s rule. If you know what you really used, edit the numbers.", "histAssume": "The estimate counts favorite gifts at their ★ value.", "histNow": "Now", "histReset": "Use estimate", "fullPath": "Full path from 0 (for reference)", "planFrom": "Plan from your current affinity", "remainNote": "The gift counts you entered are treated as what you have left now.", "currentHint": "Enter your hero’s current affinity. The plan then starts from this value and shows what you most likely used to get here.", "showEarlier": "Also show the full path from 0"});
+Object.assign(LANG.zhTW,{"histTitle": "反推：為了到達 {a} 已使用的禮物（估算）", "histHint": "依據現有好感度與此組合的規則推算。如果你知道實際用了什麼，可以直接修改數字。", "histAssume": "估算時喜愛禮物以 ★ 數值計算。", "histNow": "現在", "histReset": "改用估算值", "fullPath": "從 0 起的完整路徑（僅供參考）", "planFrom": "從現有好感度起算的後續方案", "remainNote": "你輸入的禮物數量會視為目前剩下的庫存。", "currentHint": "輸入英雄目前的好感度值。之後的方案會以這個數值為起點，並反推你大概用了哪些禮物。", "showEarlier": "同時顯示從 0 起的完整路徑"});
+Object.assign(LANG.zhCN,{"histTitle": "反推：为了到达 {a} 已使用的礼物（估算）", "histHint": "根据当前好感度和此组合的规则推算。如果你知道实际用了什么，可以直接修改数字。", "histAssume": "估算时喜爱礼物按 ★ 数值计算。", "histNow": "现在", "histReset": "改用估算值", "fullPath": "从 0 起的完整路径（仅供参考）", "planFrom": "从当前好感度起算的后续方案", "remainNote": "你输入的礼物数量会视为当前剩下的库存。", "currentHint": "输入英雄当前的好感度值。之后的方案会以这个数值为起点，并反推你大概用了哪些礼物。", "showEarlier": "同时显示从 0 起的完整路径"});
+Object.assign(LANG.ja,{"histTitle": "{a} に到達するために使ったギフト（推定）", "histHint": "現在の好感度とこのコンボのルールから推定しています。実際に使った数がわかる場合は数値を編集してください。", "histAssume": "推定では好みのギフトを ★ の値で計算します。", "histNow": "現在", "histReset": "推定値を使う", "fullPath": "0からの全体ルート（参考）", "planFrom": "現在の好感度からのプラン", "remainNote": "入力したギフト数は、現在の残り数として扱います。", "currentHint": "ヒーローの現在の好感度を入力してください。以降のプランはこの値から始まり、ここまでに使ったと思われるギフトも推定します。", "showEarlier": "0からの全体ルートも表示"});
+Object.assign(LANG.es,{"histTitle": "Regalos usados (estimado) para llegar a {a}", "histHint": "Calculado con tu afinidad actual y la regla de este combo. Si sabes lo que usaste de verdad, edita los números.", "histAssume": "La estimación cuenta los regalos favoritos con su valor ★.", "histNow": "Ahora", "histReset": "Usar estimación", "fullPath": "Camino completo desde 0 (referencia)", "planFrom": "Plan desde tu afinidad actual", "remainNote": "Las cantidades de regalos que introdujiste se tratan como lo que te queda ahora.", "currentHint": "Introduce la afinidad actual del héroe. El plan empieza desde ese valor y muestra lo que probablemente usaste hasta aquí.", "showEarlier": "Mostrar también el camino completo desde 0"});
+Object.assign(LANG.fr,{"histTitle": "Cadeaux déjà utilisés (estimation) pour atteindre {a}", "histHint": "Calculé à partir de votre affinité actuelle et de la règle de ce combo. Si vous savez ce que vous avez vraiment utilisé, modifiez les nombres.", "histAssume": "L’estimation compte les cadeaux favoris à leur valeur ★.", "histNow": "Maintenant", "histReset": "Utiliser l’estimation", "fullPath": "Parcours complet depuis 0 (à titre indicatif)", "planFrom": "Plan à partir de votre affinité actuelle", "remainNote": "Les quantités de cadeaux saisies sont considérées comme ce qu’il vous reste.", "currentHint": "Saisissez l’affinité actuelle du héros. Le plan part de cette valeur et indique ce que vous avez probablement utilisé jusque-là.", "showEarlier": "Afficher aussi le parcours complet depuis 0"});
+Object.assign(LANG.de,{"histTitle": "Geschätzt bereits genutzte Geschenke bis {a}", "histHint": "Berechnet aus deiner aktuellen Zuneigung und der Regel dieser Kombination. Wenn du weißt, was du wirklich genutzt hast, ändere die Zahlen.", "histAssume": "Die Schätzung zählt Lieblingsgeschenke mit ihrem ★-Wert.", "histNow": "Jetzt", "histReset": "Schätzung verwenden", "fullPath": "Kompletter Weg ab 0 (zur Orientierung)", "planFrom": "Plan ab deiner aktuellen Zuneigung", "remainNote": "Die eingegebenen Geschenkmengen gelten als das, was du jetzt noch übrig hast.", "currentHint": "Gib die aktuelle Zuneigung des Helden ein. Der Plan startet ab diesem Wert und zeigt, was du bis hierhin vermutlich genutzt hast.", "showEarlier": "Auch den kompletten Weg ab 0 anzeigen"});
+Object.assign(LANG.pt,{"histTitle": "Presentes já usados (estimativa) para chegar a {a}", "histHint": "Calculado com base na sua afinidade atual e na regra deste combo. Se você sabe o que realmente usou, edite os números.", "histAssume": "A estimativa conta os presentes favoritos pelo valor ★.", "histNow": "Agora", "histReset": "Usar estimativa", "fullPath": "Caminho completo desde 0 (referência)", "planFrom": "Plano a partir da sua afinidade atual", "remainNote": "As quantidades de presentes informadas são tratadas como o que resta agora.", "currentHint": "Digite a afinidade atual do herói. O plano começa desse valor e mostra o que você provavelmente usou até aqui.", "showEarlier": "Mostrar também o caminho completo desde 0"});
+Object.assign(LANG.vi,{"histTitle": "Quà đã dùng (ước tính) để đạt {a}", "histHint": "Tính từ thiện cảm hiện tại và quy tắc của combo này. Nếu bạn biết mình thực sự đã dùng gì, hãy sửa các con số.", "histAssume": "Ước tính tính quà yêu thích theo giá trị ★.", "histNow": "Hiện tại", "histReset": "Dùng ước tính", "fullPath": "Lộ trình đầy đủ từ 0 (tham khảo)", "planFrom": "Kế hoạch từ thiện cảm hiện tại", "remainNote": "Số quà bạn nhập được coi là số còn lại hiện tại.", "currentHint": "Nhập thiện cảm hiện tại của anh hùng. Kế hoạch bắt đầu từ giá trị này và cho biết bạn có thể đã dùng gì để đến đây.", "showEarlier": "Hiện cả lộ trình đầy đủ từ 0"});
+Object.assign(LANG.th,{"histTitle": "ของขวัญที่ใช้ไปแล้ว (ประมาณ) เพื่อให้ถึง {a}", "histHint": "คำนวณจากค่าความชอบปัจจุบันและกฎของคอมโบนี้ ถ้าคุณรู้ว่าใช้อะไรไปจริง ให้แก้ตัวเลขได้", "histAssume": "การประมาณนับของขวัญโปรดด้วยค่า ★", "histNow": "ตอนนี้", "histReset": "ใช้ค่าประมาณ", "fullPath": "เส้นทางเต็มตั้งแต่ 0 (เพื่ออ้างอิง)", "planFrom": "แผนจากค่าความชอบปัจจุบัน", "remainNote": "จำนวนของขวัญที่กรอกจะถือเป็นจำนวนที่เหลืออยู่ตอนนี้", "currentHint": "กรอกค่าความชอบปัจจุบันของฮีโร่ แผนจะเริ่มจากค่านี้และแสดงของขวัญที่คุณน่าจะใช้มาจนถึงตอนนี้", "showEarlier": "แสดงเส้นทางเต็มตั้งแต่ 0 ด้วย"});
+Object.assign(LANG.id,{"histTitle": "Perkiraan hadiah yang sudah dipakai untuk mencapai {a}", "histHint": "Dihitung dari afinitas saat ini dan aturan kombo ini. Jika kamu tahu yang sebenarnya dipakai, ubah angkanya.", "histAssume": "Perkiraan menghitung hadiah favorit dengan nilai ★.", "histNow": "Sekarang", "histReset": "Pakai perkiraan", "fullPath": "Jalur penuh dari 0 (sebagai acuan)", "planFrom": "Rencana dari afinitas saat ini", "remainNote": "Jumlah hadiah yang kamu isi dianggap sebagai sisa saat ini.", "currentHint": "Masukkan afinitas hero saat ini. Rencana dimulai dari nilai ini dan menampilkan perkiraan hadiah yang sudah kamu pakai.", "showEarlier": "Tampilkan juga jalur penuh dari 0"});
+Object.assign(LANG.ru,{"histTitle": "Оценка: подарки, уже использованные до {a}", "histHint": "Рассчитано по текущей симпатии и правилу этой комбинации. Если вы знаете, что использовали на самом деле, измените числа.", "histAssume": "В оценке любимые подарки считаются по значению ★.", "histNow": "Сейчас", "histReset": "Использовать оценку", "fullPath": "Полный путь с 0 (для справки)", "planFrom": "План от текущей симпатии", "remainNote": "Введённое количество подарков считается остатком на данный момент.", "currentHint": "Введите текущую симпатию героя. План начнётся с этого значения и покажет, что вы, вероятно, уже потратили.", "showEarlier": "Также показать полный путь с 0"});
+Object.assign(LANG.tr,{"histTitle": "{a} değerine ulaşmak için kullanıldığı tahmin edilen hediyeler", "histHint": "Mevcut yakınlığınıza ve bu kombinasyonun kuralına göre hesaplandı. Gerçekte ne kullandığınızı biliyorsanız sayıları düzenleyin.", "histAssume": "Tahmin, favori hediyeleri ★ değeriyle sayar.", "histNow": "Şimdi", "histReset": "Tahmini kullan", "fullPath": "0’dan tam yol (referans için)", "planFrom": "Mevcut yakınlıktan plan", "remainNote": "Girdiğiniz hediye sayıları şu an elinizde kalan olarak kabul edilir.", "currentHint": "Kahramanın mevcut yakınlığını girin. Plan bu değerden başlar ve buraya gelmek için büyük olasılıkla neleri kullandığınızı gösterir.", "showEarlier": "0’dan tam yolu da göster"});
+Object.assign(LANG.it,{"histTitle": "Regali già usati (stima) per arrivare a {a}", "histHint": "Calcolato dalla tua affinità attuale e dalla regola di questo combo. Se sai cosa hai davvero usato, modifica i numeri.", "histAssume": "La stima conta i regali preferiti al valore ★.", "histNow": "Adesso", "histReset": "Usa la stima", "fullPath": "Percorso completo da 0 (riferimento)", "planFrom": "Piano dalla tua affinità attuale", "remainNote": "Le quantità di regali inserite sono considerate quelle che ti restano ora.", "currentHint": "Inserisci l’affinità attuale dell’eroe. Il piano parte da questo valore e mostra cosa hai probabilmente usato finora.", "showEarlier": "Mostra anche il percorso completo da 0"});
+Object.assign(LANG.pl,{"histTitle": "Szacowane prezenty zużyte do osiągnięcia {a}", "histHint": "Obliczone na podstawie obecnej sympatii i reguły tej kombinacji. Jeśli wiesz, co naprawdę zużyłeś, popraw liczby.", "histAssume": "Szacunek liczy ulubione prezenty według wartości ★.", "histNow": "Teraz", "histReset": "Użyj szacunku", "fullPath": "Pełna ścieżka od 0 (poglądowo)", "planFrom": "Plan od obecnej sympatii", "remainNote": "Wpisane liczby prezentów są traktowane jako to, co ci teraz zostało.", "currentHint": "Wpisz obecną sympatię bohatera. Plan zacznie się od tej wartości i pokaże, co prawdopodobnie zużyłeś do tej pory.", "showEarlier": "Pokaż też pełną ścieżkę od 0"});
+Object.assign(LANG.ar,{"histTitle": "الهدايا المستخدمة تقديريًا للوصول إلى {a}", "histHint": "محسوبة من الود الحالي وقاعدة هذه التركيبة. إذا كنت تعرف ما استخدمته فعلًا فعدّل الأرقام.", "histAssume": "يحسب التقدير الهدايا المفضلة بقيمة ★.", "histNow": "الآن", "histReset": "استخدم التقدير", "fullPath": "المسار الكامل من 0 (للمرجع)", "planFrom": "خطة تبدأ من الود الحالي", "remainNote": "تُعامل أعداد الهدايا التي أدخلتها على أنها المتبقي لديك الآن.", "currentHint": "أدخل الود الحالي للبطل. تبدأ الخطة من هذه القيمة وتعرض ما استخدمته على الأرجح للوصول إليها.", "showEarlier": "عرض المسار الكامل من 0 أيضًا"});
+Object.assign(LANG.ko,{"histTitle": "{a}에 도달하기 위해 이미 사용한 선물(추정)", "histHint": "현재 호감도와 이 조합의 규칙으로 계산했습니다. 실제로 사용한 수를 알고 있다면 숫자를 수정하세요.", "histAssume": "추정에서는 선호 선물을 ★ 값으로 계산합니다.", "histNow": "현재", "histReset": "추정값 사용", "fullPath": "0부터의 전체 경로(참고용)", "planFrom": "현재 호감도부터의 계획", "remainNote": "입력한 선물 수량은 지금 남아 있는 수량으로 간주합니다.", "currentHint": "영웅의 현재 호감도를 입력하세요. 계획은 이 값에서 시작하며 지금까지 사용했을 선물도 추정해 보여 줍니다.", "showEarlier": "0부터의 전체 경로도 표시"});
+Object.assign(LANG.fil,{"histTitle": "Tinatayang regalong nagamit na para umabot sa {a}", "histHint": "Kinuwenta mula sa kasalukuyang affinity at patakaran ng combo na ito. Kung alam mo ang tunay na nagamit, baguhin ang mga numero.", "histAssume": "Binibilang ng tantya ang paboritong regalo sa halagang ★.", "histNow": "Ngayon", "histReset": "Gamitin ang tantya", "fullPath": "Buong landas mula 0 (sanggunian)", "planFrom": "Plano mula sa kasalukuyang affinity", "remainNote": "Ang mga bilang ng regalong inilagay mo ay ituturing na natitira mo ngayon.", "currentHint": "Ilagay ang kasalukuyang affinity ng hero. Magsisimula ang plano sa halagang ito at ipapakita ang malamang na nagamit mo na.", "showEarlier": "Ipakita rin ang buong landas mula 0"});
+Object.assign(LANG.en,{"ruleHint": "Pick two gift colors (A and B) and the gap you allow between their counts: A − B must stay inside the range.", "gapA": "Color A", "gapB": "Color B", "gapRange": "Allowed gap (A − B)", "gapChart": "Gap at each milestone", "gapChartHint": "Shaded band = allowed gap. Red dots are outside it; grey dots are milestones where the rule is switched off.", "itemMaxTitle": "Usable amount per gift", "itemMaxHint": "The most of each gift this combo may use. Leave empty to allow everything you own; 0 means don’t use it."});
+Object.assign(LANG.zhTW,{"ruleHint": "選擇兩種顏色的禮物（A 和 B），並設定兩者數量允許的差距：A − B 必須落在範圍內。", "gapA": "顏色 A", "gapB": "顏色 B", "gapRange": "允許的差距（A − B）", "gapChart": "各目標的差距", "gapChartHint": "色帶＝允許的差距範圍。紅點代表超出範圍，灰點代表規則未啟用的目標。", "itemMaxTitle": "各禮物可使用數量", "itemMaxHint": "此組合最多可使用每種禮物的數量。留空＝可用你擁有的全部，0＝不使用。"});
+Object.assign(LANG.zhCN,{"ruleHint": "选择两种颜色的礼物（A 和 B），并设置两者数量允许的差距：A − B 必须落在范围内。", "gapA": "颜色 A", "gapB": "颜色 B", "gapRange": "允许的差距（A − B）", "gapChart": "各目标的差距", "gapChartHint": "色带＝允许的差距范围。红点表示超出范围，灰点表示规则未启用的目标。", "itemMaxTitle": "各礼物可使用数量", "itemMaxHint": "此组合最多可使用每种礼物的数量。留空＝可用你拥有的全部，0＝不使用。"});
+Object.assign(LANG.ja,{"ruleHint": "2色のギフト（AとB）と、その数の差の許容範囲を選びます。A − B がこの範囲内に収まります。", "gapA": "色 A", "gapB": "色 B", "gapRange": "許容する差（A − B）", "gapChart": "各マイルストーンの差", "gapChartHint": "帯＝許容範囲。赤い点は範囲外、灰色の点はルールがオフのマイルストーンです。", "itemMaxTitle": "ギフトごとの使用可能数", "itemMaxHint": "このコンボで使える各ギフトの上限です。空欄＝所持数すべて、0＝使用しない。"});
+Object.assign(LANG.es,{"ruleHint": "Elige dos colores de regalo (A y B) y la diferencia permitida entre sus cantidades: A − B debe quedar dentro del rango.", "gapA": "Color A", "gapB": "Color B", "gapRange": "Diferencia permitida (A − B)", "gapChart": "Diferencia en cada hito", "gapChartHint": "Banda sombreada = diferencia permitida. Los puntos rojos están fuera; los grises son hitos donde la regla está desactivada.", "itemMaxTitle": "Cantidad utilizable por regalo", "itemMaxHint": "Lo máximo de cada regalo que puede usar este combo. Vacío = todo lo que tienes; 0 = no usarlo."});
+Object.assign(LANG.fr,{"ruleHint": "Choisissez deux couleurs de cadeaux (A et B) et l’écart autorisé entre leurs quantités : A − B doit rester dans la plage.", "gapA": "Couleur A", "gapB": "Couleur B", "gapRange": "Écart autorisé (A − B)", "gapChart": "Écart à chaque jalon", "gapChartHint": "Bande colorée = écart autorisé. Les points rouges sont hors plage ; les gris sont des jalons où la règle est désactivée.", "itemMaxTitle": "Quantité utilisable par cadeau", "itemMaxHint": "Le maximum de chaque cadeau que ce combo peut utiliser. Vide = tout ce que vous possédez ; 0 = ne pas l’utiliser."});
+Object.assign(LANG.de,{"ruleHint": "Wähle zwei Geschenkfarben (A und B) und den erlaubten Abstand ihrer Mengen: A − B muss im Bereich bleiben.", "gapA": "Farbe A", "gapB": "Farbe B", "gapRange": "Erlaubter Abstand (A − B)", "gapChart": "Abstand bei jedem Meilenstein", "gapChartHint": "Farbband = erlaubter Abstand. Rote Punkte liegen außerhalb; graue Punkte sind Meilensteine ohne aktive Regel.", "itemMaxTitle": "Nutzbare Menge pro Geschenk", "itemMaxHint": "Maximal nutzbare Menge je Geschenk in dieser Kombination. Leer = alles, was du besitzt; 0 = nicht verwenden."});
+Object.assign(LANG.pt,{"ruleHint": "Escolha duas cores de presentes (A e B) e a diferença permitida entre as quantidades: A − B deve ficar dentro do intervalo.", "gapA": "Cor A", "gapB": "Cor B", "gapRange": "Diferença permitida (A − B)", "gapChart": "Diferença em cada marco", "gapChartHint": "Faixa sombreada = diferença permitida. Pontos vermelhos estão fora; pontos cinza são marcos sem a regra ativa.", "itemMaxTitle": "Quantidade utilizável por presente", "itemMaxHint": "O máximo de cada presente que este combo pode usar. Vazio = tudo o que você tem; 0 = não usar."});
+Object.assign(LANG.vi,{"ruleHint": "Chọn hai màu quà (A và B) và mức chênh lệch cho phép giữa số lượng của chúng: A − B phải nằm trong khoảng này.", "gapA": "Màu A", "gapB": "Màu B", "gapRange": "Chênh lệch cho phép (A − B)", "gapChart": "Chênh lệch ở từng mốc", "gapChartHint": "Dải màu = chênh lệch cho phép. Chấm đỏ nằm ngoài khoảng; chấm xám là mốc không áp dụng quy tắc.", "itemMaxTitle": "Số lượng được dùng cho mỗi quà", "itemMaxHint": "Số lượng tối đa của mỗi quà mà combo này được dùng. Để trống = dùng tất cả số bạn có; 0 = không dùng."});
+Object.assign(LANG.th,{"ruleHint": "เลือกสีของขวัญสองสี (A และ B) และส่วนต่างจำนวนที่ยอมรับได้: A − B ต้องอยู่ในช่วงนี้", "gapA": "สี A", "gapB": "สี B", "gapRange": "ส่วนต่างที่อนุญาต (A − B)", "gapChart": "ส่วนต่างในแต่ละเป้าหมาย", "gapChartHint": "แถบสี = ช่วงส่วนต่างที่อนุญาต จุดแดงอยู่นอกช่วง จุดเทาคือเป้าหมายที่ไม่ได้ใช้กฎ", "itemMaxTitle": "จำนวนที่ใช้ได้ต่อของขวัญ", "itemMaxHint": "จำนวนสูงสุดของของขวัญแต่ละชิ้นที่คอมโบนี้ใช้ได้ เว้นว่าง = ใช้ได้ทั้งหมดที่มี, 0 = ไม่ใช้"});
+Object.assign(LANG.id,{"ruleHint": "Pilih dua warna hadiah (A dan B) dan selisih jumlah yang diizinkan: A − B harus berada dalam rentang.", "gapA": "Warna A", "gapB": "Warna B", "gapRange": "Selisih yang diizinkan (A − B)", "gapChart": "Selisih di setiap target", "gapChartHint": "Pita berwarna = selisih yang diizinkan. Titik merah di luar rentang; titik abu-abu adalah target tanpa aturan.", "itemMaxTitle": "Jumlah yang boleh dipakai per hadiah", "itemMaxHint": "Jumlah maksimum tiap hadiah yang boleh dipakai kombo ini. Kosong = semua yang kamu punya; 0 = jangan dipakai."});
+Object.assign(LANG.ru,{"ruleHint": "Выберите два цвета подарков (A и B) и допустимую разницу их количества: A − B должно оставаться в диапазоне.", "gapA": "Цвет A", "gapB": "Цвет B", "gapRange": "Допустимая разница (A − B)", "gapChart": "Разница на каждой цели", "gapChartHint": "Цветная полоса = допустимая разница. Красные точки вне диапазона; серые точки — цели, где правило отключено.", "itemMaxTitle": "Допустимое количество каждого подарка", "itemMaxHint": "Максимум каждого подарка для этой комбинации. Пусто = всё, что у вас есть; 0 = не использовать."});
+Object.assign(LANG.tr,{"ruleHint": "İki hediye rengi (A ve B) ve sayıları arasında izin verilen farkı seçin: A − B bu aralıkta kalmalı.", "gapA": "Renk A", "gapB": "Renk B", "gapRange": "İzin verilen fark (A − B)", "gapChart": "Her hedefteki fark", "gapChartHint": "Renkli bant = izin verilen fark. Kırmızı noktalar aralığın dışında; gri noktalar kuralın kapalı olduğu hedefler.", "itemMaxTitle": "Hediye başına kullanılabilir miktar", "itemMaxHint": "Bu kombinasyonun her hediyeden en fazla kullanabileceği miktar. Boş = sahip olduğunuz her şey; 0 = kullanma."});
+Object.assign(LANG.it,{"ruleHint": "Scegli due colori di regali (A e B) e la differenza consentita tra le quantità: A − B deve restare nell’intervallo.", "gapA": "Colore A", "gapB": "Colore B", "gapRange": "Differenza consentita (A − B)", "gapChart": "Differenza a ogni obiettivo", "gapChartHint": "Banda colorata = differenza consentita. I punti rossi sono fuori; i grigi sono obiettivi con regola disattivata.", "itemMaxTitle": "Quantità utilizzabile per regalo", "itemMaxHint": "Il massimo di ogni regalo che questo combo può usare. Vuoto = tutto ciò che possiedi; 0 = non usare."});
+Object.assign(LANG.pl,{"ruleHint": "Wybierz dwa kolory prezentów (A i B) oraz dozwoloną różnicę ich liczby: A − B musi mieścić się w zakresie.", "gapA": "Kolor A", "gapB": "Kolor B", "gapRange": "Dozwolona różnica (A − B)", "gapChart": "Różnica przy każdym celu", "gapChartHint": "Pasmo = dozwolona różnica. Czerwone kropki są poza zakresem; szare to cele bez aktywnej reguły.", "itemMaxTitle": "Dostępna ilość każdego prezentu", "itemMaxHint": "Maksymalna ilość każdego prezentu dla tej kombinacji. Puste = wszystko, co masz; 0 = nie używaj."});
+Object.assign(LANG.ar,{"ruleHint": "اختر لونين للهدايا (A و B) والفرق المسموح بين عددهما: يجب أن يبقى A − B ضمن النطاق.", "gapA": "اللون A", "gapB": "اللون B", "gapRange": "الفرق المسموح (A − B)", "gapChart": "الفرق عند كل هدف", "gapChartHint": "النطاق الملوّن = الفرق المسموح. النقاط الحمراء خارج النطاق؛ والرمادية أهداف لا تُطبَّق فيها القاعدة.", "itemMaxTitle": "الكمية القابلة للاستخدام لكل هدية", "itemMaxHint": "أقصى كمية من كل هدية يمكن لهذه التركيبة استخدامها. فارغ = كل ما تملكه؛ 0 = لا تستخدمها."});
+Object.assign(LANG.ko,{"ruleHint": "두 색상의 선물(A와 B)과 수량 차이의 허용 범위를 고르세요. A − B가 이 범위 안에 있어야 합니다.", "gapA": "색상 A", "gapB": "색상 B", "gapRange": "허용 차이 (A − B)", "gapChart": "목표별 차이", "gapChartHint": "색 띠 = 허용 범위. 빨간 점은 범위 밖, 회색 점은 규칙이 꺼진 목표입니다.", "itemMaxTitle": "선물별 사용 가능 수량", "itemMaxHint": "이 조합이 사용할 수 있는 각 선물의 최대 수량입니다. 비우면 보유량 전부, 0이면 사용하지 않습니다."});
+Object.assign(LANG.fil,{"ruleHint": "Pumili ng dalawang kulay ng regalo (A at B) at ang pinapayagang pagkakaiba ng bilang nila: dapat nasa saklaw ang A − B.", "gapA": "Kulay A", "gapB": "Kulay B", "gapRange": "Pinapayagang pagkakaiba (A − B)", "gapChart": "Pagkakaiba sa bawat milestone", "gapChartHint": "Shaded band = pinapayagang pagkakaiba. Pula ang labas sa saklaw; abo ang mga milestone na naka-off ang patakaran.", "itemMaxTitle": "Magagamit na bilang bawat regalo", "itemMaxHint": "Pinakamaraming magagamit ng combo na ito sa bawat regalo. Walang laman = lahat ng pag-aari mo; 0 = huwag gamitin."});
+Object.assign(LANG.en,{"ruleHint": "Pick which color should have more and which fewer, then set how far apart their counts may be. The gap is always zero or more.", "gapRange": "Allowed gap range (more − fewer)", "gapMin": "Smallest gap", "gapMax": "Largest gap"});
+Object.assign(LANG.zhTW,{"ruleHint": "選擇哪種顏色要比較多、哪種比較少，再設定兩者數量可以相差多少。差距一定是 0 或更多。", "gapRange": "可容許的差距範圍（較多 − 較少）", "gapMin": "最小差距", "gapMax": "最大差距"});
+Object.assign(LANG.zhCN,{"ruleHint": "选择哪种颜色要比较多、哪种比较少，再设置两者数量可以相差多少。差距一定是 0 或更多。", "gapRange": "可容许的差距范围（较多 − 较少）", "gapMin": "最小差距", "gapMax": "最大差距"});
+Object.assign(LANG.ja,{"ruleHint": "多くする色と少なくする色を選び、数の差をどこまで許すか設定します。差は常に 0 以上です。", "gapRange": "許容する差の範囲（多い − 少ない）", "gapMin": "最小の差", "gapMax": "最大の差"});
+Object.assign(LANG.es,{"ruleHint": "Elige qué color debe tener más y cuál menos, y cuánto pueden diferir sus cantidades. La diferencia siempre es 0 o más.", "gapRange": "Rango de diferencia permitido (más − menos)", "gapMin": "Diferencia mínima", "gapMax": "Diferencia máxima"});
+Object.assign(LANG.fr,{"ruleHint": "Choisissez la couleur qui doit en avoir plus et celle qui en a moins, puis l’écart autorisé. L’écart est toujours de 0 ou plus.", "gapRange": "Plage d’écart autorisée (plus − moins)", "gapMin": "Écart minimum", "gapMax": "Écart maximum"});
+Object.assign(LANG.de,{"ruleHint": "Wähle, welche Farbe mehr und welche weniger haben soll, und wie weit die Mengen auseinanderliegen dürfen. Der Abstand ist immer 0 oder größer.", "gapRange": "Erlaubter Abstandsbereich (mehr − weniger)", "gapMin": "Kleinster Abstand", "gapMax": "Größter Abstand"});
+Object.assign(LANG.pt,{"ruleHint": "Escolha qual cor deve ter mais e qual menos, e quanto as quantidades podem diferir. A diferença é sempre 0 ou mais.", "gapRange": "Faixa de diferença permitida (mais − menos)", "gapMin": "Menor diferença", "gapMax": "Maior diferença"});
+Object.assign(LANG.vi,{"ruleHint": "Chọn màu nào nhiều hơn, màu nào ít hơn, rồi đặt mức chênh lệch cho phép. Chênh lệch luôn từ 0 trở lên.", "gapRange": "Khoảng chênh lệch cho phép (nhiều − ít)", "gapMin": "Chênh lệch nhỏ nhất", "gapMax": "Chênh lệch lớn nhất"});
+Object.assign(LANG.th,{"ruleHint": "เลือกสีที่ต้องมีมากกว่าและสีที่น้อยกว่า แล้วตั้งว่าจำนวนต่างกันได้เท่าไร ส่วนต่างเป็น 0 หรือมากกว่าเสมอ", "gapRange": "ช่วงส่วนต่างที่ยอมรับได้ (มาก − น้อย)", "gapMin": "ส่วนต่างต่ำสุด", "gapMax": "ส่วนต่างสูงสุด"});
+Object.assign(LANG.id,{"ruleHint": "Pilih warna mana yang lebih banyak dan mana yang lebih sedikit, lalu atur seberapa jauh selisihnya. Selisih selalu 0 atau lebih.", "gapRange": "Rentang selisih yang diizinkan (banyak − sedikit)", "gapMin": "Selisih terkecil", "gapMax": "Selisih terbesar"});
+Object.assign(LANG.ru,{"ruleHint": "Выберите, какого цвета должно быть больше, а какого меньше, и допустимую разницу. Разница всегда 0 или больше.", "gapRange": "Допустимый диапазон разницы (больше − меньше)", "gapMin": "Наименьшая разница", "gapMax": "Наибольшая разница"});
+Object.assign(LANG.tr,{"ruleHint": "Hangi rengin fazla, hangisinin az olacağını seçin ve aradaki farkın sınırlarını belirleyin. Fark her zaman 0 veya daha büyüktür.", "gapRange": "İzin verilen fark aralığı (fazla − az)", "gapMin": "En küçük fark", "gapMax": "En büyük fark"});
+Object.assign(LANG.it,{"ruleHint": "Scegli quale colore deve averne di più e quale di meno, poi quanto possono differire. La differenza è sempre 0 o più.", "gapRange": "Intervallo di differenza consentito (più − meno)", "gapMin": "Differenza minima", "gapMax": "Differenza massima"});
+Object.assign(LANG.pl,{"ruleHint": "Wybierz, którego koloru ma być więcej, a którego mniej, i jak duża może być różnica. Różnica zawsze wynosi 0 lub więcej.", "gapRange": "Dozwolony zakres różnicy (więcej − mniej)", "gapMin": "Najmniejsza różnica", "gapMax": "Największa różnica"});
+Object.assign(LANG.ar,{"ruleHint": "اختر اللون الذي يجب أن يكون أكثر والآخر أقل، ثم حدد مقدار الفرق المسموح. الفرق دائمًا 0 أو أكثر.", "gapRange": "نطاق الفرق المسموح (الأكثر − الأقل)", "gapMin": "أصغر فرق", "gapMax": "أكبر فرق"});
+Object.assign(LANG.ko,{"ruleHint": "더 많이 쓸 색과 더 적게 쓸 색을 고르고, 수량 차이를 얼마까지 허용할지 정하세요. 차이는 항상 0 이상입니다.", "gapRange": "허용 차이 범위 (많은 쪽 − 적은 쪽)", "gapMin": "최소 차이", "gapMax": "최대 차이"});
+Object.assign(LANG.fil,{"ruleHint": "Piliin kung aling kulay ang mas marami at alin ang mas kaunti, saka itakda kung gaano kalaki ang puwedeng pagkakaiba. Laging 0 o higit pa ang pagkakaiba.", "gapRange": "Pinapayagang saklaw ng pagkakaiba (mas marami − mas kaunti)", "gapMin": "Pinakamaliit na pagkakaiba", "gapMax": "Pinakamalaking pagkakaiba"});
+Object.assign(LANG.en,{"advBad": "{n} milestone(s) fall outside your gap range, so it can't be met with your current stock.", "advSug": "Suggested range: {lo}–{hi}.", "advApply": "Apply suggestion", "advTight": "With your current stock, the tightest gap that works is 0–{hi}. Setting the maximum lower than {hi} will break the rule.", "advNone": "Even with an unlimited range this combo can't be solved from your stock; check the gift counts and usable amounts."});
+Object.assign(LANG.zhTW,{"advBad": "有 {n} 個目標超出你設定的差距範圍，以目前庫存無法達成。", "advSug": "建議範圍：{lo}–{hi}。", "advApply": "套用建議", "advTight": "以你目前的庫存，最緊且可行的差距是 0–{hi}。最大差距設得比 {hi} 更小就會無法滿足。", "advNone": "就算不限差距，以目前庫存也無法完成這個組合；請檢查禮物數量和可使用數量。"});
+Object.assign(LANG.zhCN,{"advBad": "有 {n} 个目标超出你设置的差距范围，按当前库存无法达成。", "advSug": "建议范围：{lo}–{hi}。", "advApply": "应用建议", "advTight": "按你当前的库存，最紧且可行的差距是 0–{hi}。最大差距设得比 {hi} 更小就会无法满足。", "advNone": "就算不限差距，按当前库存也无法完成这个组合；请检查礼物数量和可使用数量。"});
+Object.assign(LANG.ja,{"advBad": "{n} 件の目標が差の範囲から外れており、現在の所持数では満たせません。", "advSug": "おすすめの範囲：{lo}–{hi}。", "advApply": "提案を適用", "advTight": "現在の所持数で成り立つ最も狭い差は 0–{hi} です。最大差を {hi} より小さくすると満たせません。", "advNone": "差の範囲を無制限にしても、所持数ではこのコンボを解けません。ギフト数と使用可能数を確認してください。"});
+Object.assign(LANG.es,{"advBad": "{n} hito(s) quedan fuera del rango de diferencia y no se pueden cumplir con tu stock actual.", "advSug": "Rango sugerido: {lo}–{hi}.", "advApply": "Aplicar sugerencia", "advTight": "Con tu stock actual, la diferencia más estrecha viable es 0–{hi}. Un máximo menor que {hi} incumplirá la regla.", "advNone": "Ni siquiera con rango ilimitado se puede resolver este combo con tu stock; revisa las cantidades y los límites de uso."});
+Object.assign(LANG.fr,{"advBad": "{n} jalon(s) sortent de la plage d’écart et ne peuvent pas être atteints avec votre stock actuel.", "advSug": "Plage suggérée : {lo}–{hi}.", "advApply": "Appliquer", "advTight": "Avec votre stock actuel, l’écart le plus serré possible est 0–{hi}. Un maximum inférieur à {hi} rompra la règle.", "advNone": "Même sans limite d’écart, ce combo est impossible avec votre stock ; vérifiez les quantités et les limites d’usage."});
+Object.assign(LANG.de,{"advBad": "{n} Meilenstein(e) liegen außerhalb des Abstandsbereichs und sind mit deinem Bestand nicht erreichbar.", "advSug": "Vorgeschlagener Bereich: {lo}–{hi}.", "advApply": "Vorschlag übernehmen", "advTight": "Mit deinem Bestand ist der engste mögliche Abstand 0–{hi}. Ein Maximum unter {hi} verletzt die Regel.", "advNone": "Selbst ohne Abstandsgrenze ist diese Kombi mit deinem Bestand nicht lösbar; prüfe Mengen und Nutzungslimits."});
+Object.assign(LANG.pt,{"advBad": "{n} marco(s) ficam fora da faixa de diferença e não são alcançáveis com seu estoque atual.", "advSug": "Faixa sugerida: {lo}–{hi}.", "advApply": "Aplicar sugestão", "advTight": "Com seu estoque atual, a menor diferença viável é 0–{hi}. Um máximo abaixo de {hi} quebrará a regra.", "advNone": "Mesmo sem limite de diferença, este combo não pode ser resolvido com seu estoque; verifique quantidades e limites de uso."});
+Object.assign(LANG.vi,{"advBad": "{n} mốc nằm ngoài khoảng chênh lệch và không thể đạt với kho hiện tại.", "advSug": "Khoảng đề xuất: {lo}–{hi}.", "advApply": "Áp dụng đề xuất", "advTight": "Với kho hiện tại, chênh lệch chặt nhất khả thi là 0–{hi}. Đặt tối đa thấp hơn {hi} sẽ vi phạm quy tắc.", "advNone": "Dù không giới hạn chênh lệch, combo này vẫn không giải được với kho hiện tại; hãy kiểm tra số lượng và giới hạn sử dụng."});
+Object.assign(LANG.th,{"advBad": "มี {n} เป้าหมายอยู่นอกช่วงส่วนต่าง และทำไม่ได้ด้วยของที่มีตอนนี้", "advSug": "ช่วงที่แนะนำ: {lo}–{hi}", "advApply": "ใช้คำแนะนำ", "advTight": "ด้วยของที่มีตอนนี้ ส่วนต่างที่แคบที่สุดที่เป็นไปได้คือ 0–{hi} ถ้าตั้งค่าสูงสุดต่ำกว่า {hi} จะผิดกฎ", "advNone": "แม้ไม่จำกัดส่วนต่าง คอมโบนี้ก็ยังแก้ไม่ได้ด้วยของที่มี โปรดตรวจจำนวนของขวัญและจำนวนที่ใช้ได้"});
+Object.assign(LANG.id,{"advBad": "{n} target berada di luar rentang selisih dan tidak tercapai dengan stok saat ini.", "advSug": "Rentang yang disarankan: {lo}–{hi}.", "advApply": "Terapkan saran", "advTight": "Dengan stok saat ini, selisih tersempit yang mungkin adalah 0–{hi}. Maksimum di bawah {hi} akan melanggar aturan.", "advNone": "Bahkan tanpa batas selisih, kombo ini tidak bisa diselesaikan dengan stokmu; periksa jumlah hadiah dan batas pemakaian."});
+Object.assign(LANG.ru,{"advBad": "{n} цел(ей) вне диапазона разницы и недостижимы с текущим запасом.", "advSug": "Рекомендуемый диапазон: {lo}–{hi}.", "advApply": "Применить", "advTight": "С вашим запасом самая узкая возможная разница — 0–{hi}. Максимум ниже {hi} нарушит правило.", "advNone": "Даже без ограничения разницы комбо не решается с вашим запасом; проверьте количество и лимиты использования."});
+Object.assign(LANG.tr,{"advBad": "{n} hedef fark aralığının dışında kalıyor ve mevcut stokla ulaşılamıyor.", "advSug": "Önerilen aralık: {lo}–{hi}.", "advApply": "Öneriyi uygula", "advTight": "Mevcut stokla mümkün olan en dar fark 0–{hi}. Maksimumu {hi} değerinin altına çekmek kuralı bozar.", "advNone": "Fark sınırı olmasa bile bu kombo mevcut stokla çözülemiyor; hediye sayılarını ve kullanım limitlerini kontrol edin."});
+Object.assign(LANG.it,{"advBad": "{n} obiettivo/i fuori dall’intervallo di differenza, non raggiungibili con le scorte attuali.", "advSug": "Intervallo suggerito: {lo}–{hi}.", "advApply": "Applica suggerimento", "advTight": "Con le scorte attuali, la differenza più stretta possibile è 0–{hi}. Un massimo sotto {hi} violerà la regola.", "advNone": "Anche senza limite di differenza, questo combo non si risolve con le tue scorte; controlla quantità e limiti d’uso."});
+Object.assign(LANG.pl,{"advBad": "{n} cel(e) poza zakresem różnicy i nieosiągalne przy obecnym zapasie.", "advSug": "Sugerowany zakres: {lo}–{hi}.", "advApply": "Zastosuj sugestię", "advTight": "Przy obecnym zapasie najwęższa możliwa różnica to 0–{hi}. Maksimum poniżej {hi} złamie regułę.", "advNone": "Nawet bez limitu różnicy tego combo nie da się rozwiązać z obecnym zapasem; sprawdź ilości i limity użycia."});
+Object.assign(LANG.ar,{"advBad": "{n} من الأهداف خارج نطاق الفرق ولا يمكن تحقيقها بمخزونك الحالي.", "advSug": "النطاق المقترح: {lo}–{hi}.", "advApply": "تطبيق الاقتراح", "advTight": "بمخزونك الحالي، أضيق فرق ممكن هو 0–{hi}. تحديد حد أقصى أقل من {hi} سيخالف القاعدة.", "advNone": "حتى بدون حد للفرق لا يمكن حل هذه المجموعة بمخزونك؛ تحقق من أعداد الهدايا وحدود الاستخدام."});
+Object.assign(LANG.ko,{"advBad": "목표 {n}개가 허용 차이 범위를 벗어났고 현재 재고로는 달성할 수 없습니다.", "advSug": "추천 범위: {lo}–{hi}.", "advApply": "추천 적용", "advTight": "현재 재고로 가능한 가장 좁은 차이는 0–{hi}입니다. 최대 차이를 {hi}보다 낮추면 규칙을 지킬 수 없습니다.", "advNone": "차이 제한이 없어도 현재 재고로는 이 조합을 풀 수 없습니다. 선물 수량과 사용 가능 수량을 확인하세요."});
+Object.assign(LANG.fil,{"advBad": "{n} milestone ang labas sa saklaw ng pagkakaiba at hindi maaabot sa kasalukuyang stock.", "advSug": "Iminumungkahing saklaw: {lo}–{hi}.", "advApply": "Ilapat ang mungkahi", "advTight": "Sa kasalukuyang stock, ang pinakamaliit na posibleng pagkakaiba ay 0–{hi}. Masisira ang patakaran kung mas mababa sa {hi} ang maximum.", "advNone": "Kahit walang limitasyon sa pagkakaiba, hindi malulutas ang combo na ito sa stock mo; tingnan ang bilang ng regalo at limitasyon ng paggamit."});
+Object.assign(LANG.en,{"advSug": "The results below use the suggested range {lo}–{hi} instead."});
+Object.assign(LANG.zhTW,{"advSug": "下方結果已改用建議範圍 {lo}–{hi} 計算。"});
+Object.assign(LANG.zhCN,{"advSug": "下方结果已改用建议范围 {lo}–{hi} 计算。"});
+Object.assign(LANG.ja,{"advSug": "下の結果は、おすすめの範囲 {lo}–{hi} で計算しています。"});
+Object.assign(LANG.es,{"advSug": "Los resultados de abajo usan el rango sugerido {lo}–{hi}."});
+Object.assign(LANG.fr,{"advSug": "Les résultats ci-dessous utilisent la plage suggérée {lo}–{hi}."});
+Object.assign(LANG.de,{"advSug": "Die Ergebnisse unten nutzen stattdessen den vorgeschlagenen Bereich {lo}–{hi}."});
+Object.assign(LANG.pt,{"advSug": "Os resultados abaixo usam a faixa sugerida {lo}–{hi}."});
+Object.assign(LANG.vi,{"advSug": "Kết quả bên dưới dùng khoảng đề xuất {lo}–{hi}."});
+Object.assign(LANG.th,{"advSug": "ผลลัพธ์ด้านล่างใช้ช่วงที่แนะนำ {lo}–{hi} แทน"});
+Object.assign(LANG.id,{"advSug": "Hasil di bawah memakai rentang yang disarankan {lo}–{hi}."});
+Object.assign(LANG.ru,{"advSug": "Результаты ниже рассчитаны по рекомендуемому диапазону {lo}–{hi}."});
+Object.assign(LANG.tr,{"advSug": "Aşağıdaki sonuçlar önerilen {lo}–{hi} aralığıyla hesaplandı."});
+Object.assign(LANG.it,{"advSug": "I risultati qui sotto usano l’intervallo suggerito {lo}–{hi}."});
+Object.assign(LANG.pl,{"advSug": "Poniższe wyniki używają sugerowanego zakresu {lo}–{hi}."});
+Object.assign(LANG.ar,{"advSug": "النتائج أدناه محسوبة بالنطاق المقترح {lo}–{hi}."});
+Object.assign(LANG.ko,{"advSug": "아래 결과는 추천 범위 {lo}–{hi}로 계산했습니다."});
+Object.assign(LANG.fil,{"advSug": "Ang mga resulta sa ibaba ay gumagamit ng iminumungkahing saklaw na {lo}–{hi}."});
+Object.assign(LANG.en,{"gapRange": "Gap range", "applyTitle": "Apply the rule from", "applyHint": "Tap a milestone: the rule applies to it and every milestone after it.", "applyAll": "All"});
+Object.assign(LANG.zhTW,{"gapRange": "差距範圍", "applyTitle": "從哪個目標開始套用", "applyHint": "點選一個目標：從它開始（含）之後的所有目標都會套用差距規則。", "applyAll": "全部"});
+Object.assign(LANG.zhCN,{"gapRange": "差距范围", "applyTitle": "从哪个目标开始应用", "applyHint": "点选一个目标：从它开始（含）之后的所有目标都会应用差距规则。", "applyAll": "全部"});
+Object.assign(LANG.ja,{"gapRange": "差の範囲", "applyTitle": "ルールの適用開始", "applyHint": "目標をタップ：その目標以降すべてにルールを適用します。", "applyAll": "すべて"});
+Object.assign(LANG.es,{"gapRange": "Rango de diferencia", "applyTitle": "Aplicar la regla desde", "applyHint": "Toca un hito: la regla se aplica a él y a todos los siguientes.", "applyAll": "Todos"});
+Object.assign(LANG.fr,{"gapRange": "Plage d’écart", "applyTitle": "Appliquer la règle à partir de", "applyHint": "Touchez un jalon : la règle s’applique à lui et à tous les suivants.", "applyAll": "Tous"});
+Object.assign(LANG.de,{"gapRange": "Abstandsbereich", "applyTitle": "Regel anwenden ab", "applyHint": "Tippe einen Meilenstein an: Die Regel gilt für ihn und alle folgenden.", "applyAll": "Alle"});
+Object.assign(LANG.pt,{"gapRange": "Faixa de diferença", "applyTitle": "Aplicar a regra a partir de", "applyHint": "Toque em um marco: a regra vale para ele e todos os seguintes.", "applyAll": "Todos"});
+Object.assign(LANG.vi,{"gapRange": "Khoảng chênh lệch", "applyTitle": "Áp dụng quy tắc từ", "applyHint": "Chạm vào một mốc: quy tắc áp dụng cho mốc đó và mọi mốc sau.", "applyAll": "Tất cả"});
+Object.assign(LANG.th,{"gapRange": "ช่วงส่วนต่าง", "applyTitle": "เริ่มใช้กฎตั้งแต่", "applyHint": "แตะเป้าหมาย: กฎจะใช้กับเป้าหมายนั้นและทุกเป้าหมายถัดไป", "applyAll": "ทั้งหมด"});
+Object.assign(LANG.id,{"gapRange": "Rentang selisih", "applyTitle": "Terapkan aturan mulai dari", "applyHint": "Ketuk satu target: aturan berlaku untuk target itu dan semua setelahnya.", "applyAll": "Semua"});
+Object.assign(LANG.ru,{"gapRange": "Диапазон разницы", "applyTitle": "Применять правило с", "applyHint": "Нажмите цель: правило действует для неё и всех следующих.", "applyAll": "Все"});
+Object.assign(LANG.tr,{"gapRange": "Fark aralığı", "applyTitle": "Kuralı şuradan itibaren uygula", "applyHint": "Bir hedefe dokunun: kural o hedefe ve sonraki tüm hedeflere uygulanır.", "applyAll": "Tümü"});
+Object.assign(LANG.it,{"gapRange": "Intervallo di differenza", "applyTitle": "Applica la regola da", "applyHint": "Tocca un obiettivo: la regola vale per lui e per tutti i successivi.", "applyAll": "Tutti"});
+Object.assign(LANG.pl,{"gapRange": "Zakres różnicy", "applyTitle": "Zastosuj regułę od", "applyHint": "Dotknij celu: reguła obowiązuje dla niego i wszystkich kolejnych.", "applyAll": "Wszystkie"});
+Object.assign(LANG.ar,{"gapRange": "نطاق الفرق", "applyTitle": "تطبيق القاعدة ابتداءً من", "applyHint": "اضغط على هدف: تُطبق القاعدة عليه وعلى كل ما بعده.", "applyAll": "الكل"});
+Object.assign(LANG.ko,{"gapRange": "차이 범위", "applyTitle": "규칙 적용 시작 지점", "applyHint": "목표를 누르세요: 그 목표와 이후 모든 목표에 규칙이 적용됩니다.", "applyAll": "전체"});
+Object.assign(LANG.fil,{"gapRange": "Saklaw ng pagkakaiba", "applyTitle": "Ilapat ang patakaran simula sa", "applyHint": "Pindutin ang isang milestone: ilalapat ito sa kanya at sa lahat ng kasunod.", "applyAll": "Lahat"});
+Object.assign(LANG.en,{"goldFirst": "Use gold gifts first", "goldFirstHint": "Spend gold gifts early. Early milestones ignore the gap and overage rules; later ones follow the rules so the final target still hits exactly."});
+Object.assign(LANG.zhTW,{"goldFirst": "優先使用金色禮物", "goldFirstHint": "前期先把金色用掉（會暫時忽略差距與超額規則），之後的目標再依規則補足，最後仍會剛好命中。"});
+Object.assign(LANG.zhCN,{"goldFirst": "优先使用金色礼物", "goldFirstHint": "前期先把金色用掉（会暂时忽略差距与超额规则），之后的目标再按规则补足，最后仍会刚好命中。"});
+Object.assign(LANG.ja,{"goldFirst": "金ギフトを先に使う", "goldFirstHint": "序盤で金ギフトを先に使います（序盤は差と超過のルールを無視）。後半はルールに従い、最終目標はぴったり達成します。"});
+Object.assign(LANG.es,{"goldFirst": "Usar primero los regalos dorados", "goldFirstHint": "Gasta los regalos dorados al principio. Los primeros hitos ignoran las reglas de diferencia y exceso; los siguientes las siguen y el objetivo final se cumple exacto."});
+Object.assign(LANG.fr,{"goldFirst": "Utiliser d’abord les cadeaux or", "goldFirstHint": "Dépense les cadeaux or tôt. Les premiers jalons ignorent les règles d’écart et de surplus ; les suivants les respectent et l’objectif final reste exact."});
+Object.assign(LANG.de,{"goldFirst": "Goldgeschenke zuerst nutzen", "goldFirstHint": "Goldgeschenke früh einsetzen. Frühe Meilensteine ignorieren Abstands- und Überschussregeln; spätere folgen ihnen, das Endziel wird weiter exakt getroffen."});
+Object.assign(LANG.pt,{"goldFirst": "Usar presentes dourados primeiro", "goldFirstHint": "Gaste os presentes dourados cedo. Os primeiros marcos ignoram as regras de diferença e excesso; os seguintes as seguem e a meta final continua exata."});
+Object.assign(LANG.vi,{"goldFirst": "Dùng quà vàng trước", "goldFirstHint": "Dùng quà vàng sớm. Các mốc đầu bỏ qua quy tắc chênh lệch và vượt; các mốc sau theo quy tắc nên mốc cuối vẫn trúng chính xác."});
+Object.assign(LANG.th,{"goldFirst": "ใช้ของขวัญสีทองก่อน", "goldFirstHint": "ใช้ของขวัญสีทองตั้งแต่ต้น เป้าหมายช่วงแรกจะข้ามกฎส่วนต่างและส่วนเกิน ช่วงหลังทำตามกฎ และเป้าหมายสุดท้ายยังตรงเป๊ะ"});
+Object.assign(LANG.id,{"goldFirst": "Gunakan hadiah emas lebih dulu", "goldFirstHint": "Habiskan hadiah emas di awal. Target awal mengabaikan aturan selisih dan kelebihan; target berikutnya mengikuti aturan sehingga target akhir tetap tepat."});
+Object.assign(LANG.ru,{"goldFirst": "Сначала золотые подарки", "goldFirstHint": "Тратьте золотые подарки в начале. Ранние цели игнорируют правила разницы и избытка; поздние следуют им, и финальная цель по-прежнему точна."});
+Object.assign(LANG.tr,{"goldFirst": "Önce altın hediyeleri kullan", "goldFirstHint": "Altın hediyeleri başta harca. İlk hedefler fark ve fazlalık kurallarını yok sayar; sonrakiler kurallara uyar, son hedef yine tam tutar."});
+Object.assign(LANG.it,{"goldFirst": "Usa prima i regali oro", "goldFirstHint": "Spendi i regali oro all’inizio. I primi obiettivi ignorano le regole di differenza ed eccesso; i successivi le seguono e l’obiettivo finale resta esatto."});
+Object.assign(LANG.pl,{"goldFirst": "Najpierw złote prezenty", "goldFirstHint": "Wydaj złote prezenty na początku. Wczesne cele ignorują reguły różnicy i nadwyżki; późniejsze ich przestrzegają, a cel końcowy nadal wypada dokładnie."});
+Object.assign(LANG.ar,{"goldFirst": "استخدم الهدايا الذهبية أولًا", "goldFirstHint": "أنفق الهدايا الذهبية مبكرًا. تتجاهل الأهداف الأولى قواعد الفرق والزيادة، وتتبعها اللاحقة ويبقى الهدف الأخير دقيقًا."});
+Object.assign(LANG.ko,{"goldFirst": "금색 선물 먼저 사용", "goldFirstHint": "금색 선물을 초반에 먼저 씁니다. 초반 목표는 차이·초과 규칙을 무시하고, 이후 목표는 규칙을 따르며 최종 목표는 정확히 달성합니다."});
+Object.assign(LANG.fil,{"goldFirst": "Gamitin muna ang gintong regalo", "goldFirstHint": "Gastusin agad ang gintong regalo. Hindi sinusunod ng mga unang milestone ang patakaran sa pagkakaiba at sobra; susunod ang mga huli at eksakto pa rin ang huling target."});
+Object.assign(LANG.en,{"aiTitle": "🤖 Fill with an AI assistant (recommended)", "aiStep1": "Step 1: copy the prompt.", "aiCopy": "Copy prompt", "aiStep2": "Step 2: send your screenshot plus this prompt to any AI chat (Claude, ChatGPT, Gemini…), then paste its JSON reply below.", "aiImport": "Import", "aiCopied": "Copied!", "aiDone": "Imported {n} gifts, {f} favorite(s). Current affinity: {v}. Please double-check the numbers.", "aiBad": "Could not read that reply. Paste the JSON object the AI returned."});
+Object.assign(LANG.zhTW,{"aiTitle": "🤖 用 AI 助手填入（推薦）", "aiStep1": "步驟 1：複製提示詞。", "aiCopy": "複製提示詞", "aiStep2": "步驟 2：把截圖和這段提示詞一起貼給任何 AI（Claude、ChatGPT、Gemini…），再把它回覆的 JSON 貼到下面。", "aiImport": "匯入", "aiCopied": "已複製！", "aiDone": "已匯入 {n} 種禮物、{f} 個喜愛禮物，現有好感度：{v}。請再核對一下數字。", "aiBad": "讀不懂這段回覆。請貼上 AI 回傳的 JSON。"});
+Object.assign(LANG.zhCN,{"aiTitle": "🤖 用 AI 助手填入（推荐）", "aiStep1": "步骤 1：复制提示词。", "aiCopy": "复制提示词", "aiStep2": "步骤 2：把截图和这段提示词一起发给任何 AI（Claude、ChatGPT、Gemini…），再把它回复的 JSON 粘贴到下面。", "aiImport": "导入", "aiCopied": "已复制！", "aiDone": "已导入 {n} 种礼物、{f} 个喜爱礼物，当前好感度：{v}。请再核对一下数字。", "aiBad": "无法读取这段回复。请粘贴 AI 返回的 JSON。"});
+Object.assign(LANG.ja,{"aiTitle": "🤖 AIアシスタントで入力（おすすめ）", "aiStep1": "手順1：プロンプトをコピー。", "aiCopy": "プロンプトをコピー", "aiStep2": "手順2：スクリーンショットとこのプロンプトを任意のAI（Claude、ChatGPT、Gemini など）に送り、返ってきたJSONを下に貼り付けます。", "aiImport": "取り込む", "aiCopied": "コピーしました！", "aiDone": "ギフト {n} 種、好み {f} 件を取り込みました。現在の好感度：{v}。数字をもう一度確認してください。", "aiBad": "返信を読み取れませんでした。AIが返したJSONを貼り付けてください。"});
+Object.assign(LANG.es,{"aiTitle": "🤖 Rellenar con un asistente de IA (recomendado)", "aiStep1": "Paso 1: copia el prompt.", "aiCopy": "Copiar prompt", "aiStep2": "Paso 2: envía tu captura y este prompt a cualquier IA (Claude, ChatGPT, Gemini…) y pega abajo el JSON que responda.", "aiImport": "Importar", "aiCopied": "¡Copiado!", "aiDone": "Importados {n} regalos y {f} favorito(s). Afinidad actual: {v}. Revisa los números.", "aiBad": "No se pudo leer la respuesta. Pega el objeto JSON que devolvió la IA."});
+Object.assign(LANG.fr,{"aiTitle": "🤖 Remplir avec une IA (recommandé)", "aiStep1": "Étape 1 : copiez le prompt.", "aiCopy": "Copier le prompt", "aiStep2": "Étape 2 : envoyez votre capture et ce prompt à n’importe quelle IA (Claude, ChatGPT, Gemini…) puis collez ci-dessous le JSON reçu.", "aiImport": "Importer", "aiCopied": "Copié !", "aiDone": "{n} cadeaux et {f} favori(s) importés. Affinité actuelle : {v}. Vérifiez les chiffres.", "aiBad": "Réponse illisible. Collez l’objet JSON renvoyé par l’IA."});
+Object.assign(LANG.de,{"aiTitle": "🤖 Mit KI-Assistent ausfüllen (empfohlen)", "aiStep1": "Schritt 1: Prompt kopieren.", "aiCopy": "Prompt kopieren", "aiStep2": "Schritt 2: Sende Screenshot und Prompt an eine beliebige KI (Claude, ChatGPT, Gemini …) und füge die JSON-Antwort unten ein.", "aiImport": "Importieren", "aiCopied": "Kopiert!", "aiDone": "{n} Geschenke und {f} Favorit(en) importiert. Aktuelle Zuneigung: {v}. Bitte Zahlen prüfen.", "aiBad": "Antwort nicht lesbar. Füge das JSON-Objekt der KI ein."});
+Object.assign(LANG.pt,{"aiTitle": "🤖 Preencher com um assistente de IA (recomendado)", "aiStep1": "Passo 1: copie o prompt.", "aiCopy": "Copiar prompt", "aiStep2": "Passo 2: envie sua captura e este prompt para qualquer IA (Claude, ChatGPT, Gemini…) e cole abaixo o JSON da resposta.", "aiImport": "Importar", "aiCopied": "Copiado!", "aiDone": "{n} presentes e {f} favorito(s) importados. Afinidade atual: {v}. Confira os números.", "aiBad": "Não foi possível ler a resposta. Cole o objeto JSON devolvido pela IA."});
+Object.assign(LANG.vi,{"aiTitle": "🤖 Điền bằng trợ lý AI (khuyên dùng)", "aiStep1": "Bước 1: sao chép lời nhắc.", "aiCopy": "Sao chép lời nhắc", "aiStep2": "Bước 2: gửi ảnh chụp cùng lời nhắc này cho một AI bất kỳ (Claude, ChatGPT, Gemini…), rồi dán JSON trả lời vào bên dưới.", "aiImport": "Nhập", "aiCopied": "Đã sao chép!", "aiDone": "Đã nhập {n} quà, {f} quà yêu thích. Độ thiện cảm hiện tại: {v}. Hãy kiểm tra lại số liệu.", "aiBad": "Không đọc được phản hồi. Hãy dán đối tượng JSON mà AI trả về."});
+Object.assign(LANG.th,{"aiTitle": "🤖 กรอกด้วยผู้ช่วย AI (แนะนำ)", "aiStep1": "ขั้นที่ 1: คัดลอกพรอมต์", "aiCopy": "คัดลอกพรอมต์", "aiStep2": "ขั้นที่ 2: ส่งภาพหน้าจอพร้อมพรอมต์นี้ให้ AI ใดก็ได้ (Claude, ChatGPT, Gemini…) แล้ววาง JSON ที่ได้ด้านล่าง", "aiImport": "นำเข้า", "aiCopied": "คัดลอกแล้ว!", "aiDone": "นำเข้า {n} ของขวัญ, {f} ของโปรด ความสนิทปัจจุบัน: {v} โปรดตรวจตัวเลขอีกครั้ง", "aiBad": "อ่านคำตอบไม่ได้ โปรดวาง JSON ที่ AI ส่งกลับมา"});
+Object.assign(LANG.id,{"aiTitle": "🤖 Isi dengan asisten AI (disarankan)", "aiStep1": "Langkah 1: salin prompt.", "aiCopy": "Salin prompt", "aiStep2": "Langkah 2: kirim tangkapan layar beserta prompt ini ke AI mana pun (Claude, ChatGPT, Gemini…), lalu tempel balasan JSON di bawah.", "aiImport": "Impor", "aiCopied": "Tersalin!", "aiDone": "{n} hadiah dan {f} favorit diimpor. Afinitas saat ini: {v}. Periksa kembali angkanya.", "aiBad": "Balasan tidak terbaca. Tempel objek JSON dari AI."});
+Object.assign(LANG.ru,{"aiTitle": "🤖 Заполнить с помощью ИИ (рекомендуется)", "aiStep1": "Шаг 1: скопируйте промпт.", "aiCopy": "Копировать промпт", "aiStep2": "Шаг 2: отправьте скриншот и этот промпт любому ИИ (Claude, ChatGPT, Gemini…) и вставьте ниже его JSON-ответ.", "aiImport": "Импорт", "aiCopied": "Скопировано!", "aiDone": "Импортировано подарков: {n}, любимых: {f}. Текущая симпатия: {v}. Проверьте числа.", "aiBad": "Не удалось прочитать ответ. Вставьте JSON, который вернул ИИ."});
+Object.assign(LANG.tr,{"aiTitle": "🤖 Yapay zekâ asistanıyla doldur (önerilir)", "aiStep1": "Adım 1: istemi kopyalayın.", "aiCopy": "İstemi kopyala", "aiStep2": "Adım 2: ekran görüntüsünü ve bu istemi herhangi bir yapay zekâya (Claude, ChatGPT, Gemini…) gönderin, dönen JSON’u aşağıya yapıştırın.", "aiImport": "İçe aktar", "aiCopied": "Kopyalandı!", "aiDone": "{n} hediye ve {f} favori içe aktarıldı. Mevcut yakınlık: {v}. Sayıları kontrol edin.", "aiBad": "Yanıt okunamadı. Yapay zekânın döndürdüğü JSON nesnesini yapıştırın."});
+Object.assign(LANG.it,{"aiTitle": "🤖 Compila con un assistente IA (consigliato)", "aiStep1": "Passo 1: copia il prompt.", "aiCopy": "Copia prompt", "aiStep2": "Passo 2: invia screenshot e prompt a una qualsiasi IA (Claude, ChatGPT, Gemini…) e incolla sotto il JSON risposto.", "aiImport": "Importa", "aiCopied": "Copiato!", "aiDone": "Importati {n} regali e {f} preferito/i. Affinità attuale: {v}. Ricontrolla i numeri.", "aiBad": "Risposta non leggibile. Incolla l’oggetto JSON restituito dall’IA."});
+Object.assign(LANG.pl,{"aiTitle": "🤖 Wypełnij z asystentem AI (zalecane)", "aiStep1": "Krok 1: skopiuj prompt.", "aiCopy": "Kopiuj prompt", "aiStep2": "Krok 2: wyślij zrzut ekranu i ten prompt do dowolnego AI (Claude, ChatGPT, Gemini…) i wklej poniżej odpowiedź JSON.", "aiImport": "Importuj", "aiCopied": "Skopiowano!", "aiDone": "Zaimportowano {n} prezentów i {f} ulubionych. Obecna sympatia: {v}. Sprawdź liczby.", "aiBad": "Nie udało się odczytać odpowiedzi. Wklej obiekt JSON zwrócony przez AI."});
+Object.assign(LANG.ar,{"aiTitle": "🤖 املأ بمساعد ذكاء اصطناعي (موصى به)", "aiStep1": "الخطوة 1: انسخ الموجّه.", "aiCopy": "نسخ الموجّه", "aiStep2": "الخطوة 2: أرسل لقطة الشاشة مع هذا الموجّه إلى أي ذكاء اصطناعي (Claude أو ChatGPT أو Gemini…) ثم الصق رد JSON أدناه.", "aiImport": "استيراد", "aiCopied": "تم النسخ!", "aiDone": "تم استيراد {n} هدية و{f} مفضلة. الود الحالي: {v}. يرجى مراجعة الأرقام.", "aiBad": "تعذّرت قراءة الرد. الصق كائن JSON الذي أعاده الذكاء الاصطناعي."});
+Object.assign(LANG.ko,{"aiTitle": "🤖 AI 어시스턴트로 입력 (권장)", "aiStep1": "1단계: 프롬프트를 복사하세요.", "aiCopy": "프롬프트 복사", "aiStep2": "2단계: 스크린샷과 이 프롬프트를 아무 AI(Claude, ChatGPT, Gemini…)에 보내고, 받은 JSON을 아래에 붙여넣으세요.", "aiImport": "가져오기", "aiCopied": "복사됨!", "aiDone": "선물 {n}개, 선호 {f}개를 가져왔습니다. 현재 호감도: {v}. 숫자를 다시 확인하세요.", "aiBad": "답변을 읽을 수 없습니다. AI가 돌려준 JSON을 붙여넣으세요."});
+Object.assign(LANG.fil,{"aiTitle": "🤖 Punan gamit ang AI assistant (inirerekomenda)", "aiStep1": "Hakbang 1: kopyahin ang prompt.", "aiCopy": "Kopyahin ang prompt", "aiStep2": "Hakbang 2: ipadala ang screenshot at ang prompt na ito sa kahit anong AI (Claude, ChatGPT, Gemini…), saka i-paste sa ibaba ang JSON na sagot.", "aiImport": "I-import", "aiCopied": "Nakopya!", "aiDone": "Na-import ang {n} regalo at {f} paborito. Kasalukuyang affinity: {v}. Pakisuri ang mga numero.", "aiBad": "Hindi mabasa ang sagot. I-paste ang JSON na ibinalik ng AI."});
+Object.assign(LANG.en,{"aiPreview": "Preview prompt", "aiHide": "Hide preview"});
+Object.assign(LANG.zhTW,{"aiPreview": "預覽提示詞", "aiHide": "收起預覽"});
+Object.assign(LANG.zhCN,{"aiPreview": "预览提示词", "aiHide": "收起预览"});
+Object.assign(LANG.ja,{"aiPreview": "プロンプトをプレビュー", "aiHide": "プレビューを閉じる"});
+Object.assign(LANG.es,{"aiPreview": "Vista previa del prompt", "aiHide": "Ocultar vista previa"});
+Object.assign(LANG.fr,{"aiPreview": "Aperçu du prompt", "aiHide": "Masquer l’aperçu"});
+Object.assign(LANG.de,{"aiPreview": "Prompt-Vorschau", "aiHide": "Vorschau ausblenden"});
+Object.assign(LANG.pt,{"aiPreview": "Pré-visualizar prompt", "aiHide": "Ocultar prévia"});
+Object.assign(LANG.vi,{"aiPreview": "Xem trước lời nhắc", "aiHide": "Ẩn xem trước"});
+Object.assign(LANG.th,{"aiPreview": "ดูตัวอย่างพรอมต์", "aiHide": "ซ่อนตัวอย่าง"});
+Object.assign(LANG.id,{"aiPreview": "Pratinjau prompt", "aiHide": "Sembunyikan pratinjau"});
+Object.assign(LANG.ru,{"aiPreview": "Предпросмотр промпта", "aiHide": "Скрыть предпросмотр"});
+Object.assign(LANG.tr,{"aiPreview": "İstemi önizle", "aiHide": "Önizlemeyi gizle"});
+Object.assign(LANG.it,{"aiPreview": "Anteprima prompt", "aiHide": "Nascondi anteprima"});
+Object.assign(LANG.pl,{"aiPreview": "Podgląd promptu", "aiHide": "Ukryj podgląd"});
+Object.assign(LANG.ar,{"aiPreview": "معاينة الموجّه", "aiHide": "إخفاء المعاينة"});
+Object.assign(LANG.ko,{"aiPreview": "프롬프트 미리보기", "aiHide": "미리보기 닫기"});
+Object.assign(LANG.fil,{"aiPreview": "I-preview ang prompt", "aiHide": "Itago ang preview"});
+/* ===== save data system ===== */
+const SAVE_KEY='heroAffinityCalc.save.v1';
+let saveTimer=null, resetArmed=false;
+function collectState(){
+  return {app:'hero-affinity-calculator',version:1,savedAt:new Date().toISOString(),lang:curLang,
+    items:Object.fromEntries(Object.entries(itemState).map(([k,v])=>[k,{cap:v.cap,favorite:v.favorite}])),
+    presets:[...selectedPresets],customTargets:customTargets.slice(),currentAff,showEarlier,
+    combos:JSON.parse(JSON.stringify(combos)),comboSeq};
+}
+function num(v,d,min,max){ v=Number(v); if(!isFinite(v)) return d; if(min!=null&&v<min) v=min; if(max!=null&&v>max) v=max; return v; }
+function applyState(o){
+  if(!o||o.app!=='hero-affinity-calculator'||typeof o!=='object') throw new Error('bad');
+  if(o.lang&&LANG[o.lang]) curLang=o.lang;
+  if(o.items&&typeof o.items==='object'){
+    Object.keys(itemState).forEach(k=>{ const v=o.items[k]; if(v){ itemState[k].cap=Math.round(num(v.cap,0,0,1e7)); itemState[k].favorite=!!v.favorite; } });
+    TIER_ITEMS.forEach(list=>{ let seen=false; list.forEach(k=>{ if(itemState[k].favorite){ if(seen) itemState[k].favorite=false; seen=true; } }); });
+  }
+  selectedPresets=new Set((Array.isArray(o.presets)?o.presets:[]).filter(k=>PRESET_LISTS[k]));
+  customTargets=[...new Set((Array.isArray(o.customTargets)?o.customTargets:[]).map(Number).filter(v=>isFinite(v)&&v>0))];
+  currentAff=Math.round(num(o.currentAff,0,0,1e9)); showEarlier=!!o.showEarlier;
+  const modes=['auto','limit','even'], conds=['always','final','fromValue'];
+  combos=(Array.isArray(o.combos)?o.combos:[]).slice(0,20).map((c,i)=>{
+    let a=Math.round(num(c.a,0,0,2)), b=Math.round(num(c.b,1,0,2)); if(a===b||a===2||b===2){ a=0; b=1; }
+    const nfItems={}, itemMax={}; Object.keys(itemState).forEach(k=>{ const m=c.itemMax&&c.itemMax[k]; if(m!==undefined&&m!==null&&m!==''&&isFinite(+m)) itemMax[k]=Math.max(0,Math.round(+m)); else if(c.nfMode==='specific'&&c.nfItems&&c.nfItems[k]===false) itemMax[k]=0; });
+    return {id:Math.round(num(c.id,i,0,1e6)),name:String(c.name==null?'Combo '+(i+1):c.name).slice(0,40),a,b,dir:'A-B',lo:Math.max(0,num(c.lo,0)),hi:Math.max(0,num(c.hi,25),Math.max(0,num(c.lo,0))),
+      cond:conds.includes(c.cond)?c.cond:'always',condVal:num(c.condVal,0),tol:num(c.tol,10,0),useNonFavorite:!!c.useNonFavorite,goldFirst:!!c.goldFirst,
+      histOverride:(Array.isArray(c.histOverride)&&c.histOverride.length===3)?c.histOverride.map(v=>Math.max(0,Math.round(num(v,0)))):null,nfMode:modes.includes(c.nfMode)?c.nfMode:'auto',itemMax,nfLimit:[0,1,2].map(j=>{ const v=c.nfLimit&&c.nfLimit[j]; return (v===''||v==null)?'':Math.max(0,num(v,0)); }),nfItems};
+  });
+  comboSeq=Math.max(0,...combos.map(c=>c.id+1),num(o.comboSeq,0,0,1e6));
+  computeTargets(); scanWarn=new Set();
+  document.documentElement.dir=(curLang==='ar')?'rtl':'ltr';
+  document.getElementById('langSelect').value=curLang;
+  document.getElementById('curAff').value=currentAff||'';
+  document.getElementById('showEarlier').checked=showEarlier;
+  document.getElementById('results').innerHTML='';
+  applyStatic(); renderVars(); renderPresets(); renderTargets(); renderCombos();
+}
+function saveMsg(text,cls){ const el=document.getElementById('saveStatus'); if(el){ el.className='scan-status '+(cls||''); el.textContent=text; } }
+function autosave(){
+  try{ localStorage.setItem(SAVE_KEY,JSON.stringify(collectState()));
+    const d=new Date(), hh=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+    saveMsg(t('saveAuto').replace('{t}',hh),''); }catch(e){}
+}
+function queueSave(){ clearTimeout(saveTimer); saveTimer=setTimeout(autosave,500); }
+['change','click','input'].forEach(ev=>document.addEventListener(ev,queueSave,true));
+window.addEventListener('pagehide',()=>{ try{ localStorage.setItem(SAVE_KEY,JSON.stringify(collectState())); }catch(e){} });
+async function downloadSave(){
+  const data=JSON.stringify(collectState(),null,1), d=new Date();
+  const fname='hero-affinity-save-'+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'.json';
+  try{
+    if(window.claude&&claude.use){ const dl=await claude.use('downloads'); if(dl){ await dl.save({filename:fname,data}); saveMsg(t('saveDone'),'ok'); return; } }
+  }catch(e){ if(e&&e.code==='declined') return; }
+  try{
+    const url=URL.createObjectURL(new Blob([data],{type:'application/json'})), a=document.createElement('a');
+    a.href=url; a.download=fname; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),2000);
+    saveMsg(t('saveDone'),'ok');
+  }catch(e){ saveMsg(t('saveBad'),'bad'); }
+}
+async function loadSaveFile(file){
+  if(!file) return;
+  try{ const o=JSON.parse(await file.text()); applyState(o); autosave(); saveMsg(t('saveLoaded'),'ok'); }
+  catch(e){ saveMsg(t('saveBad'),'bad'); }
+}
+function resetAll(){
+  const btn=document.getElementById('t_saveReset');
+  if(!resetArmed){ resetArmed=true; btn.textContent=t('saveConfirm'); setTimeout(()=>{ resetArmed=false; btn.textContent=t('saveReset'); },4000); return; }
+  resetArmed=false; btn.textContent=t('saveReset');
+  Object.keys(itemState).forEach(k=>{ itemState[k].cap=0; itemState[k].favorite=false; });
+  selectedPresets=new Set(['ph1','ph2']); customTargets=[]; currentAff=0; showEarlier=false; combos=[]; comboSeq=0;
+  computeTargets(); addCombo(); combos[0].name='Combo 1';
+  document.getElementById('curAff').value=''; document.getElementById('showEarlier').checked=false; document.getElementById('results').innerHTML='';
+  scanWarn=new Set(); renderVars(); renderPresets(); renderTargets(); renderCombos();
+  try{ localStorage.removeItem(SAVE_KEY); }catch(e){}
+  saveMsg(t('saveResetDone'),'ok');
+}
+function bootLoad(){
+  try{ const raw=localStorage.getItem(SAVE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
+}
 let selectedPresets = new Set(['ph1','ph2']);
 let customTargets = [];
 let targets = [];
@@ -783,11 +891,13 @@ function computeTargets(){
   targets.forEach(v=> targetWeights[v]=map[v]||0);
 }
 let currentAff = 0, showEarlier = false;
-function setCurrent(v){ currentAff=Math.max(0,+v||0); renderTargets(); }
+function setCurrent(v){ currentAff=Math.max(0,+v||0); combos.forEach(c=>c.histOverride=null); renderTargets(); }
 let combos = [];
 let comboSeq = 0;
 
 function applyStatic(){
+  document.querySelectorAll('[data-t]').forEach(el=>{ el.textContent=t(el.getAttribute('data-t')); });
+  { const pv=document.getElementById('aiPreview'); if(pv&&!pv.hidden) pv.textContent=aiPromptText(); }
   document.getElementById('t_title').textContent=t('title');
   document.getElementById('t_sub').textContent=t('sub');
   document.getElementById('t_varsTitle').textContent=t('varsTitle');
@@ -801,8 +911,11 @@ function applyStatic(){
   document.getElementById('t_combosNote').textContent=t('combosNote');
   document.getElementById('t_calcBtn').textContent=t('calcBtn');
   document.getElementById('t_legend').textContent=t('legend');
-  document.getElementById('t_scanBtn').textContent=t('scanBtn');
-  document.getElementById('t_scanHint').textContent=t('scanHint');
+  document.getElementById('t_saveTitle').textContent=t('saveTitle');
+  document.getElementById('t_saveDownload').textContent=t('saveDownload');
+  document.getElementById('t_saveLoad').textContent=t('saveLoad');
+  document.getElementById('t_saveReset').textContent=t('saveReset');
+  document.getElementById('t_saveHint').textContent=t('saveHint');
   document.getElementById('t_currentTitle').textContent=t('currentTitle');
   document.getElementById('t_currentHint').textContent=t('currentHint');
   document.getElementById('t_showEarlier').textContent=t('showEarlier');
@@ -848,6 +961,7 @@ function renderTargets(){
     const weighted = w>=2;
     return `<span class="chip${weighted?' weighted':''}${tg<=currentAff&&currentAff>0?' passed':''}">${tg}${weighted?`<span class="w-badge">\u00d7${w}</span>`:''}${isCustom?`<button onclick="removeTarget(${tg})">✕</button>`:''}</span>`;
   }).join('');
+  try{ renderCombos(); }catch(e){}
 }
 function addTarget(){
   const el = document.getElementById('newTarget');
@@ -858,12 +972,13 @@ function removeTarget(v){ customTargets = customTargets.filter(x=>x!==v); comput
 
 function addCombo(){
   const id = comboSeq++;
-  combos.push({id, name:'Combo '+(combos.length+1), a:0, b:1, dir:'A-B', lo:0, hi:25, cond:'always', condVal:0, tol:10, useNonFavorite:false, nfMode:'auto', nfLimit:['','',''], nfItems:{}});
+  combos.push({id, name:'Combo '+(combos.length+1), a:0, b:1, dir:'A-B', lo:0, hi:25, cond:defaultStart()?'fromValue':'always', condVal:defaultStart(), tol:10, useNonFavorite:false, goldFirst:false, nfMode:'auto', nfLimit:['','',''], nfItems:{}, itemMax:{}, histOverride:null});
   renderCombos();
 }
 function removeCombo(id){ combos = combos.filter(c=>c.id!==id); renderCombos(); }
 
 function renderCombos(){
+  combos.forEach(c=>{ if(c.cond==='final'){ c.cond='fromValue'; c.condVal=targets.length?targets[targets.length-1]:0; } });
   const box = document.getElementById('comboList');
   const colorOpts = (sel,other)=>[0,1,2].filter(i=>i!==other).map(i=>`<option value="${i}" ${i==sel?'selected':''}>${tierLabel(i)}</option>`).join('');
   box.innerHTML = combos.map(c=>`
@@ -872,55 +987,87 @@ function renderCombos(){
         <input class="inline-input combo-name" value="${c.name}" onchange="updCombo(${c.id},'name',this.value)">
         <button class="btn-danger" onclick="removeCombo(${c.id})">${t('remove')}</button>
       </div>
-      <div class="combo-block">
-        <div class="block-title">\u2696\uFE0F ${t('ruleTitle')}</div>
-        <div class="block-hint">${t('ruleHint')}</div>
-        <div class="row">
-          <div class="field"><label>${t('moreColor')}</label><select onchange="setTier(${c.id},'a',+this.value)">${colorOpts(c.a,c.b)}</select></div>
-          <div class="field"><label>${t('lessColor')}</label><select onchange="setTier(${c.id},'b',+this.value)">${colorOpts(c.b,c.a)}</select></div>
+      <div class="combo-block gap-visual" id="gv-${c.id}">
+        <div class="block-title">\u2696\uFE0F ${t('gapRange')}</div>
+        <div class="pair-vis">
+          <div class="pair-pill t0"><b>${tierLabel(0)}</b></div>
+          <button class="pair-op" id="gop-${c.id}" onclick="swapPair(${c.id})" title="\u21C4">${gapOp(c)}</button>
+          <div class="pair-pill t1"><b>${tierLabel(1)}</b></div>
         </div>
-        <div class="row">
-          <div class="field"><label>${t('diffFrom')}</label><input class="inline-input" type="number" value="${c.lo}" onchange="updCombo(${c.id},'lo',+this.value)"></div>
-          <div class="field"><label>${t('diffTo')}</label><input class="inline-input" type="number" value="${c.hi}" onchange="updCombo(${c.id},'hi',+this.value)"></div>
+        <div id="gb-${c.id}" class="gap-band">${bandHTML(c)}</div>
+        <div class="row gap-ctrl">
+          <div class="field"><label>${t('gapMin')}</label><div class="gap-pair"><input class="inline-input" type="number" min="0" id="gl-${c.id}" value="${c.lo}" onchange="gapSet(${c.id},'lo',this.value)"></div></div>
+          <div class="field"><label>${t('gapMax')}</label><div class="gap-pair"><input class="inline-input" type="number" min="0" id="gh-${c.id}" value="${c.hi}" onchange="gapSet(${c.id},'hi',this.value)"></div></div>
         </div>
+        <div class="chips-row">${[[0,5],[0,10],[0,25],[10,30]].map(([l,h])=>`<button class="chip-btn" onclick="gapPreset(${c.id},${l},${h})">${l}\u2013${h}</button>`).join('')}</div>
       </div>
       <div class="combo-block">
         <div class="block-title">\uD83C\uDFAF ${t('applyTitle')}</div>
-        <div class="seg">
-          ${[['always','every'],['final','finalOnly'],['fromValue','fromValue']].map(([v,k])=>`<button class="${c.cond==v?'on':''}" onclick="setCond(${c.id},'${v}')">${t(k)}</button>`).join('')}
-        </div>
-        ${c.cond==='fromValue'?`<div class="row" style="margin-top:8px"><div class="field"><label>${t('fromValueLabel')}</label><input class="inline-input" type="number" value="${c.condVal}" onchange="updCombo(${c.id},'condVal',+this.value)"></div></div>`:''}
+        <div class="block-hint">${t('applyHint')}</div>
+        <div class="chips-row apply-chips"><button class="chip-btn${c.cond==='always'?' on':''}" onclick="setStart(${c.id},0)">${t('applyAll')}</button>${targets.map(v=>`<button class="chip-btn${(c.cond==='always'||v>=c.condVal)?' on':''}${v<=currentAff&&currentAff>0?' passed':''}" onclick="setStart(${c.id},${v})">${v}</button>`).join('')}</div>
       </div>
+      <label class="switch-line combo-nonfav"><input type="checkbox" ${c.goldFirst?'checked':''} onchange="setNf(${c.id},'goldFirst',this.checked)"> <span>${t('goldFirst')}</span></label>
+      ${c.goldFirst?`<div class="block-hint" style="margin:-2px 0 8px 26px">${t('goldFirstHint')}</div>`:''}
       <label class="switch-line combo-nonfav"><input type="checkbox" ${c.useNonFavorite?'checked':''} onchange="setNf(${c.id},'useNonFavorite',this.checked)"> <span>${t('useNonFav')}</span></label>
       ${c.useNonFavorite?`<div class="combo-block">
         <div class="block-title">\uD83C\uDF81 ${t('nfTitle')}</div>
         <div class="seg">
-          ${[['auto','nfAuto'],['limit','nfLimit'],['even','nfEven'],['specific','nfSpecific']].map(([v,k])=>`<button class="${c.nfMode==v?'on':''}" onclick="setNf(${c.id},'nfMode','${v}')">${t(k)}</button>`).join('')}
+          ${[['auto','nfAuto'],['limit','nfLimit'],['even','nfEven']].map(([v,k])=>`<button class="${c.nfMode==v?'on':''}" onclick="setNf(${c.id},'nfMode','${v}')">${t(k)}</button>`).join('')}
         </div>
         ${c.nfMode==='limit'?`<div class="block-hint" style="margin-top:8px">${t('nfLimitLabel')}</div><div class="row">${[0,1,2].map(i=>`<div class="field"><label>${tierLabel(i)}</label><input class="inline-input" type="number" min="0" placeholder="\u221E" value="${c.nfLimit[i]}" onchange="setNfLimit(${c.id},${i},this.value)"></div>`).join('')}</div>`:''}
-        ${c.nfMode==='specific'?`<div class="block-hint" style="margin-top:8px">${t('nfPick')}</div><div class="pick-grid">${[0,1,2].map(i=>TIER_ITEMS[i].filter(k=>!itemState[k].favorite).map(k=>`<label class="pick t${i}"><input type="checkbox" ${c.nfItems[k]===false?'':'checked'} onchange="setNfItem(${c.id},'${k}',this.checked)"> <img src="${ITEM_IMG[k]}" alt=""> ${itemName(k)}</label>`).join('')).join('')}</div>`:''}
       </div>`:''}
+      <div class="combo-block">
+        <div class="block-title">\uD83C\uDF81 ${t('itemMaxTitle')}</div>
+        <div class="block-hint">${t('itemMaxHint')}</div>
+        <div class="tier-grid item-max-grid">${[0,1,2].map(i=>`<div class="tier-card t${i}"><span class="tier-badge">${tierLabel(i)}</span><div class="item-list">${TIER_ITEMS[i].filter(k=>itemState[k].favorite||c.useNonFavorite).map(k=>{ const st=itemState[k], m=c.itemMax&&c.itemMax[k]; return `<div class="item-row${st.cap===0?' dim':''}"><img src="${ITEM_IMG[k]}" alt=""><span class="item-row-name">${st.favorite?'\u2605 ':''}${itemName(k)}</span><input class="inline-input item-qty" type="number" min="0" placeholder="${st.cap}" value="${(m===undefined||m===null)?'':m}" onchange="setItemMax(${c.id},'${k}',this.value)"><small class="own">/ ${st.cap}</small></div>`; }).join('')||'<div class="block-hint">\u2014</div>'}</div></div>`).join('')}</div>
+      </div>
       <details class="adv"><summary>${t('advanced')}</summary>
         <div class="row" style="margin-top:8px"><div class="field"><label>${t('tolerance')}</label><input class="inline-input" type="number" value="${c.tol}" onchange="updCombo(${c.id},'tol',+this.value)"></div></div>
       </details>
     </div>`).join('');
 }
+function gapOp(c){ const lo=Math.min(c.lo,c.hi),hi=Math.max(c.lo,c.hi), g=c.a===0;
+  const ch=g?'M8 5L17 12L8 19':'M16 5L7 12L16 19', eq=lo===0&&hi>0;
+  const body=hi===0?'<path d="M6 9H18M6 15H18"/>':(eq?`<path d="${g?'M8 4L17 10L8 16':'M16 4L7 10L16 16'}M7 20H17"/>`:`<path d="${ch}"/>`);
+  return `<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`; }
+function swapPair(id){ const c=combos.find(c=>c.id===id); const t0=c.a; c.a=c.b; c.b=t0; renderCombos(); }
+function setPair(id,v){ const [a,b]=v.split(',').map(Number); updCombo(id,'a',a); updCombo(id,'b',b); renderCombos(); }
 function setTier(id,k,v){ updCombo(id,k,v); renderCombos(); }
 function setNf(id,k,v){ updCombo(id,k,v); renderCombos(); }
-function setNfItem(id,key,on){ const c=combos.find(c=>c.id===id); c.nfItems[key]=on; }
+function setItemMax(id,key,v){ const c=combos.find(c=>c.id===id); if(v===''||v==null) delete c.itemMax[key]; else c.itemMax[key]=Math.max(0,Math.round(+v)||0); }
+const TIER_COL=['#3fae57','#8a5cd6','#c9a233'];
+function bandHTML(c){
+  const MAX=90, lo=Math.min(c.lo,c.hi), hi=Math.max(c.lo,c.hi), pc=v=>Math.min(100,Math.max(0,v/MAX*100));
+  const col=TIER_COL[c.a];
+  const range=(k,v)=>`<input type="range" id="${k}-${c.id}" min="0" max="${MAX}" value="${v}" style="--tc:${col}" oninput="gapSet(${c.id},'${k==='gls'?'lo':'hi'}',this.value)">`;
+  return `<div class="dual"><div class="dual-track"><div class="dual-fill" id="gfill-${c.id}" style="background:${col};left:${pc(lo)}%;width:${pc(hi)-pc(lo)}%"></div></div>${range('gls',c.lo)}${range('ghs',c.hi)}</div>
+  <div class="dual-ticks"><span>0</span><span>30</span><span>60</span><span>90</span></div>`;
+}
+function refreshGap(id){
+  const c=combos.find(c=>c.id===id), g=n=>document.getElementById(n+'-'+id);
+  const lo=Math.min(c.lo,c.hi), hi=Math.max(c.lo,c.hi), pc=v=>Math.min(100,Math.max(0,v/90*100));
+  const f=g('gfill'); if(f){ f.style.left=pc(lo)+'%'; f.style.width=(pc(hi)-pc(lo))+'%'; }
+  const tx=g('gv-txt'); if(tx) tx.textContent=lo+' \u2264'; const t2=g('gv-txt2'); if(t2) t2.textContent='\u2264 '+hi; const op=g('gop'); if(op) op.innerHTML=gapOp(c);
+  ['lo','hi'].forEach(k=>{ const n=g(k==='lo'?'gl':'gh'), r=g(k==='lo'?'gls':'ghs'); if(n&&document.activeElement!==n) n.value=c[k]; if(r) r.value=c[k]; });
+}
+function gapSet(id,key,v){ const c=combos.find(c=>c.id===id); v=Math.max(0,Math.round(+v)); if(!isFinite(v)) return; c[key]=v; if(c.lo>c.hi){ if(key==='lo') c.hi=c.lo; else c.lo=c.hi; } refreshGap(id); }
+function gapPreset(id,lo,hi){ const c=combos.find(c=>c.id===id); c.lo=lo; c.hi=hi; refreshGap(id); }
 function setNfLimit(id,i,v){ const c=combos.find(c=>c.id===id); c.nfLimit[i]=v===''?'':Math.max(0,+v); }
+function setStart(id,v){ const c=combos.find(c=>c.id===id); if(!v){ c.cond='always'; c.condVal=0; } else { c.cond='fromValue'; c.condVal=v; } renderCombos(); }
+function defaultStart(){ const tg=targets.filter(v=>v>currentAff); return tg.length? tg[Math.floor(tg.length/2)] : 0; }
 function setCond(id,v){ updCombo(id,'cond',v); renderCombos(); }
 function updCombo(id,key,val){ const c = combos.find(c=>c.id===id); c[key]=val; }
 
 function ruleActive(c, idx){
   if(c.cond==='always') return true;
-  if(c.cond==='final') return idx===targets.length-1;
-  if(c.cond==='fromValue') return targets[idx] >= c.condVal;
+  if(c.cond==='final') return !HMODE && idx===TL().length-1;
+  if(c.cond==='fromValue') return TL()[idx] >= c.condVal;
   return false;
 }
-function total(counts,c){ return tierPoints(0,counts[0],c)+tierPoints(1,counts[1],c)+tierPoints(2,counts[2],c); }
+function total(counts,c){ return HIST.base+tierPoints(0,counts[0],c)+tierPoints(1,counts[1],c)+tierPoints(2,counts[2],c); }
 let capLimit=null;
-function caps(c){ const r=[tierCap(0,c),tierCap(1,c),tierCap(2,c)]; return capLimit? r.map((v,i)=>Math.min(v,capLimit[i])) : r; }
+function caps(c){ if(HMODE){ const lim=Math.min(2500,Math.ceil(currentAff/10)+3); return [lim,lim,lim]; }
+  const r=[tierCap(0,c)+HIST.h[0],tierCap(1,c)+HIST.h[1],tierCap(2,c)+HIST.h[2]]; return capLimit? r.map((v,i)=>Math.min(v,capLimit[i])) : r; }
 function better(a, b, target){
   const aOk = a>=target, bOk = b>=target;
   if(aOk !== bOk) return aOk;
@@ -929,7 +1076,7 @@ function better(a, b, target){
 function exactAnyGap(prev, target, c, cap){
   let bestE=null, bestCost=Infinity;
   for(let x=prev[0];x<=cap[0];x++) for(let y=prev[1];y<=cap[1];y++){
-    const p=tierPoints(0,x,c)+tierPoints(1,y,c);
+    const p=HIST.base+tierPoints(0,x,c)+tierPoints(1,y,c);
     if(p>target) break;
     for(let z=prev[2];z<=cap[2];z++){
       const tot=p+tierPoints(2,z,c);
@@ -971,7 +1118,7 @@ function solveRow(prev, target, c, idx){
         if(y>cap[highIdx]) break;
         if(y<prev[highIdx]) continue;
         const counts=[0,0,0]; counts[lowIdx]=x; counts[highIdx]=y; counts[thirdIdx]=z;
-        const tot = tierPoints(lowIdx,x,c)+tierPoints(highIdx,y,c)+zp;
+        const tot = HIST.base+tierPoints(lowIdx,x,c)+tierPoints(highIdx,y,c)+zp;
         if(tot===target && (exact===null || z<exact.counts[thirdIdx])) exact={counts,tot};
         if(best===null || better(tot,best.tot,target)) best={counts,tot};
         if(tot>=target) break;
@@ -979,7 +1126,7 @@ function solveRow(prev, target, c, idx){
     }
   }
   if(!best) return {counts:prev.slice(), tot:base};
-  if(idx===targets.length-1){
+  if(idx===TL().length-1){
     if(exact) return exact;           // highest priority: hit the final target exactly
     const fx = exactAnyGap(prev, target, c, cap);
     if(fx) return fx;
@@ -988,18 +1135,29 @@ function solveRow(prev, target, c, idx){
 }
 
 function cellCount(i,n,c){
+  if(currentAff>0) return n;
   const fk=tierFavKey(i);
   if(!c.useNonFavorite || !fk) return n;
-  const fav=Math.min(n,tierFavCap(i));
+  const fav=Math.min(n,tierFavCap(i,c));
   return n>fav ? `${n} <small>(★${fav}+${n-fav})</small>` : `${n}`;
 }
 function gapOf(counts,c){ return c.dir==='A-B' ? counts[c.a]-counts[c.b] : counts[c.b]-counts[c.a]; }
-function runPass(c, F){
+function runPass(c, F, goldFront){
   capLimit = F;
-  let prev=[0,0,0]; const rows=[];
-  targets.forEach((tg,idx)=>{
+  let prev=HIST.h.slice(); const rows=[];
+  TL().forEach((tg,idx)=>{
     let sol;
-    if(F && idx===targets.length-1) sol={counts:F.slice(), tot:total(F,c)};
+    if(F && idx===TL().length-1) sol={counts:F.slice(), tot:total(F,c)};
+    else if(goldFront && F && prev[2]<F[2]){
+      const base=total(prev,c);
+      if(base>=tg) sol={counts:prev.slice(), tot:base};
+      else {
+        const others=base-tierPoints(2,prev[2],c), n=minCountForPoints(2,prev[2],tg-others,c);
+        const cand=prev.slice(); cand[2]=Math.min(F[2],Math.max(prev[2],n));
+        const tot=total(cand,c);
+        sol=(cand[2]<F[2]||tot>=tg)? {counts:cand,tot} : solveRow(cand,tg,c,idx);
+      }
+    }
     else sol=solveRow(prev,tg,c,idx);
     rows.push({target:tg, counts:sol.counts, tot:sol.tot, overage:sol.tot-tg});
     prev=sol.counts;
@@ -1008,28 +1166,28 @@ function runPass(c, F){
   return rows;
 }
 function scoreRows(rows,c){
-  let short=0, gapBad=0, ov=0;
+  let short=0, gapBad=0, ov=0, exact=0;
   rows.forEach((r,i)=>{
-    if(r.overage<0) short++; else ov+=r.overage;
+    if(r.overage<0) short++; else { ov+=r.overage; if(r.overage===0) exact++; }
     if(ruleActive(c,i)){ const d=gapOf(r.counts,c); if(d<c.lo||d>c.hi) gapBad++; }
   });
-  return [short,gapBad,ov];
+  return [short,gapBad,-exact,ov];
 }
 function solveCombo(c){
   // Final target must hit exactly: pick final counts first, then solve earlier rows beneath them.
-  const last=targets[targets.length-1];
+  const last=TL()[TL().length-1];
   const cap=caps(c);
   const cands=[], candsAny=[];
-  for(let x=0;x<=cap[0];x++){
-    const px=tierPoints(0,x,c); if(px>last) break;
-    for(let y=0;y<=cap[1];y++){
+  for(let x=HIST.h[0];x<=cap[0];x++){
+    const px=HIST.base+tierPoints(0,x,c); if(px>last) break;
+    for(let y=HIST.h[1];y<=cap[1];y++){
       const pxy=px+tierPoints(1,y,c); if(pxy>last) break;
-      for(let z=0;z<=cap[2];z++){
+      for(let z=HIST.h[2];z<=cap[2];z++){
         const tt=pxy+tierPoints(2,z,c); if(tt>last) break;
         if(tt===last){
           const F=[x,y,z];
           candsAny.push(F);
-          if(!ruleActive(c,targets.length-1)){ cands.push(F); }
+          if(!ruleActive(c,TL().length-1)){ cands.push(F); }
           else { const d=gapOf(F,c); if(d>=c.lo&&d<=c.hi) cands.push(F); }
           break;
         }
@@ -1043,51 +1201,150 @@ function solveCombo(c){
   let best=null, bs=null;
   pool.forEach(F=>{
     const rows=runPass(c,F), sc=scoreRows(rows,c);
-    if(!bs || sc[0]<bs[0] || (sc[0]===bs[0] && (sc[1]<bs[1] || (sc[1]===bs[1] && sc[2]<bs[2])))){ best=rows; bs=sc; }
+    if(!bs || sc[0]<bs[0] || (sc[0]===bs[0] && (sc[1]<bs[1] || (sc[1]===bs[1] && (sc[2]<bs[2] || (sc[2]===bs[2] && sc[3]<bs[3])))))){ best=rows; bs=sc; }
   });
+  if(c.goldFirst && !HMODE && best && best.length){
+    const F=best[best.length-1].counts;
+    if(F[2]>HIST.h[2]) return runPass(c,F,true);
+  }
   return best;
 }
+function inferHistory(c){
+  const A=currentAff;
+  TG=targets.filter(v=>v<A).concat([A]); HMODE=true; HIST={h:[0,0,0],base:0};
+  let rows; try{ rows=solveCombo(c); } finally { TG=null; HMODE=false; }
+  const r=rows[rows.length-1];
+  return {h:r.counts.slice(), pts:r.tot};
+}
+function setHist(id,i,v){ const c=combos.find(c=>c.id===id); const cur=histFor(c); const h=cur.slice(); h[i]=Math.max(0,Math.round(+v||0)); c.histOverride=h; calculateAll(); }
+function resetHist(id){ const c=combos.find(c=>c.id===id); c.histOverride=null; calculateAll(); }
+function histFor(c){ return c.histOverride || inferHistory(c).h; }
+function rowsHTML(rows,c,effTol){
+  return rows.map(r=>{
+    const d=gapOf(r.counts,c), inBand=d>=c.lo&&d<=c.hi, w=targetWeights[r.target]||0;
+    const ovClass=r.overage<0?'short':(r.overage===0?'exact':(r.overage<=effTol(r)?'near':''));
+    const tgCell=w>=2?`${r.target}<span class="w-badge">×${w}</span>`:r.target;
+    return `<tr><td>${tgCell}</td><td>${cellCount(0,r.counts[0],c)}</td><td>${cellCount(1,r.counts[1],c)}</td><td>${cellCount(2,r.counts[2],c)}</td><td>${r.tot}</td>
+      <td class="${ovClass}">${r.overage}</td><td class="${inBand?'gap-inband':''}">${d}</td></tr>`;
+  }).join('');
+}
+function usageParts(i,f,c){
+  const fk=tierFavKey(i), parts=[], fav=Math.min(f,tierFavCap(i));
+  if(fk && fav>0) parts.push(`★${itemName(fk)}×${fav}`);
+  if(c.useNonFavorite && f>fav) allocNonFav(i,f-fav,c).forEach(o=>parts.push(`${itemName(o.key)}×${o.n}`));
+  return parts;
+}
+function usageBars(c,fin,H){
+  return `<div class="tier-grid usage-grid">${[0,1,2].map(i=>{
+    const f=fin[i]-H[i], fk=tierFavKey(i), fcap=tierFavCap(i,c), favUsed=Math.min(f,fcap), rows=[];
+    if(fk) rows.push({k:fk,used:favUsed,cap:itemCapFor(fk,c),fav:true});
+    if(c.useNonFavorite){ const al=Object.fromEntries(allocNonFav(i,Math.max(0,f-favUsed),c).map(o=>[o.key,o.n])); nfItemsOf(i,c).forEach(k=>{ const cap=itemCapFor(k,c); if(cap>0) rows.push({k,used:al[k]||0,cap,fav:false}); }); }
+    return `<div class="tier-card t${i}"><span class="tier-badge">${tierLabel(i)} \u00d7${f}</span><div class="item-list">${rows.map(r=>`<div class="use-row"><img src="${ITEM_IMG[r.k]}" alt=""><div class="use-main"><div class="use-top"><b>${r.cap?Math.round(r.used/r.cap*100)+'% \u00b7 ':''}${r.fav?'\u2605 ':''}${itemName(r.k)} \u00d7${r.used}</b><small class="own">/ ${r.cap}</small></div><div class="use-bar"><i${r.cap&&r.used>=r.cap?' class="full"':''} style="width:${r.cap?Math.min(100,r.used/r.cap*100):0}%"></i></div></div></div>`).join('')||'<div class="block-hint">\u2014</div>'}</div></div>`;
+  }).join('')}</div>`;
+}
+function ruleOnAt(c,target,idx,n){ return c.cond==='always' || (c.cond==='final' && idx===n-1) || (c.cond==='fromValue' && target>=c.condVal); }
+function gapChart(rows,c,H,A){
+  const pts=[]; if(A>0) pts.push({label:'\u25B6',g:gapOf(H,c),on:ruleOnAt(c,A,0,rows.length+1),now:true});
+  rows.forEach((r,i)=>pts.push({label:String(r.target),g:gapOf(r.counts,c),on:ruleOnAt(c,r.target,i,rows.length)}));
+  const lo=Math.min(c.lo,c.hi), hi=Math.max(c.lo,c.hi), gs=pts.map(p=>p.g);
+  const ymin=Math.min(lo,...gs)-4, ymax=Math.max(hi,...gs)+4, W=560, Ht=170, L=34, R=12, T=12, B=36;
+  const x=i=>L+(pts.length>1?i/(pts.length-1):0.5)*(W-L-R), y=v=>T+(ymax-v)/(ymax-ymin)*(Ht-T-B);
+  const line=pts.map((p,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(p.g).toFixed(1)}`).join(' ');
+  return `<svg viewBox="0 0 ${W} ${Ht}" class="gap-chart" role="img">
+    <rect x="${L}" y="${y(hi)}" width="${W-L-R}" height="${Math.max(2,y(lo)-y(hi))}" class="gc-band" style="fill:${TIER_COL[c.a]}"/>
+    <text x="${L-4}" y="${y(hi)+3}" text-anchor="end" class="gc-txt">${hi}</text><text x="${L-4}" y="${y(lo)+3}" text-anchor="end" class="gc-txt">${lo}</text>
+    <path d="${line}" class="gc-line"/>
+    ${pts.map((p,i)=>{ const out=p.g<lo||p.g>hi, cls=!p.on?'gc-off':(out?'gc-bad':'gc-ok'); return `<circle cx="${x(i).toFixed(1)}" cy="${y(p.g).toFixed(1)}" r="${p.now?5:4}" class="${cls}${p.now?' gc-now':''}"><title>${p.label}: ${p.g}</title></circle><text transform="translate(${x(i).toFixed(1)},${Ht-B+12}) rotate(-40)" text-anchor="end" class="gc-txt">${p.label}</text>`; }).join('')}
+  </svg>`;
+}
+function gapAdvice(c,rows){
+  if(c.goldFirst){ c=Object.assign({},c,{goldFirst:false}); rows=solveCombo(c); }
+  if(!rows.length || !rows.some((r,i)=>ruleActive(c,i))) return null;
+  const run=(lo,hi)=>{ const cc=Object.assign({},c,{lo,hi}), rr=solveCombo(cc); return scoreRows(rr,cc); };
+  const base=run(0,90), okAt=(lo,hi)=>{ const sc=run(lo,hi); return sc[1]===0 && sc[0]<=base[0]; };
+  if(base[1]!==0) return {bad:scoreRows(rows,c)[1],none:true};
+  const minHi=lo=>{ if(!okAt(lo,90)) return null; let a=lo,b=90; while(a<b){ const m=(a+b)>>1; if(okAt(lo,m)) b=m; else a=m+1; } return b; };
+  const tight=minHi(0), bad=scoreRows(rows,c)[1];
+  let sug=null;
+  if(bad>0){
+    let h=minHi(c.lo);
+    if(h!==null) sug={lo:c.lo,hi:h};
+    else { let a=0,b=c.lo; while(a<b){ const m=(a+b+1)>>1; if(okAt(m,90)) a=m; else b=m-1; } h=minHi(a); if(h!==null) sug={lo:a,hi:h}; }
+  }
+  return {bad,tight,sug};
+}
+function adviceHTML(c,a){
+  if(!a) return '';
+  if(a.none) return `<div class="advice warn">\u26A0\uFE0F ${t('advNone')}</div>`;
+  let out='';
+  if(a.bad>0){
+    out+=`<div class="advice warn">\u26A0\uFE0F ${t('advBad').replace('{n}',a.bad)}${a.sug?` <b>${t('advSug').replace('{lo}',a.sug.lo).replace('{hi}',a.sug.hi)}</b> <button class="btn-light" onclick="applyGapSug(${c.id},${a.sug.lo},${a.sug.hi})">${t('advApply')}</button>`:''}</div>`;
+  }
+  if(a.tight>0 && a.bad===0) out+=`<div class="advice info">\uD83D\uDCA1 ${t('advTight').split('{hi}').join(a.tight)}</div>`;
+  return out;
+}
+function applyGapSug(id,lo,hi){ const c=combos.find(c=>c.id===id); c.lo=lo; c.hi=hi; renderCombos(); calculateAll(); }
 function calculateAll(){
   const resBox = document.getElementById('results');
   resBox.innerHTML = '';
+  const A=currentAff;
   combos.forEach(c=>{
-    const allRows = solveCombo(c);
-    const rows = showEarlier || currentAff<=0 ? allRows : allRows.filter(r=>r.target>currentAff);
-    const hiddenN = allRows.length - rows.length;
-    const lastRow = allRows[allRows.length-1];
+    const effTol = r=> Math.max(1, Math.floor(c.tol / Math.max(1, targetWeights[r.target]||1)));
+    let H=[0,0,0], hist=null, rows, fullRows=null, advice=null;
+    if(A>0){
+      hist = c.histOverride ? {h:c.histOverride.slice(),pts:null} : inferHistory(c);
+      H=hist.h;
+      if(showEarlier) fullRows=solveCombo(c);
+      TG=targets.filter(v=>v>A); HIST={h:H.slice(),base:A};
+      try{ rows = TG.length? solveCombo(c) : []; advice=gapAdvice(c,rows); if(advice&&advice.sug){ c=Object.assign({},c,advice.sug); rows=solveCombo(c); } } finally { TG=null; HIST={h:[0,0,0],base:0}; }
+    } else { rows = solveCombo(c); advice=gapAdvice(c,rows); if(advice&&advice.sug){ c=Object.assign({},c,advice.sug); rows=solveCombo(c); } }
     if(!rows.length){
       const p0=document.createElement('div'); p0.className='panel';
       p0.innerHTML=`<h2>${c.name}</h2><div class="summary">${t('noRows')}</div>`; resBox.appendChild(p0); return;
     }
-    const effTol = r=> Math.max(1, Math.floor(c.tol / Math.max(1, targetWeights[r.target]||1)));
+    const lastRow = rows[rows.length-1];
     const exactN = rows.filter(r=>r.overage===0).length;
     const nearN = rows.filter(r=>r.overage>=0 && r.overage<=effTol(r)).length;
     const shortN = rows.filter(r=>r.overage<0).length;
     const totOv = rows.reduce((s,r)=>s+Math.max(0,r.overage),0);
-    const breakdown = [0,1,2].map(i=>{
-      const n=lastRow.counts[i], fk=tierFavKey(i), parts=[];
-      const fav=Math.min(n,tierFavCap(i));
-      if(fk && fav>0) parts.push(`\u2605${itemName(fk)}\u00d7${fav}`);
-      if(c.useNonFavorite && n>fav) allocNonFav(i,n-fav,c).forEach(o=>parts.push(`${itemName(o.key)}\u00d7${o.n}`));
-      return `<div><b>${tierLabel(i)}</b>: ${parts.join(', ')||'\u2014'}</div>`;
-    }).join('');
+    const stages = rows.map((r,ix)=>{
+      const pr = ix>0 ? rows[ix-1] : null, pc = pr ? pr.counts : H;
+      return {from: pr?pr.target:(A>0?A:0), to:r.target, d:[0,1,2].map(i=>r.counts[i]-pc[i]), pts:r.tot-(pr?pr.tot:(A>0?A:0))};
+    });
+    const stageSum=[0,1,2].map(i=>stages.reduce((a,g)=>a+g.d[i],0)), stagePts=stages.reduce((a,g)=>a+g.pts,0);
+    const breakdown = usageBars(c,lastRow.counts,H);
+    const head=`<tr><th>${t('targetsTitle')}</th><th>${tierLabel(0)}</th><th>${tierLabel(1)}</th><th>${tierLabel(2)}</th><th>Total</th><th>${t('totalOv')}</th><th>Gap</th></tr>`;
+    let histBox='', nowRow='', fullBox='';
+    if(A>0){
+      const hp=[0,1,2].map(i=>H[i]>0?(tierFavKey(i)?`★${itemName(tierFavKey(i))}×${H[i]}`:`${tierLabel(i)}×${H[i]}`):'—');
+      histBox=`<div class="hist-box"><div class="block-title">🔍 ${t('histTitle').replace('{a}',A)}</div>
+        <div class="block-hint">${t('histHint')} ${t('histAssume')}</div>
+        <div class="row">${[0,1,2].map(i=>`<div class="field"><label>${tierLabel(i)}</label><input class="inline-input" type="number" min="0" value="${H[i]}" onchange="setHist(${c.id},${i},this.value)"></div>`).join('')}
+        ${c.histOverride?`<div class="field" style="flex:0 0 auto"><label>&nbsp;</label><button class="btn-light" onclick="resetHist(${c.id})">${t('histReset')}</button></div>`:''}</div>
+        <div class="summary">${hp.map((x,i)=>`<div><b>${tierLabel(i)}</b>: ${x}</div>`).join('')}</div>
+        <div class="block-hint">${t('remainNote')}</div></div>`;
+      nowRow=`<tr class="now-row"><td>${t('histNow')} (${A})</td><td>${H[0]}</td><td>${H[1]}</td><td>${H[2]}</td><td>${A}</td><td></td><td>${gapOf(H,c)}</td></tr>`;
+      if(fullRows) fullBox=`<div class="stage-box"><div class="block-title">${t('fullPath')}</div><table class="result-table">${head}${rowsHTML(fullRows,c,effTol)}</table></div>`;
+    }
     const panel = document.createElement('div');
     panel.className='panel';
     panel.innerHTML = `<h2>${c.name}</h2>
-      <table class="result-table"><tr><th>${t('targetsTitle')}</th><th>${tierLabel(0)}</th><th>${tierLabel(1)}</th><th>${tierLabel(2)}</th><th>Total</th><th>${t('totalOv')}</th><th>Gap</th></tr>
-      ${rows.map((r)=>{
-        const d = c.dir==='A-B' ? r.counts[c.a]-r.counts[c.b] : r.counts[c.b]-r.counts[c.a];
-        const inBand = d>=c.lo && d<=c.hi;
-        const w = targetWeights[r.target]||0;
-        const ovClass = r.overage<0 ? 'short' : (r.overage===0?'exact':(r.overage<=effTol(r)?'near':''));
-        const tgCell = w>=2 ? `${r.target}<span class="w-badge">\u00d7${w}</span>` : r.target;
-        return `<tr><td>${tgCell}</td><td>${cellCount(0,r.counts[0],c)}</td><td>${cellCount(1,r.counts[1],c)}</td><td>${cellCount(2,r.counts[2],c)}</td><td>${r.tot}</td>
-          <td class="${ovClass}">${r.overage}</td><td class="${inBand?'gap-inband':''}">${d}</td></tr>`;
-      }).join('')}
-      </table>
-      ${hiddenN?`<div class="summary">${t('hiddenRows').replace('{n}',hiddenN)}</div>`:''}
+      ${histBox}
+      ${A>0?`<div class="block-title" style="margin-top:12px">🎯 ${t('planFrom')} (${A})</div>`:''}
+      ${adviceHTML(c,advice)}
+      <table class="result-table">${head}${nowRow}${rowsHTML(rows,c,effTol)}</table>
+      <div class="stage-box">
+        <div class="block-title">📈 ${t('stageTitle')}</div>
+        <div class="block-hint">${t('stageHint')}</div>
+        <table class="result-table stage-table"><tr><th>${t('stageStage')}</th><th>${tierLabel(0)}</th><th>${tierLabel(1)}</th><th>${tierLabel(2)}</th><th>${t('stagePoints')}</th></tr>
+        ${stages.map(g=>`<tr><td>${g.from} → ${g.to}</td>${g.d.map(v=>`<td>${v>0?'+'+v:'0'}</td>`).join('')}<td>+${g.pts}</td></tr>`).join('')}
+        <tr class="stage-sum"><td><b>${t('stageSum')}</b></td>${stageSum.map(v=>`<td><b>+${v}</b></td>`).join('')}<td><b>+${stagePts}</b></td></tr>
+        </table>
+      </div>
       <div class="summary">${t('exact')}: <b>${exactN}/${rows.length}</b> &nbsp;|&nbsp; ${t('within')} (${t('incl')}): <b>${nearN}/${rows.length}</b> &nbsp;|&nbsp; ${t('totalOv')}: <b>${totOv}</b>${shortN?` &nbsp;|&nbsp; <span style="color:var(--danger)">${t('shortfall')}: ${shortN}</span>`:''} &nbsp;|&nbsp; ${t('finalCounts')}: ${tierLabel(0)}=${lastRow.counts[0]}, ${tierLabel(1)}=${lastRow.counts[1]}, ${tierLabel(2)}=${lastRow.counts[2]}</div>
-      <div class="summary"><b>${t('nfBreakdown')}</b>${breakdown}</div>`;
+      <div class="stage-box"><div class="block-title">\uD83D\uDCCA ${t('gapChart')} (${tierLabel(c.a)} \u2212 ${tierLabel(c.b)})</div><div class="block-hint">${t('gapChartHint')}</div>${gapChart(rows,c,H,A)}</div>
+      <div class="stage-box"><div class="block-title">\uD83C\uDF81 ${t('nfBreakdown')}</div>${breakdown}</div>
+      ${fullBox}`;
     resBox.appendChild(panel);
   });
 }
@@ -1096,6 +1353,7 @@ computeTargets();
 applyStatic(); renderVars(); renderPresets(); renderTargets();
 addCombo(); combos[0].name='Combo 1'; combos[0].lo=0; combos[0].hi=25;
 renderCombos();
+bootLoad();
 </script>
 </body>
 </html>
