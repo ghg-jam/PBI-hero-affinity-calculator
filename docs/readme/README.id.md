@@ -19,17 +19,18 @@ Berjalan sepenuhnya di browser. Tanpa akun, tanpa server, tidak ada yang diungga
 
 - Penghitung hadiah untuk tiga tingkat (hijau / ungu / emas) dengan favorit.
 - Target hadiah: daftar tonggak bawaan, target kustom, dan target akhir.
-- Beberapa kombo (rencana), masing-masing dengan aturan keseimbangan hadiah sendiri.
+- Beberapa kombo (rencana), masing-masing dengan aturan keseimbangan hadiah sendiri: warna mana yang lebih banyak dan selisih yang dijaga **dalam rentang** (ada preset cepat seperti 0–25 atau 0–200), **sebesar** mungkin, atau **sekecil** mungkin.
 - Rencana dari afinitas saat ini: memperkirakan hadiah yang sudah terpakai dan hanya menghitung tonggak yang tersisa.
-- Hasil: tepat sasaran, kelebihan, kekurangan, hadiah per tahap, grafik selisih, dan bilah progres.
-- Pengisian dibantu AI dari tangkapan layar, simpan/muat data, 18 bahasa, mode terang/gelap, dan 11 warna tema.
+- Hasil: tepat sasaran, kelebihan dan kekurangan per tonggak, hadiah yang dibutuhkan per tahap (dengan ikon hadiah yang dipakai), grafik selisih, dan bilah kemajuan. Hasil hanya berubah saat Anda menekan **Hitung Semua Kombo**, dan sebuah bilah memberi tahu bila hasil sudah usang.
+- Opsi lanjutan (tersembunyi secara default): awal batas selisih, batas “poin maksimum di atas target”, hadiah non-favorit, batas total per warna, batas per hadiah (bisa dihapus semua sekali ketuk), dan urutan pemakaian khusus.
+- Pengisian dengan AI: salin prompt, kirim bersama tangkapan layar ke chat AI **baru**, lalu tempel balasan JSON (atau impor dari file). AI bisa salah membaca angka, jadi selalu cocokkan dengan game. Juga: simpan/muat data, 18 bahasa, mode terang/gelap, dan 11 tema warna.
 
 ## Cara memakai
 
 1. **Hadiah**: masukkan jumlah tiap hadiah dan tandai favorit dengan bintang.
 2. **Target**: masukkan afinitas saat ini (opsional) dan centang daftar hadiah yang diinginkan.
-3. **Kombo**: pakai bawaan atau buka *Pengaturan Lanjutan*.
-4. **Hasil**: lihat berapa banyak hadiah tiap jenis yang dipakai.
+3. **Kombo**: pertahankan default atau pilih aturan selisih (rentang, terbesar, atau terkecil) lalu buka *Pengaturan Lanjutan*.
+4. **Hasil**: tekan **Hitung Semua Kombo**, lalu lihat berapa banyak tiap hadiah yang dipakai.
 
 ## Jalankan secara lokal
 

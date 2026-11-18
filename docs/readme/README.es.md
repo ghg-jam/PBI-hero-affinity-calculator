@@ -19,17 +19,18 @@ Funciona totalmente en tu navegador. Sin cuenta, sin servidor y sin subir nada.
 
 - Contador de regalos de los tres niveles (verde / morado / dorado) con favoritos.
 - Objetivos de recompensa: listas de hitos integradas, objetivos personalizados y meta final.
-- Varios combos (planes), cada uno con su propia regla de equilibrio de regalos.
+- Varios combos (planes), cada uno con su regla de equilibrio de regalos: qué color tiene más y una diferencia que se mantiene **dentro de un rango** (con atajos como 0–25 o 0–200), lo **más grande** posible o lo **más pequeña** posible.
 - Planificación desde la afinidad actual: estima los regalos ya usados y calcula solo los hitos que faltan.
-- Resultados: aciertos exactos, exceso, déficit, regalos por etapa, gráfico de diferencia y barras de progreso.
-- Relleno asistido por IA con una captura, guardar/cargar datos, 18 idiomas, modo claro/oscuro y 11 colores de tema.
+- Resultados: aciertos exactos, exceso y déficit por hito, regalos necesarios por etapa (con iconos de los regalos usados), gráfico de diferencia y barras de progreso. Los resultados solo cambian al pulsar **Calcular todos los combos** y una barra avisa cuando están desactualizados.
+- Opciones avanzadas (ocultas por defecto): desde dónde empieza el límite de diferencia, un límite de «puntos máximos sobre el objetivo», regalos no favoritos, un límite total por color, límites por regalo (con borrado de todos de un toque) y un orden de gasto personalizado.
+- Relleno con IA: copia el prompt, envíalo con una captura a un chat de IA **nuevo** y pega la respuesta JSON (o impórtala desde un archivo). La IA puede leer mal los números: compruébalo siempre con tu juego. También: guardar/cargar datos, 18 idiomas, modo claro/oscuro y 11 temas de color.
 
 ## Cómo se usa
 
 1. **Regalos**: introduce cuántos tienes de cada uno y marca el favorito con la estrella.
 2. **Objetivos**: indica tu afinidad actual (opcional) y marca las listas de recompensas.
-3. **Combos**: deja los valores por defecto o abre *Ajustes avanzados*.
-4. **Resultados**: consulta cuántos regalos de cada tipo usar.
+3. **Combos**: deja los valores por defecto o elige la regla de diferencia (rango, mayor o menor) y abre *Ajustes avanzados*.
+4. **Resultados**: pulsa **Calcular todos los combos** y mira cuántos regalos de cada tipo usar.
 
 ## Ejecutar en local
 

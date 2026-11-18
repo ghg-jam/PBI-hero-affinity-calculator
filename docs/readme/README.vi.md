@@ -19,17 +19,18 @@ Chạy hoàn toàn trên trình duyệt. Không cần tài khoản, không cần
 
 - Đếm quà của ba bậc (xanh lá / tím / vàng) và đánh dấu quà yêu thích.
 - Mục tiêu phần thưởng: danh sách mốc có sẵn, mục tiêu tùy chỉnh và mục tiêu cuối.
-- Nhiều combo (kế hoạch), mỗi combo có quy tắc cân bằng quà riêng.
+- Nhiều combo (kế hoạch), mỗi combo có quy tắc cân bằng quà riêng: màu nào nhiều hơn và chênh lệch được giữ **trong một khoảng** (có sẵn mức nhanh như 0–25, 0–200), **lớn nhất** có thể hoặc **nhỏ nhất** có thể.
 - Lập kế hoạch từ độ thân thiết hiện tại: ước tính quà đã dùng và chỉ tính các mốc còn lại.
-- Kết quả: trúng chính xác, vượt, thiếu, quà cần cho từng giai đoạn, biểu đồ chênh lệch và thanh tiến độ.
-- Điền bằng AI từ ảnh chụp màn hình, lưu/tải dữ liệu, 18 ngôn ngữ, chế độ sáng/tối và 11 màu giao diện.
+- Kết quả: số lần đạt chính xác, phần dư và phần thiếu ở mỗi mốc, quà cần cho từng giai đoạn (kèm biểu tượng quà đã dùng), biểu đồ chênh lệch và thanh tiến độ. Kết quả chỉ thay đổi khi bạn nhấn **Tính tất cả combo**, và một thanh sẽ báo khi kết quả đã cũ.
+- Tùy chọn nâng cao (mặc định ẩn): điểm bắt đầu của giới hạn chênh lệch, giới hạn “điểm vượt mục tiêu tối đa”, quà không yêu thích, giới hạn tổng theo màu, giới hạn theo từng quà (xóa tất cả bằng một chạm) và thứ tự dùng tùy chỉnh.
+- Điền bằng AI: sao chép prompt, gửi kèm ảnh chụp cho một cuộc trò chuyện AI **mới**, rồi dán phản hồi JSON (hoặc nhập từ tệp). AI có thể đọc sai số, hãy luôn đối chiếu với game. Ngoài ra: lưu/tải dữ liệu, 18 ngôn ngữ, chế độ sáng/tối và 11 chủ đề màu.
 
 ## Cách dùng
 
 1. **Quà**: nhập số lượng từng loại và đánh dấu sao cho quà yêu thích.
 2. **Mục tiêu**: nhập độ thân thiết hiện tại (tùy chọn) và chọn các danh sách phần thưởng.
-3. **Combo**: giữ mặc định hoặc mở *Cài đặt nâng cao*.
-4. **Kết quả**: xem cần dùng bao nhiêu quà mỗi loại.
+3. **Combo**: giữ mặc định hoặc chọn quy tắc chênh lệch (khoảng, lớn nhất hoặc nhỏ nhất) và mở *Cài đặt nâng cao*.
+4. **Kết quả**: nhấn **Tính tất cả combo**, rồi xem cần dùng bao nhiêu mỗi loại quà.
 
 ## Chạy trên máy
 

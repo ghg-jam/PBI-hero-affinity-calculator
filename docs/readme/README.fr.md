@@ -19,17 +19,18 @@ Fonctionne entièrement dans votre navigateur. Pas de compte, pas de serveur, ri
 
 - Compteur de cadeaux pour les trois niveaux (vert / violet / or) avec favoris.
 - Objectifs de récompense : listes de paliers intégrées, objectifs personnalisés et objectif final.
-- Plusieurs combos (plans), chacun avec sa propre règle d’équilibre des cadeaux.
+- Plusieurs combos (plans), chacun avec sa règle d’équilibre : quelle couleur en a le plus, et un écart maintenu **dans une plage** (avec des préréglages comme 0–25 ou 0–200), le **plus grand** possible ou le **plus petit** possible.
 - Planification à partir de l’affinité actuelle : estime les cadeaux déjà utilisés et ne calcule que les paliers restants.
-- Résultats : paliers exacts, dépassement, manque, cadeaux par étape, graphique d’écart et barres de progression.
-- Remplissage assisté par IA via une capture d’écran, sauvegarde/chargement des données, 18 langues, mode clair/sombre et 11 couleurs de thème.
+- Résultats : réussites exactes, excédent et déficit par palier, cadeaux nécessaires par étape (avec les icônes des cadeaux utilisés), graphique d’écart et barres de progression. Les résultats ne changent que lorsque vous appuyez sur **Calculer tous les combos**, et une barre signale quand ils ne sont plus à jour.
+- Options avancées (masquées par défaut) : début de la limite d’écart, limite de « points maximum au-dessus de l’objectif », cadeaux non favoris, limite totale par couleur, limites par cadeau (effaçables d’un geste) et ordre de dépense personnalisé.
+- Remplissage par IA : copiez le prompt, envoyez-le avec une capture à un **nouveau** chat IA, puis collez la réponse JSON (ou importez-la depuis un fichier). L’IA peut mal lire les nombres : vérifiez toujours avec votre jeu. Aussi : sauvegarde/chargement, 18 langues, mode clair/sombre et 11 thèmes de couleur.
 
 ## Utilisation
 
 1. **Cadeaux** : saisissez la quantité de chacun et marquez le favori avec l’étoile.
 2. **Objectifs** : indiquez l’affinité actuelle (facultatif) et cochez les listes de récompenses.
-3. **Combos** : gardez les valeurs par défaut ou ouvrez *Réglages avancés*.
-4. **Résultats** : consultez combien de cadeaux utiliser.
+3. **Combos** : gardez les valeurs par défaut ou choisissez la règle d’écart (plage, plus grand ou plus petit) et ouvrez *Paramètres avancés*.
+4. **Résultats** : appuyez sur **Calculer tous les combos**, puis lisez combien de cadeaux de chaque sorte utiliser.
 
 ## Exécuter en local
 

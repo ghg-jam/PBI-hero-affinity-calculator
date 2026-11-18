@@ -19,17 +19,18 @@ Funziona interamente nel browser. Nessun account, nessun server, nulla viene car
 
 - Contatore di regali per i tre livelli (verde / viola / oro) con preferiti.
 - Obiettivi di ricompensa: elenchi di traguardi integrati, obiettivi personalizzati e obiettivo finale.
-- Più combo (piani), ognuna con la propria regola di bilanciamento dei regali.
+- Più combo (piani), ciascuno con la propria regola di equilibrio: quale colore ne ha di più e una differenza mantenuta **entro un intervallo** (con preset rapidi come 0–25 o 0–200), la **più grande** possibile o la **più piccola** possibile.
 - Pianificazione dall’affinità attuale: stima i regali già usati e calcola solo i traguardi rimanenti.
-- Risultati: colpi esatti, eccedenza, mancanza, regali per tappa, grafico delle differenze e barre di avanzamento.
-- Compilazione assistita da IA con screenshot, salvataggio/caricamento dati, 18 lingue, modalità chiara/scura e 11 colori tema.
+- Risultati: centri esatti, eccesso e mancanza per traguardo, regali necessari per fase (con le icone dei regali usati), grafico della differenza e barre di avanzamento. I risultati cambiano solo quando premi **Calcola tutti i combo** e una barra avvisa quando sono obsoleti.
+- Opzioni avanzate (nascoste di default): da dove parte il limite di differenza, limite di «punti massimi oltre l’obiettivo», regali non preferiti, limite totale per colore, limiti per regalo (azzerabili con un tocco) e ordine di spesa personalizzato.
+- Compilazione con IA: copia il prompt, invialo con uno screenshot a una chat IA **nuova** e incolla la risposta JSON (o importala da file). L’IA può leggere male i numeri: confronta sempre con il gioco. Inoltre: salvataggio/caricamento dati, 18 lingue, modalità chiara/scura e 11 temi colore.
 
 ## Come si usa
 
 1. **Regali**: inserisci quanti ne hai di ciascun tipo e segna il preferito con la stella.
 2. **Obiettivi**: inserisci l’affinità attuale (facoltativo) e spunta gli elenchi di ricompense.
-3. **Combo**: lascia i valori predefiniti o apri *Impostazioni avanzate*.
-4. **Risultati**: vedi quanti regali di ogni tipo usare.
+3. **Combo**: mantieni i valori predefiniti o scegli la regola di differenza (intervallo, massima o minima) e apri *Impostazioni avanzate*.
+4. **Risultati**: premi **Calcola tutti i combo** e leggi quanti regali di ogni tipo usare.
 
 ## Eseguire in locale
 

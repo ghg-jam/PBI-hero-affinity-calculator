@@ -19,17 +19,18 @@ Funciona inteiramente no seu navegador. Sem conta, sem servidor e nada é enviad
 
 - Contador de presentes dos três níveis (verde / roxo / dourado) com favoritos.
 - Metas de recompensa: listas de marcos integradas, metas personalizadas e meta final.
-- Vários combos (planos), cada um com sua própria regra de equilíbrio de presentes.
+- Vários combos (planos), cada um com sua regra de equilíbrio: qual cor tem mais e uma diferença mantida **dentro de um intervalo** (com atalhos como 0–25 ou 0–200), a **maior** possível ou a **menor** possível.
 - Planejamento a partir da afinidade atual: estima os presentes já usados e calcula só os marcos restantes.
-- Resultados: acertos exatos, excesso, falta, presentes por etapa, gráfico de diferença e barras de progresso.
-- Preenchimento com IA a partir de uma captura de tela, salvar/carregar dados, 18 idiomas, modo claro/escuro e 11 cores de tema.
+- Resultados: acertos exatos, excesso e falta por marco, presentes necessários por etapa (com ícones dos presentes usados), gráfico de diferença e barras de progresso. Os resultados só mudam ao tocar em **Calcular todos os combos**, e uma barra avisa quando estão desatualizados.
+- Opções avançadas (ocultas por padrão): onde começa o limite de diferença, limite de “pontos máximos acima da meta”, presentes não favoritos, limite total por cor, limites por presente (com limpeza de todos em um toque) e ordem de gasto personalizada.
+- Preenchimento com IA: copie o prompt, envie com uma captura para um chat de IA **novo** e cole a resposta JSON (ou importe de um arquivo). A IA pode ler números errado: confira sempre com o jogo. Também: salvar/carregar dados, 18 idiomas, modo claro/escuro e 11 temas de cor.
 
 ## Como usar
 
 1. **Presentes**: informe quantos tem de cada um e marque o favorito com a estrela.
 2. **Metas**: informe a afinidade atual (opcional) e marque as listas de recompensas.
-3. **Combos**: mantenha o padrão ou abra *Configurações avançadas*.
-4. **Resultados**: veja quantos presentes de cada tipo usar.
+3. **Combos**: mantenha o padrão ou escolha a regra de diferença (intervalo, maior ou menor) e abra *Configurações avançadas*.
+4. **Resultados**: toque em **Calcular todos os combos** e veja quantos presentes de cada tipo usar.
 
 ## Executar localmente
 

@@ -19,17 +19,18 @@ Läuft vollständig im Browser. Kein Konto, kein Server, es wird nichts hochgela
 
 - Geschenkzähler für die drei Stufen (grün / lila / gold) mit Favoriten.
 - Belohnungsziele: eingebaute Meilensteinlisten, eigene Ziele und ein Endziel.
-- Mehrere Kombinationen (Pläne), jede mit eigener Regel zum Geschenkausgleich.
+- Mehrere Kombinationen (Pläne), jede mit eigener Ausgleichsregel: welche Farbe mehr hat und ein Abstand, der **innerhalb eines Bereichs** bleibt (mit Schnellwerten wie 0–25 oder 0–200), so **groß** wie möglich oder so **klein** wie möglich ist.
 - Planung ab der aktuellen Zuneigung: schätzt bereits verbrauchte Geschenke und berechnet nur die verbleibenden Meilensteine.
-- Ergebnisse: exakte Treffer, Überschuss, Fehlbetrag, Geschenke pro Stufe, Abstandsdiagramm und Fortschrittsbalken.
-- KI-gestütztes Ausfüllen per Screenshot, Daten speichern/laden, 18 Sprachen, heller/dunkler Modus und 11 Farbthemen.
+- Ergebnisse: exakte Treffer, Überschuss und Fehlbetrag je Meilenstein, benötigte Geschenke je Stufe (mit Symbolen der verwendeten Geschenke), Abstandsdiagramm und Fortschrittsbalken. Ergebnisse ändern sich nur, wenn du **Alle Kombinationen berechnen** drückst; eine Leiste zeigt an, wenn sie veraltet sind.
+- Erweiterte Optionen (standardmäßig ausgeblendet): Start des Abstandslimits, Limit „Max. Punkte über Ziel“, Nicht-Favoriten, Gesamtlimit je Farbe, Limits je Geschenk (mit „Alle Limits löschen“) und eine eigene Verbrauchsreihenfolge.
+- KI-gestütztes Ausfüllen: Prompt kopieren, mit Screenshot an einen **neuen** KI-Chat senden und die JSON-Antwort einfügen (oder aus einer Datei importieren). KI kann Zahlen falsch lesen – immer mit dem Spiel vergleichen. Dazu: Daten speichern/laden, 18 Sprachen, heller/dunkler Modus und 11 Farbthemen.
 
 ## So geht’s
 
 1. **Geschenke**: Anzahl je Geschenk eingeben, Favorit mit dem Stern markieren.
 2. **Ziele**: aktuelle Zuneigung (optional) eingeben und Belohnungslisten ankreuzen.
-3. **Kombinationen**: Standardwerte behalten oder *Erweiterte Einstellungen* öffnen.
-4. **Ergebnisse**: ablesen, wie viele Geschenke jeder Sorte zu verwenden sind.
+3. **Kombinationen**: Standardwerte behalten oder die Abstandsregel (Bereich, größter oder kleinster Abstand) wählen und *Erweiterte Einstellungen* öffnen.
+4. **Ergebnisse**: **Alle Kombinationen berechnen** drücken und ablesen, wie viele Geschenke jeder Sorte zu verwenden sind.
 
 ## Lokal ausführen
 

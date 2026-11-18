@@ -19,17 +19,18 @@ Ganap na tumatakbo sa browser mo. Walang account, walang server, walang ina-uplo
 
 - Bilang ng regalo para sa tatlong tier (berde / lila / ginto) na may mga paborito.
 - Mga target na reward: built-in na listahan ng milestone, custom na target, at huling layunin.
-- Maraming combo (plano), bawat isa ay may sariling patakaran sa balanse ng regalo.
+- Maraming combo (plano), bawat isa ay may sariling alituntunin ng balanse: aling kulay ang mas marami at ang agwat ay pinananatili **sa loob ng saklaw** (may mabilis na preset tulad ng 0–25 o 0–200), pinakamalaki hangga’t maaari, o pinakamaliit hangga’t maaari.
 - Pagpaplano mula sa kasalukuyang affinity: tinatantya ang nagamit nang regalo at kinakalkula lang ang natitirang milestone.
-- Mga resulta: eksaktong tama, sobra, kulang, regalong kailangan sa bawat yugto, gap chart, at progress bar.
-- AI-assisted na pagpuno mula sa screenshot, save/load ng data, 18 wika, light/dark mode, at 11 kulay ng tema.
+- Mga resulta: eksaktong tama, sobra at kulang sa bawat milestone, mga regalong kailangan sa bawat yugto (may icon ng mga ginamit na regalo), chart ng agwat, at progress bar. Nagbabago lang ang resulta kapag pinindot mo ang **Calculate All Combos**, at may bar na nagsasabi kapag luma na ang mga ito.
+- Mga advanced na opsyon (nakatago bilang default): kung saan nagsisimula ang limit ng agwat, limit na “max points over target”, mga hindi-paboritong regalo, kabuuang limit bawat kulay, limit bawat regalo (maaaring burahin lahat sa isang tap), at custom na pagkakasunod-sunod ng paggamit.
+- AI-assisted na pagpuno: kopyahin ang prompt, ipadala kasama ng screenshot sa **bagong** AI chat, at i-paste ang JSON na sagot (o i-import mula sa file). Maaaring mali ang basa ng AI sa mga numero, kaya laging ikumpara sa laro. Mayroon ding save/load ng data, 18 wika, light/dark mode, at 11 kulay na tema.
 
 ## Paano gamitin
 
 1. **Mga Regalo**: ilagay kung ilan ang mayroon ka sa bawat isa at markahan ng star ang paborito.
 2. **Mga Target**: ilagay ang kasalukuyang affinity (opsyonal) at piliin ang mga listahan ng reward.
-3. **Mga Combo**: gamitin ang default o buksan ang *Advanced Settings*.
-4. **Mga Resulta**: tingnan kung ilan sa bawat regalo ang gagamitin.
+3. **Mga Combo**: iwanan ang mga default o piliin ang patakaran sa agwat (saklaw, pinakamalaki, o pinakamaliit) at buksan ang *Advanced Settings*.
+4. **Mga Resulta**: pindutin ang **Calculate All Combos** at tingnan kung ilan sa bawat regalo ang gagamitin.
 
 ## Patakbuhin sa sarili mong computer
 

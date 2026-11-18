@@ -13,20 +13,20 @@ Runs entirely in your browser. No account, no server, nothing is uploaded.
 > Unofficial fan-made tool. Not affiliated with or endorsed by the game's developer.
 
 <p>
-  <img src="docs/phone-gifts.png" alt="Gifts tab on a phone" width="240">
-  <img src="docs/phone-results.png" alt="Results tab on a phone with progress bars" width="240">
+  <img src="docs/phone-gifts.png" alt="Gifts tab on a phone (light mode)" width="240">
+  <img src="docs/phone-results.png" alt="Results tab on a phone with the summary and gap chart" width="240">
 </p>
 <img src="docs/desktop-results.png" alt="Results tab on desktop with the side navigation" width="720">
 
 ## Features
 
 - **Gift counter** for the three tiers (green / purple / gold), with favorite gifts and their bonus values.
-- **Reward targets**: tick one or more built-in milestone lists, add your own custom targets, and choose your own **final goal** (the plan ends exactly there).
-- **Combos**: any number of plans, each with its own gift-balance rule (which colour has more, and how big the gap may be).
+- **Reward targets**: tick one or more built-in milestone lists (grouped by name, one row per colour set), add your own custom targets, and choose your own **final goal** (the plan ends exactly there).
+- **Combos**: any number of plans, each with its own gift-balance rule: which colour has more, and a gap that is kept **within a range** (with quick presets such as 0–25 or 0–200), made as **large as possible**, or made as **small as possible**.
 - **Plan from current affinity**: enter where the hero is now. The tool estimates which gifts were already used and plans only the milestones still ahead.
-- **Results**: exact hits, overage and shortfall per milestone, gifts needed per stage, a gap chart, and progress bars with a pin per goal.
-- **Advanced options** (hidden by default): gap limit and where it starts, non-favorite gifts, per-gift limits, a "Max Points Over Target" limit and a custom spending order.
-- **AI-assisted fill**: copy the prompt, send it with a screenshot to any AI chat, paste the JSON reply back.
+- **Results**: exact hits, overage and shortfall per milestone, gifts needed per stage (with icons for the gifts used), a gap chart, and progress bars with a pin per goal. Results only change when you press **Calculate All Combos**, so you can adjust settings freely; a bar above the results tells you when they are out of date.
+- **Advanced options** (hidden by default): where the gap limit starts, a "Max Points Over Target" limit, non-favorite gifts, a total limit per colour, per-gift limits (with a one-tap **Clear all limits**) and a custom spending order.
+- **AI-assisted fill**: copy the prompt, send it with a screenshot to a **new** AI chat, then paste the JSON reply back, or import it from a file if the AI gives you one. AI can misread numbers, so always compare the result with your game.
 - **Save data**: your inputs are kept in the browser automatically. You can also download a save file, load it later, or reset.
 - **18 languages**: English, 繁體中文, 简体中文, 日本語, Español, Français, Deutsch, Português, Tiếng Việt, ไทย, Bahasa Indonesia, Русский, Türkçe, Italiano, Polski, العربية (right-to-left), 한국어, Filipino.
 - **Responsive**: bottom tab bar on phones, side navigation on tablets and desktop. Light and dark mode follow the system setting by default; Settings also has 11 colour themes plus a custom colour, and a text and UI size option.
@@ -36,8 +36,8 @@ Runs entirely in your browser. No account, no server, nothing is uploaded.
 1. Open the site.
 2. **Gifts**: enter how many of each gift you have. Tap the star to mark a hero's favorite (one per colour).
 3. **Targets**: enter the current affinity (optional) and tick the reward lists you want.
-4. **Combos**: keep the defaults, or open *Advanced Settings* to change the gap limit, which gifts to use and the allowed overage.
-5. **Results**: read how many of each gift to use. With several combos there is one tab per combo plus a Compare tab.
+4. **Combos**: keep the defaults, or change the gap rule (range, largest or smallest gap) and open *Advanced Settings* for which gifts to use, limits and the allowed overage.
+5. **Results**: press **Calculate All Combos**, then read how many of each gift to use. With several combos there is one section per combo.
 
 ## Run locally
 

@@ -19,17 +19,18 @@ Tamamen tarayıcında çalışır. Hesap yok, sunucu yok, hiçbir şey yüklenme
 
 - Üç kademe (yeşil / mor / altın) için hediye sayacı ve favoriler.
 - Ödül hedefleri: yerleşik kilometre taşı listeleri, özel hedefler ve nihai hedef.
-- Her biri kendi hediye denge kuralına sahip birden çok kombo (plan).
+- Birden çok kombo (plan); her birinin kendi denge kuralı var: hangi renk daha fazla ve fark **bir aralıkta** tutulur (0–25, 0–200 gibi hazır seçeneklerle), mümkün olduğunca **büyük** veya mümkün olduğunca **küçük** olur.
 - Mevcut yakınlıktan planlama: harcanmış hediyeleri tahmin eder, yalnızca kalan kilometre taşlarını hesaplar.
-- Sonuçlar: tam isabet, fazlalık, eksik, aşama başına gereken hediyeler, fark grafiği ve ilerleme çubukları.
-- Ekran görüntüsüyle yapay zekâ destekli doldurma, veri kaydet/yükle, 18 dil, açık/koyu mod ve 11 tema rengi.
+- Sonuçlar: kilometre taşı başına tam isabet, fazlalık ve eksik, aşama başına gereken hediyeler (kullanılan hediye simgeleriyle), fark grafiği ve ilerleme çubukları. Sonuçlar yalnızca **Tüm Kombinasyonları Hesapla**’ya bastığınızda değişir; eskidiklerinde üstteki bir çubuk uyarır.
+- Gelişmiş seçenekler (varsayılan olarak gizli): fark sınırının başladığı yer, “hedefin üstünde en fazla puan” sınırı, favori olmayan hediyeler, renk başına toplam sınır, hediye başına sınırlar (tek dokunuşla temizlenebilir) ve özel harcama sırası.
+- Yapay zekâ ile doldurma: istemi kopyalayın, ekran görüntüsüyle **yeni** bir yapay zekâ sohbetine gönderin, JSON yanıtını yapıştırın (veya dosyadan içe aktarın). Yapay zekâ sayıları yanlış okuyabilir; her zaman oyunla karşılaştırın. Ayrıca: veri kaydet/yükle, 18 dil, açık/koyu mod ve 11 renk teması.
 
 ## Nasıl kullanılır
 
 1. **Hediyeler**: her hediyeden kaç tane olduğunu gir, favoriyi yıldızla işaretle.
 2. **Hedefler**: mevcut yakınlığı gir (isteğe bağlı) ve istediğin ödül listelerini işaretle.
-3. **Kombolar**: varsayılanları kullan veya *Gelişmiş Ayarlar*’ı aç.
-4. **Sonuçlar**: her hediyeden kaç tane kullanılacağını gör.
+3. **Kombolar**: varsayılanları koruyun veya fark kuralını (aralık, en büyük ya da en küçük) seçip *Gelişmiş Ayarlar*’ı açın.
+4. **Sonuçlar**: **Tüm Kombinasyonları Hesapla**’ya basıp her hediyeden kaç tane kullanılacağını okuyun.
 
 ## Yerelde çalıştır
 
