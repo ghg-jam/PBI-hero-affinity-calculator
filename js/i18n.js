@@ -1,0 +1,1 @@
+let curLang="en",langToken=0;function ensureLang(code,cb){if(LANG[code]||LANG_CODES.indexOf(code)<0){cb();return}const s=document.createElement("script");s.src="lang/"+code+".js?v="+APP_VER,s.onload=cb,s.onerror=cb,document.head.appendChild(s)}function t(k){return LANG[curLang]&&LANG[curLang][k]||LANG.en[k]}

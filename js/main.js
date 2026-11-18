@@ -1,0 +1,1 @@
+computeTargets(),applyStatic(),setTheme(getTheme()),renderVars(),renderPresets(),renderTargets(),addCombo(),combos[0].lo=0,combos[0].hi=25,renderCombos(),PAL.refresh(),bootLoad();
